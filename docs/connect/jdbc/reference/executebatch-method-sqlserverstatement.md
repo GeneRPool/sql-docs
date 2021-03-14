@@ -1,24 +1,21 @@
 ---
+description: "executeBatch Method (SQLServerStatement)"
 title: "executeBatch Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "SQLServerStatement.executeBatch"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # executeBatch Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

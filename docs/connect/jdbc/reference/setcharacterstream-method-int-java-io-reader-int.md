@@ -1,24 +1,21 @@
 ---
+description: "setCharacterStream Method (int, java.io.Reader, int)"
 title: "setCharacterStream Method (int, java.io.Reader, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "SQLServerPreparedStatement.setCharacterStream"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # setCharacterStream Method (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,16 +1,13 @@
 ---
+description: "MSmerge_articlehistory (Transact-SQL)"
 title: "MSmerge_articlehistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
+ms.technology: replication
+ms.topic: "reference"
 f1_keywords: 
   - "MSmerge_articlehistory"
   - "MSmerge_articlehistory_TSQL"
@@ -19,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_articlehistory system table"
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # MSmerge_articlehistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_articlehistory** table tracks changes made to articles during a Merge Agent synchronization session, with one row for each article to which changes were made. This table is stored in the distribution database.  
   

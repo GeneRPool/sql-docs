@@ -1,14 +1,13 @@
 ---
+description: "Send Mail Task"
 title: "Send Mail Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sendmailtask.f1"
   - "sql13.dts.designer.sendmailtask.general.f1"
@@ -20,12 +19,14 @@ helpviewer_keywords:
   - "messages [Integration Services]"
   - "sending messages"
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: chugugrace
+ms.author: chugu
 ---
 # Send Mail Task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Send Mail task sends an e-mail message. By using the Send Mail task, a package can send messages if tasks in the package workflow succeed or fail, or send messages in response to an event that the package raises at run time. For example, the task can notify a database administrator about the success or failure of the Backup Database task.  
   
  You can configure the Send Mail task in the following ways:  
@@ -76,11 +77,11 @@ manager: "jhubbard"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## Related Tasks  
- For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## Related Content  
   
--   Technical article, [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
+-   Technical article, [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
   
 ## Send Mail Task Editor (General Page)
   Use the **General page** of the **Send Mail Task Editor** dialog box to name and describe the Send Mail task.  
@@ -99,7 +100,7 @@ manager: "jhubbard"
   
 ### Options  
  **SMTPConnection**  
- Select an SMTP connection manager in the list, or click **\<New connection…>** to create a new connection manager.  
+ Select an SMTP connection manager in the list, or click **\<New connection...>** to create a new connection manager.  
   
 > [!IMPORTANT]  
 >  The SMTP connection manager supports only anonymous authentication and Windows Authentication. It does not support basic authentication.  
@@ -143,22 +144,21 @@ manager: "jhubbard"
   
 #### MessageSourceType = Direct Input  
  **MessageSource**  
- Type the message text or click the browse button (…) and then type the message in the **Message source** dialog box.  
+ Type the message text or click the browse button (...) and then type the message in the **Message source** dialog box.  
   
 #### MessageSourceType = File connection  
  **MessageSource**  
- Select a File connection manager in the list or click \<**New connection…**> to create a new connection manager.  
+ Select a File connection manager in the list or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
 #### MessageSourceType = Variable  
  **MessageSource**  
- Select a variable in the list or click \<**New variable…**> to create a new variable.  
+ Select a variable in the list or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
   

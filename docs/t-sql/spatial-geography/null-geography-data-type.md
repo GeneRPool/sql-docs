@@ -1,14 +1,13 @@
 ---
+description: "Null (geography Data Type)"
 title: "Null (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "Null (geography Data Type)"
 dev_langs: 
@@ -17,13 +16,11 @@ helpviewer_keywords:
   - "Null (geography Data Type)"
   - "Null method"
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Null (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A read-only property providing a null instance of the **geography** type.
   
@@ -33,8 +30,10 @@ A read-only property providing a null instance of the **geography** type.
   
 Null  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **geography**  

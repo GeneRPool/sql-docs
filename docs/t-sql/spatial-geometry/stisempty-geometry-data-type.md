@@ -1,14 +1,13 @@
 ---
+description: "STIsEmpty (geometry Data Type)"
 title: "STIsEmpty (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "STIsEmpty_TSQL"
   - "STIsEmpty (geometry Data Type)"
@@ -17,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsEmpty (geometry Data Type)"
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIsEmpty (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if a **geometry** instance is empty. Returns 0 if a **geometry** instance is not empty.
   
@@ -34,7 +31,9 @@ Returns 1 if a **geometry** instance is empty. Returns 0 if a **geometry** insta
 .STIsEmpty ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  

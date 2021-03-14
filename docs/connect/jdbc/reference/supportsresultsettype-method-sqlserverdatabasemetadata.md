@@ -1,24 +1,21 @@
 ---
+description: "supportsResultSetType Method (SQLServerDatabaseMetaData)"
 title: "supportsResultSetType Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.supportsResultSetType"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsResultSetType Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

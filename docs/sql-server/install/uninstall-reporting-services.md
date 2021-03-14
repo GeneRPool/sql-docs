@@ -1,22 +1,20 @@
 ---
 title: "Uninstall Reporting Services | Microsoft Docs"
+description: This article describes how to uninstall Reporting Services, which does not remove content you created or configuration you have modified. 
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
+author: maggiesMSFT 
+ms.author: maggies
+manager: kfile
 ---
 # Uninstall Reporting Services
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
   Uninstalling [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not remove the content you have created or configuration you have modified. However, if there is content you need after the uninstall is complete, it is recommended you make copies of content before you begin the uninstallation process.  
   
 ## Uninstall SharePoint Mode  
@@ -48,7 +46,7 @@ manager: "erikre"
   
 1.  In Windows Control Panel, click **Programs and Features**.  
   
-2.  In **Programs and Features** select **Microsoft SQL Server 2012**.  
+2.  In **Programs and Features** select **Microsoft SQL Server 2016**.  
   
 3.  In the uninstall wizard, select the instance that includes the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance feature **RS**.  
   
@@ -62,7 +60,6 @@ manager: "erikre"
   
 ## See Also  
  [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
- [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
+ [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
-  
   

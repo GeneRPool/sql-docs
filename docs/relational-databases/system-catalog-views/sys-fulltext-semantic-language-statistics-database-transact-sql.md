@@ -1,14 +1,12 @@
 ---
+description: "sys.fulltext_semantic_language_statistics_database (Transact-SQL)"
 title: "sys.fulltext_semantic_language_statistics_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fulltext_semantic_language_statistics_database_TSQL"
   - "fulltext_semantic_language_statistics_database_TSQL"
@@ -19,13 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fulltext_semantic_language_statistics_database catalog view"
 ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 ---
 # sys.fulltext_semantic_language_statistics_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row about the semantic language statistics database installed on the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

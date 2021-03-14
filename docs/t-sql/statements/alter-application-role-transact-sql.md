@@ -1,14 +1,13 @@
 ---
+description: "ALTER APPLICATION ROLE (Transact-SQL)"
 title: "ALTER APPLICATION ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "ALTER_APPLICATION_ROLE_TSQL"
   - "ALTER APPLICATION ROLE"
@@ -20,32 +19,35 @@ helpviewer_keywords:
   - "ALTER APPLICATION ROLE statement"
   - "application roles [SQL Server], modifying"
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
+
 # ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the name, password, or default schema of an application role.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
-```  
+```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+
  *application_role_name*  
  Is the name of the application role to be modified.  
   
@@ -58,8 +60,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  Specifies the first schema that will be searched by the server when it resolves the names of objects. *schema_name* can be a schema that does not exist in the database.  
   
-## Remarks  
- If the new application role name already exists in the database, the statement will fail. When the name, password, or default schema of an application role is changed the ID associated with the role is not changed.  
+## Remarks
+
+If the new application role name already exists in the database, the statement will fail. When the name, password, or default schema of an application role is changed the ID associated with the role is not changed.  
   
 > [!IMPORTANT]  
 >  Password expiration policy is not applied to application role passwords. For this reason, take extra care in selecting strong passwords. Applications that invoke application roles must store their passwords.  
@@ -77,7 +80,7 @@ ALTER APPLICATION ROLE application_role_name
 ### A. Changing the name of application role  
  The following example changes the name of the application role `weekly_receipts` to `receipts_ledger`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987Gbv8$76sPYY5m23' ,   
@@ -91,7 +94,7 @@ GO
 ### B. Changing the password of application role  
  The following example changes the password of the application role `receipts_ledger`.  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH PASSWORD = '897yUUbv867y$200nk2i';  
 GO  
@@ -100,7 +103,7 @@ GO
 ### C. Changing the name, password, and default schema  
  The following example changes the name, password, and default schema of the application role `receipts_ledger` all at the same time.  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH NAME = weekly_ledger,   
     PASSWORD = '897yUUbv77bsrEE00nk2i',   

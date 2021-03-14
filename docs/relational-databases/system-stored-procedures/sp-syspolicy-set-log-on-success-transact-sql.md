@@ -1,14 +1,13 @@
 ---
+description: "sp_syspolicy_set_log_on_success (Transact-SQL)"
 title: "sp_syspolicy_set_log_on_success (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sp_syspolicy_set_log_on_success_TSQL"
   - "sp_syspolicy_set_log_on_success"
@@ -17,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_set_log_on_success"
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # sp_syspolicy_set_log_on_success (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies whether successful policy evaluations are logged in the Policy History log for Policy-Based Management.  
   
@@ -38,7 +35,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## Arguments  
- [ **@value=** ] *value*  
+`[ @value = ] value`
  Determines whether successful policy evaluations are logged. *value* is **sqlvariant**, and can be one of the following values:  
   
 -   0 or 'false' = Successful policy evaluations are not logged.  

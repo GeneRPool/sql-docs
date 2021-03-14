@@ -1,13 +1,12 @@
 ---
-title: "SetEnable Method (ServerNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+description: "SetEnable Method (ServerNetworkProtocol Class)"
+title: "SetEnable Method (ServerNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetEnable Method (ServerNetworkProtocol Class)"
@@ -17,12 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetEnable method"
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
 ---
 # SetEnable Method (ServerNetworkProtocol Class)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Enables the server network protocol.  
   
 ## Syntax  
@@ -42,6 +40,6 @@ object.SetEnable()
 ## Remarks  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

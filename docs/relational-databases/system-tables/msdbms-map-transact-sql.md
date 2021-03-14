@@ -1,16 +1,13 @@
 ---
+description: "MSdbms_map (Transact-SQL)"
 title: "MSdbms_map (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
+ms.technology: replication
+ms.topic: "reference"
 f1_keywords: 
   - "MSdbms_map"
   - "MSdbms_map_TSQL"
@@ -19,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdbms_map system table"
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
-caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # MSdbms_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSdbms_map** table contains source data type information as well as a link to default destination data type information for source and destination DBMS pairs. This table is stored in the **msdb** database and is used for heterogeneous publishing.  
   

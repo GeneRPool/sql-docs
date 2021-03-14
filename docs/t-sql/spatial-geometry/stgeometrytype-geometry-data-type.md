@@ -1,14 +1,13 @@
 ---
+description: "STGeometryType (geometry Data Type)"
 title: "STGeometryType (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "STGeometryType_TSQL"
   - "STGeometryType (geometry Data Type)"
@@ -17,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryType (geometry Data Type)"
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeometryType (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the Open Geospatial Consortium (OGC) type name represented by a **geometry** instance.
   
@@ -34,7 +31,9 @@ Returns the Open Geospatial Consortium (OGC) type name represented by a **geomet
 .STGeometryType ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(4000)**  
   
  CLR return type: **SqlString**  

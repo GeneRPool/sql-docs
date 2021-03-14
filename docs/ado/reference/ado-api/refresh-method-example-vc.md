@@ -1,26 +1,23 @@
 ---
+description: "Refresh Method Example (VC++)"
 title: "Refresh Method Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Refresh method [ADO], VC++ example"
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Refresh Method Example (VC++)
-This example demonstrates using the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method to refresh the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection for a stored procedure [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  
+This example demonstrates using the [Refresh](./refresh-method-ado.md) method to refresh the [Parameters](./parameters-collection-ado.md) collection for a stored procedure [Command](./command-object-ado.md) object.  
   
 ## Example  
   
@@ -232,6 +229,6 @@ Authors with 25 percent royalty
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)   
+ [Parameters Collection (ADO)](./parameters-collection-ado.md)   
+ [Refresh Method (ADO)](./refresh-method-ado.md)

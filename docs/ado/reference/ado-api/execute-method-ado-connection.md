@@ -1,14 +1,13 @@
 ---
+description: "Execute Method (ADO Connection)"
 title: "Execute Method (ADO Connection) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "Connection15::Execute"
@@ -16,10 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Execute method [ADO]"
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Execute Method (ADO Connection)
 Executes the specified query, SQL statement, stored procedure, or provider-specific text.  
@@ -37,7 +34,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### Parameters  
  *CommandText*  
- A **String** value that contains the SQL statement, stored procedure, a URL, or provider-specific text to execute. **Optionally**, table names can be used but only if the provider is SQL aware. For example if a table name of "Customers" is used, ADO will automatically prepend the standard SQL Select syntax to form and pass "SELECT * FROM Customers" as a [!INCLUDE[tsql](../../../includes/tsql_md.md)] statement to the provider.  
+ A **String** value that contains the SQL statement, stored procedure, a URL, or provider-specific text to execute. **Optionally**, table names can be used but only if the provider is SQL aware. For example if a table name of "Customers" is used, ADO will automatically prepend the standard SQL Select syntax to form and pass "SELECT * FROM Customers" as a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement to the provider.  
   
  *RecordsAffected*  
  Optional. A **Long** variable to which the provider returns the number of records that the operation affected.  

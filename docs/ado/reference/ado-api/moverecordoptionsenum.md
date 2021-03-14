@@ -1,27 +1,24 @@
 ---
+description: "MoveRecordOptionsEnum"
 title: "MoveRecordOptionsEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "MoveRecordOptionsEnum"
 helpviewer_keywords: 
   - "MoveRecordOptionsEnum enumeration [ADO]"
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # MoveRecordOptionsEnum
-Specifies the behavior of the [Record](../../../ado/reference/ado-api/record-object-ado.md) object [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) method.  
+Specifies the behavior of the [Record](./record-object-ado.md) object [MoveRecord](./moverecord-method-ado.md) method.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -34,4 +31,4 @@ Specifies the behavior of the [Record](../../../ado/reference/ado-api/record-obj
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [MoveRecord Method (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [MoveRecord Method (ADO)](./moverecord-method-ado.md)

@@ -1,14 +1,12 @@
 ---
+description: "sys.dm_broker_queue_monitors (Transact-SQL)"
 title: "sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "dm_broker_queue_monitors"
   - "sys.dm_broker_queue_monitors_TSQL"
@@ -19,13 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_broker_queue_monitors dynamic management view"
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_broker_queue_monitors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each queue monitor in the instance. A queue monitor manages activation for a queue.  
   

@@ -1,14 +1,13 @@
 ---
+description: "DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
 title: "DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "DROP CRYPTOGRAPHIC PROVIDER"
   - "DROP_CRYPTOGRAPHIC_PROVIDER_TSQL"
@@ -17,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP CRYPTOGRAPHIC PROVIDER statement"
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -31,12 +28,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP CRYPTOGRAPHIC PROVIDER provider_name   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Is the name of the Extensible Key Management provider.  
   
@@ -53,7 +51,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ## Examples  
  The following example drops a cryptographic provider called `SecurityProvider`.  
   
-```  
+```sql  
 /* First, disable provider to perform the upgrade.  
 This will terminate all open cryptographic sessions. */  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   

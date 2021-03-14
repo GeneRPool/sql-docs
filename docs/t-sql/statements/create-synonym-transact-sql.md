@@ -1,14 +1,13 @@
 ---
-title: "CREATE SYNONYM (Transact-SQL) | Microsoft Docs"
+description: "CREATE SYNONYM (Transact-SQL)"
+title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ""
 ms.date: "04/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "CREATE_SYNONYM_TSQL"
   - "SYNONYM_TSQL"
@@ -22,13 +21,13 @@ helpviewer_keywords:
   - "CREATE SYNONYM statement"
   - "synonyms [SQL Server], creating"
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
+
 # CREATE SYNONYM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a new synonym.  
   
@@ -36,7 +35,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- SQL Server Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>  
@@ -49,7 +48,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>
 ```  
   
 ```  
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >  
   
@@ -59,7 +58,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name_1*  
  Specifies the schema in which the synonym is created. If *schema* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the default schema of the current user.  
   
@@ -67,7 +68,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  Is the name of the new synonym.  
   
  *server_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Is the name of the server on which base object is located.  
   
@@ -80,27 +81,34 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  *object_name*  
  Is the name of the base object that the synonym references.  
   
- Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
+ Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
   
 ## Remarks  
  The base object need not exist at synonym create time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checks for the existence of the base object at run time.  
   
  Synonyms can be created for the following types of objects:  
   
-|||  
-|-|-|  
-|Assembly (CLR) Stored Procedure|Assembly (CLR) Table-valued Function|  
-|Assembly (CLR) Scalar Function|Assembly Aggregate (CLR) Aggregate Functions|  
-|Replication-filter-procedure|Extended Stored Procedure|  
-|SQL Scalar Function|SQL Table-valued Function|  
-|SQL Inline-table-valued Function|SQL Stored Procedure|  
-|View|Table<sup>1</sup> (User-defined)|  
-  
+- Assembly (CLR) Stored Procedure
+- Assembly (CLR) Table-valued Function
+- Assembly (CLR) Scalar Function
+- Assembly Aggregate (CLR) Aggregate Functions
+- Replication-filter-procedure
+- Extended Stored Procedure
+- SQL Scalar Function
+- SQL Table-valued Function
+- SQL Inline-table-valued Function
+- SQL Stored Procedure
+- Table<sup>1</sup> (User-defined)
+- View
+
  <sup>1 Includes local and global temporary tables</sup>  
   
  Four-part names for function base objects are not supported.  
   
- Synonyms can be created, dropped and referenced in dynamic SQL.  
+ Synonyms can be created, dropped and referenced in dynamic SQL.
+ 
+ > [!NOTE]
+ > Synonyms are database-specific and cannot be accessed by other databases.
   
 ## Permissions  
  To create a synonym in a given schema, a user must have CREATE SYNONYM permission and either own the schema or have ALTER SCHEMA permission.  
@@ -115,7 +123,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 ### A. Creating a synonym for a local object  
  The following example first creates a synonym for the base object, `Product` in the `AdventureWorks2012` database, and then queries the synonym.  
   
-```  
+```sql 
 -- Create a synonym for the Product table in AdventureWorks2012.  
 CREATE SYNONYM MyProduct  
 FOR AdventureWorks2012.Production.Product;  
@@ -130,28 +138,24 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
-  
- `ProductID   Name`  
-  
- `----------- --------------------------`  
-  
- `1           Adjustable Race`  
-  
- `2           Bearing Ball`  
-  
- `3           BB Ball Bearing`  
-  
- `4           Headset Ball Bearings`  
-  
- `(4 row(s) affected)`  
+ ```
+ ----------------------- 
+ ProductID   Name 
+ ----------- -------------------------- 
+ 1           Adjustable Race 
+ 2           Bearing Ball 
+ 3           BB Ball Bearing 
+ 4           Headset Ball Bearings 
+
+ (4 row(s) affected)
+``` 
   
 ### B. Creating a synonym to remote object  
  In the following example, the base object, `Contact`, resides on a remote server named `Server_Remote`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
-```  
+```sql 
 EXEC sp_addlinkedserver Server_Remote;  
 GO  
 USE tempdb;  
@@ -163,10 +167,10 @@ GO
 ### C. Creating a synonym for a user-defined function  
  The following example creates a function named `dbo.OrderDozen` that increases order amounts to an even dozen units. The example then creates the synonym `dbo.CorrectOrder` for the `dbo.OrderDozen` function.  
   
-```  
+```sql  
 -- Creating the dbo.OrderDozen function  
-CREATE FUNCTION dbo.OrderDozen (@OrderAmt int)  
-RETURNS int  
+CREATE FUNCTION dbo.OrderDozen (@OrderAmt INT)  
+RETURNS INT  
 WITH EXECUTE AS CALLER  
 AS  
 BEGIN  
@@ -179,7 +183,7 @@ END;
 GO  
   
 -- Using the dbo.OrderDozen function  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.OrderDozen(@Amt) AS ModifiedOrder;  
   
@@ -189,7 +193,7 @@ FOR dbo.OrderDozen;
 GO  
   
 -- Using the dbo.CorrectOrder synonym.  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  

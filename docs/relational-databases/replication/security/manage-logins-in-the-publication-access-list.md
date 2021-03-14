@@ -1,14 +1,13 @@
 ---
+description: "Manage Logins in the Publication Access List"
 title: "Manage Logins in the Publication Access List | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server replication], publication access list"
   - "publications [SQL Server replication], publication access lists"
@@ -16,13 +15,13 @@ helpviewer_keywords:
   - "PAL (publication access list)"
   - "logins [SQL Server replication], managing"
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Manage Logins in the Publication Access List
-  This topic describes how to manage logins in the Publication Access List in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Access to a publication is controlled by the publication access list (PAL). Logins and groups can be added and removed from the PAL.  
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
+  This topic describes how to manage logins in the Publication Access List in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Access to a publication is controlled by the publication access list (PAL). Logins and groups can be added and removed from the PAL.  
   
  **In This Topic**  
   
@@ -58,20 +57,20 @@ manager: "jhubbard"
   
 #### To view groups and logins that belong to the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). For **@publication**, specify the publication name. This displays information about the groups and logins in the PAL.  
+1.  At the Publisher on the publication database, execute [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). For `@publication`, specify the publication name. This displays information about the groups and logins in the PAL.  
   
 #### To add groups and logins to the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being added.  
+1.  At the Publisher on the publication database, execute [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). For `@publication`, specify the publication name; and for `@login`, specify the name of the login or group that is being added.  
   
 #### To remove groups and logins from the PAL  
   
-1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). For **@publication**, specify the publication name; and for **@login**, specify the name of the login or group that is being removed.  
+1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). For `@publication`, specify the publication name; and for `@login`, specify the name of the login or group that is being removed.  
   
 ## See Also  
  [Manage Logins in the Publication Access List](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Secure a Replication Topology](../../../relational-databases/replication/security/secure-a-replication-topology.md)   
+ [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)  
   
   

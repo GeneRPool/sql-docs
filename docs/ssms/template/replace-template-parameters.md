@@ -1,14 +1,13 @@
 ---
-title: "Replace Template Parameters | Microsoft Docs"
-ms.custom: ""
+description: "Replace Template Parameters"
+title: "Replace Template Parameters"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.templates.replaceparameters.f1"
 helpviewer_keywords: 
@@ -17,12 +16,11 @@ helpviewer_keywords:
   - "Replace (Query) Template Parameters dialog box"
   - "replacing template parameters"
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Replace Template Parameters
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Templates contain parameters that can be replaced by implementation-specific values each time the template is used. After opening a template in a code editor, you can replace the parameters with values relevant to your implementation.  
   
 ## Before You Begin  

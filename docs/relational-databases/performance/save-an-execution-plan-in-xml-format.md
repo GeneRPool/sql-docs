@@ -1,14 +1,13 @@
 ---
 title: "Save an Execution Plan in XML Format | Microsoft Docs"
+description: Learn how to use SQL Server Management Studio to save execution plans in XML format and to open them for viewing. You must have appropriate permissions.
 ms.custom: ""
 ms.date: "08/21/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML query plans [SQL Server]"
   - "opening execution plans"
@@ -16,12 +15,12 @@ helpviewer_keywords:
   - "execution plans [SQL Server], saving"
   - "saving execution plans"
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Save an Execution Plan in XML Format
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to save execution plans as an XML file, and to open them for viewing.  
   
  To use the execution plan feature in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], or to use the XML Showplan SET options, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../includes/tsql-md.md)] query for which an execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
@@ -32,14 +31,14 @@ manager: "jhubbard"
   
 2.  Turn [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) on with the following statement:  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
-     To turn [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) on, use the following statement:  
+    To turn [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) on, use the following statement:  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -50,7 +49,7 @@ manager: "jhubbard"
   
 3.  Execute a query. Example:  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -67,8 +66,8 @@ manager: "jhubbard"
   
 5.  In the **Save** \<Grid or Text> **Results** dialog box, in the **Save as type** box, click **All files (\*.\*)**.  
   
-6.  In the **File name** box provide a name, in the format \<name**>.sqlplan**, and then click **Save**.  
-  
+6.  In the **File name** box provide a name, in the format \<name>**.sqlplan**, and then click **Save**.  
+
 ### To save an execution plan by using SQL Server Management Studio options  
   
 1.  Generate either an estimated execution plan or an actual execution plan by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Display the Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md) and [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).  
@@ -79,7 +78,7 @@ manager: "jhubbard"
   
 3.  In the **Save As** dialog box, make sure that the **Save as type** is set to **Execution Plan Files (\*.sqlplan)**.  
   
-4.  In the **File name** box provide a name, in the format \<name**>.sqlplan**, and then click **Save**.  
+4.  In the **File name** box provide a name, in the format \<name>**.sqlplan**, and then click **Save**.  
   
 ### To open a saved XML query plan in SQL Server Management Studio  
   

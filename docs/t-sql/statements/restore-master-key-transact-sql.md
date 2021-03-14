@@ -1,14 +1,13 @@
 ---
+description: "RESTORE MASTER KEY (Transact-SQL)"
 title: "RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "RESTORE_MASTER_KEY_TSQL"
   - "RESTORE MASTER KEY"
@@ -25,13 +24,11 @@ helpviewer_keywords:
   - "transferring Database Master Keys"
   - "RESTORE MASTER KEY statement"
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # RESTORE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Imports a database master key from a backup file.  
   
@@ -39,15 +36,16 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RESTORE MASTER KEY FROM FILE = 'path_to_file'   
     DECRYPTION BY PASSWORD = 'password'  
     ENCRYPTION BY PASSWORD = 'password'  
     [ FORCE ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FILE ='*path_to_file*'  
  Specifies the complete path, including file name, to the stored database master key. *path_to_file* can be a local path or a UNC path to a network location.  
   
@@ -75,7 +73,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ## Examples  
  The following example restores the database master key of the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 RESTORE MASTER KEY   
     FROM FILE = 'c:\backups\keys\AdventureWorks2012_master_key'   

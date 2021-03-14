@@ -1,22 +1,19 @@
 ---
+description: "SQLSetConnectOption (Paradox Driver)"
 title: "SQLSetConnectOption (Paradox Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetConnectOption function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLSetConnectOption"
 ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectOption (Paradox Driver)
 > [!NOTE]  

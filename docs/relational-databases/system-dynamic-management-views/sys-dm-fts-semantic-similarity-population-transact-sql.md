@@ -1,14 +1,11 @@
 ---
+description: "sys.dm_fts_semantic_similarity_population (Transact-SQL)"
 title: "sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "dm_fts_semantic_similarity_population_TSQL"
   - "sys.dm_fts_semantic_similarity_population"
@@ -19,13 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_fts_semantic_similarity_population dynamic management view"
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: pmasl 
+ms.author: pelopes
+ms.reviewer: mikeray
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row of status information about the population of the document similarity index for each similarity index in each table that has an associated semantic index.  
   

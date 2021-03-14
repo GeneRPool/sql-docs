@@ -1,14 +1,13 @@
 ---
+description: "NULLIF (Transact-SQL)"
 title: "NULLIF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/08/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "NULLIF"
   - "NULLIF_TSQL"
@@ -20,21 +19,20 @@ helpviewer_keywords:
   - "NULLIF function"
   - "equivalent expressions [SQL Server]"
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
-caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NULLIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns a null value if the two specified expressions are equal.  
+  Returns a null value if the two specified expressions are equal. For example, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` returns NULL for the first column (4 and 4) because the two input values are the same. The second column returns the first value (5) because the two input values are different. 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```syntaxsql  
 NULLIF ( expression , expression )  
 ```  
   
@@ -42,7 +40,9 @@ NULLIF ( expression , expression )
  *expression*  
  Is any valid scalar [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns the same type as the first *expression*.  
   
  NULLIF returns the first *expression* if the two expressions are not equal. If the expressions are equal, NULLIF returns a null value of the type of the first *expression*.  
@@ -60,9 +60,9 @@ NULLIF ( expression , expression )
 ```sql  
 CREATE TABLE dbo.budgets  
 (  
-   dept            tinyint   IDENTITY,  
-   current_year      decimal   NULL,  
-   previous_year   decimal   NULL  
+   dept            TINYINT   IDENTITY,  
+   current_year    DECIMAL   NULL,  
+   previous_year   DECIMAL   NULL  
 );  
 INSERT budgets VALUES(100000, 150000);  
 INSERT budgets VALUES(NULL, 300000);  
@@ -93,7 +93,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, MakeFlag, FinishedGoodsFlag,   
-   NULLIF(MakeFlag,FinishedGoodsFlag)AS 'Null if Equal'  
+   NULLIF(MakeFlag,FinishedGoodsFlag) AS 'Null if Equal'  
 FROM Production.Product  
 WHERE ProductID < 10;  
 GO  
@@ -113,9 +113,9 @@ GO
   
 ```sql  
 CREATE TABLE budgets (  
-   dept           tinyint,  
-   current_year   decimal(10,2),  
-   previous_year  decimal(10,2)  
+   dept           TINYINT,  
+   current_year   DECIMAL(10,2),  
+   previous_year  DECIMAL(10,2)  
 );  
   
 INSERT INTO budgets VALUES(1, 100000, 150000);  
@@ -144,7 +144,7 @@ FROM budgets;
 ## See Also  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   
 

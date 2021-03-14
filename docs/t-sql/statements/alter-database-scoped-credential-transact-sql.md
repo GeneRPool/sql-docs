@@ -1,14 +1,13 @@
 ---
+description: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 title: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "ALTER DATABASE SCOPED CREDENTIAL"
   - "ALTER_DATABASE_SCOPED_CREDENTIAL_TSQL"
@@ -16,13 +15,12 @@ helpviewer_keywords:
   - "ALTER DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Changes the properties of a database scoped credential.  
   
@@ -30,23 +28,24 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *credential_name*  
  Specifies the name of the database scoped credential that is being altered.  
   
  IDENTITY **='***identity_name***'**  
- Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage, the identity name must be `SHARED ACCESS SIGNATURE`.  For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage, the identity name must be `SHARED ACCESS SIGNATURE`.  For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
  SECRET **='***secret***'**  
  Specifies the secret required for outgoing authentication. *secret* is required to import a file from Azure Blob storage. *secret* may be optional for other purposes.   
->  [!WARNING]
+> [!WARNING]
 >  The SAS key value might begin with a '?' (question mark). When you use the SAS key, you must remove the leading '?'. Otherwise your efforts might be blocked.    
   
 ## Remarks  
@@ -64,7 +63,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### A. Changing the password of a database scoped credential  
  The following example changes the secret stored in a database scoped credential called `Saddles`. The database scoped credential contains the Windows login `RettigB` and its password. The new password is added to the database scoped credential using the SECRET clause.  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -73,7 +72,7 @@ GO
 ### B. Removing the password from a credential  
  The following example removes the password from a database scoped credential named `Frames`. The database scoped credential contains Windows login `Aboulrus8` and a password. After the statement is executed, the database scoped credential will have a NULL password because the SECRET option is not specified.  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  
@@ -85,5 +84,4 @@ GO
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-  
   

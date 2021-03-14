@@ -1,14 +1,13 @@
 ---
+description: "sys.transmission_queue (Transact-SQL)"
 title: "sys.transmission_queue (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "transmission_queue"
   - "sys.transmission_queue_TSQL"
@@ -19,13 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.transmission_queue catalog view"
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.transmission_queue (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains a row for each message in the transmission queue, as shown in the following table:  
   

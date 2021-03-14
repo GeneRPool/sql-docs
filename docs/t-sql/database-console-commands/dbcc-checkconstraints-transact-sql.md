@@ -1,13 +1,12 @@
 ---
-title: "DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs"
+description: "DBCC CHECKCONSTRAINTS (Transact-SQL)"
+title: DBCC CHECKCONSTRAINTS (Transact-SQL)
 ms.custom: ""
-ms.date: "07/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "11/14/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC CHECKCONSTRAINTS"
@@ -23,13 +22,13 @@ helpviewer_keywords:
   - "constraints [SQL Server], consistency checks"
   - "integrity [SQL Server], constraints"
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: umajay
 ---
+
 # DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Checks the integrity of a specified constraint or all constraints on a specified table in the current database.
   
@@ -37,7 +36,7 @@ Checks the integrity of a specified constraint or all constraints on a specified
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC CHECKCONSTRAINTS  
 [   
     (   
@@ -50,8 +49,10 @@ DBCC CHECKCONSTRAINTS
     ]  
 ```  
   
-## Arguments  
- *table_name* | *table_id* | *constraint_name* | *constraint_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ *table_name* \| *table_id* \| *constraint_name* \| *constraint_id*  
  Is the table or constraint to be checked. When *table_name* or *table_id* is specified, all enabled constraints on that table are checked. When *constraint_name* or *constraint_id* is specified, only that constraint is checked. If neither a table identifier nor a constraint identifier is specified, all enabled constraints on all tables in the current database are checked.  
  A constraint name uniquely identifies the table to which it belongs. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -86,9 +87,9 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 The query data is stored in a temp table. After all requested tables or constraints have been checked, the result set is returned.
 DBCC CHECKCONSTRAINTS checks the integrity of FOREIGN KEY and CHECK constraints but does not check the integrity of the on-disk data structures of a table. These data structure checks can be performed by using [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later
   
-If *table_name* or *table_id* is specified and it is enabled for system versioning, DBCC CHECKCONSTRAINTS also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* is not specified, this command will return each consistency violation in the output on a separate line. The format of the output will be ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<what is wrong with temporal table record>.
+If *table_name* or *table_id* is specified and it is enabled for system versioning, DBCC CHECKCONSTRAINTS also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* is not specified, this command will return each consistency violation in the output on a separate line. The format of the output will be ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
   
 |Check|Additional info in output if check failed|  
 |-----------|-----------------------------------------------|  
@@ -120,7 +121,7 @@ The following example checks the constraint integrity of the table `Table1` in t
 ```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE Table1 (Col1 int, Col2 char (30));  
+CREATE TABLE Table1 (Col1 INT, Col2 CHAR(30));  
 GO  
 INSERT INTO Table1 VALUES (100, 'Hello');  
 GO  

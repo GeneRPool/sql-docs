@@ -1,14 +1,13 @@
 ---
+description: "AbsolutePage, PageCount, and PageSize Properties Example (VB)"
 title: "AbsolutePage, PageCount, and PageSize Properties Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -16,10 +15,8 @@ helpviewer_keywords:
   - "AbsolutePage property [ADO], Visual Basic example"
   - "PageSize property [ADO], Visual Basic example"
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VB)
 ```  
@@ -99,7 +96,7 @@ End Sub
 ```  
   
 ## See Also  
- [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize Property (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePage Property (ADO)](./absolutepage-property-ado.md)   
+ [PageCount Property (ADO)](./pagecount-property-ado.md)   
+ [PageSize Property (ADO)](./pagesize-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

@@ -1,14 +1,13 @@
 ---
+description: "sys.assembly_references (Transact-SQL)"
 title: "sys.assembly_references (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "assembly_references"
   - "sys.assembly_references_TSQL"
@@ -19,13 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.assembly_references catalog view"
 ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.assembly_references (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each pair of assemblies where one is directly referencing another.  
   

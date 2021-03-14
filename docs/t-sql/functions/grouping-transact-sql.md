@@ -1,14 +1,13 @@
 ---
+description: "GROUPING (Transact-SQL)"
 title: "GROUPING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.date: "12/03/2019"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "GROUPING"
   - "GROUPING_TSQL"
@@ -22,13 +21,11 @@ helpviewer_keywords:
   - "GROUPING function"
   - "CUBE operator"
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Indicates whether a specified column expression in a GROUP BY list is aggregated or not. GROUPING returns 1 for aggregated or 0 for not aggregated in the result set. GROUPING can be used only in the SELECT \<select> list, HAVING, and ORDER BY clauses when GROUP BY is specified.  
   
@@ -36,12 +33,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GROUPING ( <column_expression> )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<column_expression>  
  Is a column or an expression that contains a column in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
   
@@ -54,7 +52,7 @@ GROUPING ( <column_expression> )
 ## Examples  
  The following example groups `SalesQuota` and aggregates `SaleYTD` amounts in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The `GROUPING` function is applied to the `SalesQuota` column.  
   
-```  
+```sql 
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
 FROM Sales.SalesPerson  
 GROUP BY SalesQuota WITH ROLLUP;  
@@ -65,19 +63,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SalesQuota     TotalSalesYTD       Grouping`  
-  
- `------------   -----------------   --------`  
-  
- `NULL           1533087.5999          0`  
-  
- `250000.00      33461260.59           0`  
-  
- `300000.00      9299677.9445          0`  
-  
- `NULL           44294026.1344         1`  
-  
- `(4 row(s) affected)`  
+ ```
+ SalesQuota     TotalSalesYTD       Grouping  
+------------   -----------------   --------  
+NULL           1533087.5999          0  
+250000.00      33461260.59           0  
+300000.00      9299677.9445          0  
+NULL           44294026.1344         1  
+
+(4 row(s) affected)
+```  
   
 ## See Also  
  [GROUPING_ID &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-id-transact-sql.md)   

@@ -1,24 +1,22 @@
 ---
 title: "SQL Server, Wait Statistics Object | Microsoft Docs"
+description: Learn about the SQLServer:Wait Statistics performance object, which contains performance counters that report information about wait status.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Wait Statistics object"
   - "SQLServer:Wait Statistics"
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Wait Statistics Object
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Wait Statistics** performance object contains performance counters that report information about wait status.  
   
  The table below lists the counters that the Wait Statistics object contains.  

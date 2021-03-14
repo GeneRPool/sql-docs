@@ -1,19 +1,16 @@
 ---
-title: "Step 3: Proof of concept connecting to SQL using PHP | Microsoft Docs"
+title: "Step 3: Connecting to SQL using PHP"
+description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using PHP. The basic examples demonstrate selecting and inserting data."
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +42,7 @@ This **OpenConnection** function is called near the top in all of the functions 
   
 ## Step 2:  Execute query  
   
-The [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set which can be iterated over with the use of [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+The [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set, which can be iterated over with the use of [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -77,8 +74,7 @@ The [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) functio
   
 ## Step 3:  Insert a row  
   
-In this example you will see how to execute an [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) statement safely, pass parameters which protect your application from [SQL injection](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerability, and retrieve the auto-generated [Primary Key](https://msdn.microsoft.com/library/ms179610.aspx) value.    
-  
+In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely and pass parameters. Parameter values protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md).
   
 ```php 
     function InsertData()  
@@ -107,7 +103,7 @@ In this example you will see how to execute an [INSERT](https://msdn.microsoft.c
     }  
 ```  
   
-## Step 4:  Rollback a transaction  
+## Step 4:  Roll back a transaction  
   
   
 This code example demonstrates the use of transactions in which you:  
@@ -116,7 +112,7 @@ This code example demonstrates the use of transactions in which you:
   
 -Insert a row of data, Update another row of data  
   
--Commit your transaction if the insert and update were successful and rollback the transaction if one of them was not  
+-Commit your transaction if the insert and update were successful and roll back the transaction if one of them was not  
   
   
 ```php 
@@ -163,4 +159,5 @@ This code example demonstrates the use of transactions in which you:
 ## Additional Examples  
   
 [Example Application (SQLSRV Driver)](../../connect/php/example-application-sqlsrv-driver.md)  
+
 [Example Application (PDO_SQLSRV Driver)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

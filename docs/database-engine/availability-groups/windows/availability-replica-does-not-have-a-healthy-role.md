@@ -1,25 +1,22 @@
 ---
-title: "Availability replica does not have a healthy role | Microsoft Docs"
-ms.custom: ""
+title: "Replica does not have a healthy role for an availability group"
+description: "Identify possible causes for why an availability replica does not have a healthy role within an Always On availability group."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: availability-groups
+ms.topic: troubleshooting
 f1_keywords: 
   - "sql13.swb.agdashboard.arp1rolehealthy.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
-caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
-# Availability replica does not have a healthy role
+# Availability replica does not have a healthy role for an Always On availability group
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   
@@ -32,9 +29,6 @@ manager: "jhubbard"
   
 ## Description  
  This policy checks the state of the role of the availability replica. The policy is in an unhealthy state when the role of the availability replica is neither primary nor secondary. The policy is otherwise in a healthy state.  
-  
-> [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability replica does not have a healthy role](http://go.microsoft.com/fwlink/p/?LinkId=220856) on the TechNet Wiki.  
   
 ## Possible Causes  
  The role of this availability replica is unhealthy. The replica does not have either the primary or secondary role.  

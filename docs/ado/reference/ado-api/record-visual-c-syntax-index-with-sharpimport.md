@@ -1,24 +1,21 @@
 ---
+description: "Record (Visual C++ Syntax Index with #import)"
 title: "Record (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Record collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Record (Visual C++ Syntax Index with #import)
 ## Methods  
@@ -76,4 +73,4 @@ __declspec(property(get=GetState)) enum ObjectStateEnum State;
 ```  
   
 ## See Also  
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Record Object (ADO)](./record-object-ado.md)

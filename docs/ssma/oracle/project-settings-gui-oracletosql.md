@@ -1,19 +1,16 @@
 ---
+description: "Project Settings (GUI) (OracleToSQL)"
 title: "Project Settings (GUI) (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "v-thobro"
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Project Settings (GUI) (OracleToSQL)
 The GUI project settings let you configure how data appears on the **Data** tab and whether to show the assessment report after conversion or not.  

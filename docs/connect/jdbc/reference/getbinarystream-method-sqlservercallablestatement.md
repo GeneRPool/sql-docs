@@ -1,24 +1,21 @@
 ---
+description: "getBinaryStream Method (SQLServerCallableStatement)"
 title: "getBinaryStream Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.getBinaryStream()"
 apilocation: 
   - "SQLServerCallableStatement.getBinaryStream()"
 apitype: "Assembly"
 ms.assetid: b0d2cff1-1ab0-44c2-9824-70106fc43370
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # getBinaryStream Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

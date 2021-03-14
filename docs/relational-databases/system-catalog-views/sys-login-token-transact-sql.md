@@ -1,14 +1,13 @@
 ---
+description: "sys.login_token (Transact-SQL)"
 title: "sys.login_token (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "login_token_TSQL"
   - "sys.login_token_TSQL"
@@ -21,13 +20,11 @@ helpviewer_keywords:
   - "logins [SQL Server], security tokens"
   - "tokens [SQL Server]"
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # sys.login_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for every server principal that is part of the login token.  
   

@@ -1,14 +1,11 @@
 ---
+description: "ISJSON (Transact-SQL)"
 title: "ISJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.date: 06/03/2020
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "ISJSON"
   - "ISJSON_TSQL"
@@ -16,13 +13,13 @@ helpviewer_keywords:
   - "ISJSON function"
   - "JSON, validating"
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: chadam
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # ISJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Tests whether a string contains valid JSON.  
   
@@ -30,11 +27,11 @@ manager: "craigg"
   
 ## Syntax  
   
-```sql  
+```syntaxsql  
 ISJSON ( expression )  
 ```  
   
-## Arguments  
+## Arguments
  *expression*  
  The string to test.  
   
@@ -59,7 +56,6 @@ IF (ISJSON(@param) > 0)
 BEGIN  
      -- Do something with the valid JSON value of @param.  
 END
- 
 ```  
   
 ### Example 2  

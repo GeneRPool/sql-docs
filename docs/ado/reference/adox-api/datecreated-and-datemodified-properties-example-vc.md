@@ -1,27 +1,24 @@
 ---
+description: "DateCreated and DateModified Properties Example (VC++)"
 title: "DateCreated and DateModified Properties Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "DateCreated property [ADOX], VC++ example"
   - "DateModified property [ADOX], VC++ example"
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # DateCreated and DateModified Properties Example (VC++)
-This example demonstrates the [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) and [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) properties by adding a new [Column](../../../ado/reference/adox-api/column-object-adox.md) to an existing [Table](../../../ado/reference/adox-api/table-object-adox.md) and by creating a new **Table**. The DateOutput procedure is required for this example to run.  
+This example demonstrates the [DateCreated](./datecreated-property-adox.md) and [DateModified](./datemodified-property-adox.md) properties by adding a new [Column](./column-object-adox.md) to an existing [Table](./table-object-adox.md) and by creating a new **Table**. The DateOutput procedure is required for this example to run.  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -99,7 +96,7 @@ void DateCreatedX() {
     }  
   
     catch(...) {  
-        cout << "Error occured in include files...." << endl;  
+        cout << "Error occurred in include files...." << endl;  
     }  
 }  
   
@@ -113,7 +110,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 ```  
   
 ## See Also  
- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [DateCreated Property (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified Property (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Column Object (ADOX)](./column-object-adox.md)   
+ [DateCreated Property (ADOX)](./datecreated-property-adox.md)   
+ [DateModified Property (ADOX)](./datemodified-property-adox.md)   
+ [Table Object (ADOX)](./table-object-adox.md)

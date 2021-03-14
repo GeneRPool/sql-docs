@@ -1,25 +1,23 @@
 ---
 title: "Check the ODBC SQL Server Driver Version (Windows) | Microsoft Docs"
+description: Discover how to use the Windows ODBC Data Source Administrator to check the version of the ODBC drivers that are installed on your computer.
 ms.custom: ""
 ms.date: "11/07/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "driver version number [ODBC]"
   - "ODBC drivers, version number"
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Check the ODBC SQL Server Driver Version (Windows)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Your computer may contain a variety of ODBC drivers, from [!INCLUDE[msCoName](../../includes/msconame-md.md)] and from other companies. This topic describes how to use the Windows **ODBC Data Source Administrator** to check the version of the installed ODBC drivers.  
   
@@ -33,10 +31,9 @@ manager: "jhubbard"
 
 
 > [!NOTE]  
->  For connections to Azure Active Directory Authentication for SQL Database install the latest driver, such as [ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
+>  For connections to Azure Active Directory Authentication for SQL Database install the latest driver, such as [ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).   
 
   
 ## See Also  
  [Open the ODBC Data Source Administrator](../../database-engine/configure-windows/open-the-odbc-data-source-administrator.md)  
-  
   

@@ -1,13 +1,12 @@
 ---
-title: "StartDate Property (SecurityCertificate Class) | Microsoft Docs"
-ms.custom: ""
+description: "StartDate Property (SecurityCertificate Class)"
+title: "StartDate Property (SecurityCertificate)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "StartDate Property (SecurityCertificate Class)"
@@ -17,12 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "StartDate property"
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
 ---
 # StartDate Property (SecurityCertificate Class)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the date when the security certificate starts being in effect.  
   
 ## Syntax  
@@ -42,6 +40,6 @@ object.StartDate [= value]
 ## Remarks  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

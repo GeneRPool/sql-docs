@@ -1,14 +1,13 @@
 ---
+description: "Create Partitioned Tables and Indexes"
 title: "Create Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "1/5/2021"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.createpartition.progress.f1"
   - "sql13.swb.createpartition.partitioncolumn.f1"
@@ -28,13 +27,13 @@ helpviewer_keywords:
   - "partition functions [SQL Server]"
   - "partition schemes [SQL Server]"
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Partitioned Tables and Indexes
-  You can create a partitioned table or index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database. Partitioning can make large tables and indexes more manageable and scalable.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  You can create a partitioned table or index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The data in partitioned tables and indexes is horizontally divided into units that can be spread across more than one filegroup in a database. Partitioning can make large tables and indexes more manageable and scalable.  
   
  Creating a partitioned table or index typically happens in four parts:  
   
@@ -45,6 +44,9 @@ manager: "jhubbard"
 3.  Create a partition scheme that maps the partitions of a partitioned table or index to the new filegroups.  
   
 4.  Create or modify a table or index and specify the partition scheme as the storage location.  
+ 
+> [!NOTE]
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
   
  **In This Topic**  
   
@@ -86,12 +88,12 @@ manager: "jhubbard"
   
 1.  In Object Explorer, right-click the database in which you want to create a partitioned table and select **Properties**.  
   
-2.  In the **Database Properties –** *database_name* dialog box, under **Select a page**, select **Filegroups**.  
+2.  In the **Database Properties -** *database_name* dialog box, under **Select a page**, select **Filegroups**.  
   
 3.  Under **Rows**, click **Add**. In the new row, enter the filegroup name.  
   
     > [!WARNING]  
-    >  You must always have one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
+    >  When specifying multiple filegroups, you must always have one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
   
 4.  Continue adding rows until you have created all of the filegroups for the partitioned table.  
   
@@ -107,7 +109,7 @@ manager: "jhubbard"
   
 #### To create a partitioned table  
   
-1.  Right-click the table that you wish to partition, point to **Storage**, and then click **Create Partition…**.  
+1.  Right-click the table that you wish to partition, point to **Storage**, and then click **Create Partition...**.  
   
 2.  In the **Create Partition Wizard**, on the **Welcome to the Create Partition Wizard** page, click **Next**.  
   
@@ -125,21 +127,21 @@ manager: "jhubbard"
   
      After selecting the partitioning column and any other options, click **Next**.  
   
-4.  On the **Select a Partition Function** page, under **Select partition function**, click either **New partition function** or **Existing partition function**. If you choose **New partition function**, enter the name of the function. If you choose **Existing partition function**, select the name of the function you’d like to use from the list. The **Existing partition function** option will not be available if there are no other partition functions on the database.  
+4.  On the **Select a Partition Function** page, under **Select partition function**, click either **New partition function** or **Existing partition function**. If you choose **New partition function**, enter the name of the function. If you choose **Existing partition function**, select the name of the function you'd like to use from the list. The **Existing partition function** option will not be available if there are no other partition functions on the database.  
   
      After completing this page, click **Next**.  
   
-5.  On the **Select a Partition Scheme** page, under **Select partition scheme**, click either **New partition scheme** or **Existing partition scheme**. If you choose **New partition scheme**, enter the name of the scheme. If you choose **Existing partition scheme**, select the name of the scheme you’d like to use from the list. The **Existing partition scheme** option will not be available if there are no other partition schemes on the database.  
+5.  On the **Select a Partition Scheme** page, under **Select partition scheme**, click either **New partition scheme** or **Existing partition scheme**. If you choose **New partition scheme**, enter the name of the scheme. If you choose **Existing partition scheme**, select the name of the scheme you'd like to use from the list. The **Existing partition scheme** option will not be available if there are no other partition schemes on the database.  
   
      After completing this page, click **Next**.  
   
-6.  On the **Map Partitions** page, under **Range**, select either **Left boundary** or **Right boundary** to specify whether to include the highest or lowest bounding value within each filegroup you create. You must always enter one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
+6.  On the **Map Partitions** page, under **Range**, select either **Left boundary** or **Right boundary** to specify whether to include the highest or lowest bounding value within each filegroup you create. When specifying multiple filegroups, you must always enter one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
   
      In the **Select filegroups and specify boundary values** grid, under **Filegroup**, select the filegroup into which you want to partition your data. Under **Boundary**, enter the boundary value for each filegroup. If boundary value is left empty, the partition function maps the whole table or index into a single partition using the partition function name.  
   
      The following additional options are available on this page:  
   
-     **Set Boundaries…**  
+     **Set Boundaries...**  
      Opens the **Set Boundary Values** dialog box to select the boundary values and date ranges you want for your partitions. This option is only available when you have selected a partitioning column that contains one of the following data types: **date**, **datetime**, **smalldatetime**, **datetime2**, or **datetimeoffset**.  
   
      **Estimate storage**  
@@ -173,7 +175,7 @@ manager: "jhubbard"
   
      If you select **Schedule**, click **Change schedule**.  
   
-    1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule’s name.  
+    1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule's name.  
   
     2.  On the **Schedule type** list, select the type of schedule:  
   
@@ -197,15 +199,15 @@ manager: "jhubbard"
   
             -   If you select **Monthly**, select either **Day** or **The**.  
   
-                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter “15” in the first box and “2” in the second box. Please note that the largest number allowed in the second box is “99”.  
+                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. Please note that the largest number allowed in the second box is "99".  
   
-                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter “2” in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is “99”.  
+                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is "99".  
   
         2.  Under **Daily frequency**, specify how often the job schedule repeats on the day the job schedule runs:  
   
             -   If you select **Occurs once at**, enter the specific time of day when the job schedule should run in the **Occurs once at** box. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
-            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter “2” in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is “100”.  
+            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is "100".  
   
                  In the **Starting at** box, enter the time that the job schedule should start running. In the **Ending at** box, enter the time that the job schedule should stop repeating. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
@@ -247,10 +249,10 @@ manager: "jhubbard"
      Opens the **Save Report As** dialog box.  
   
      **Copy Report to Clipboard**  
-     Copies the results of the wizard’s progress report to the Clipboard.  
+     Copies the results of the wizard's progress report to the Clipboard.  
   
      **Send Report as Email**  
-     Copies the results of the wizard’s progress report into an email message.  
+     Copies the results of the wizard's progress report into an email message.  
   
      When complete, click **Close**.  
   
@@ -340,6 +342,34 @@ manager: "jhubbard"
         ON myRangePS1 (col1) ;  
     GO  
     ```  
+
+
+#### To create a partitioned table in Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+
+In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], adding files and file groups is not supported, but table partitioning is supported by partitioning across only the PRIMARY filegroup.
+  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+1.  On the Standard bar, click **New Query**.  
+  
+1.  Copy and paste the following example into the query window and click **Execute**. This example creates a partition function and a partition scheme. A new table is created with the partition scheme specified as the storage location. 
+
+    ```
+    -- Creates a partition function called myRangePF1 that will partition a table into four partitions  
+    CREATE PARTITION FUNCTION myRangePF1 (int)  
+        AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
+    GO  
+    -- Creates a partition scheme called myRangePS1 that applies myRangePF1 to the PRIMARY filegroup 
+    CREATE PARTITION SCHEME myRangePS1  
+        AS PARTITION myRangePF1  
+        ALL TO ('PRIMARY') ;  
+    GO  
+    -- Creates a partitioned table called PartitionTable that uses myRangePS1 to partition col1  
+    CREATE TABLE PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+        ON myRangePS1 (col1) ;  
+    GO
+    ```  
+
   
 #### To determine if a table is partitioned  
   

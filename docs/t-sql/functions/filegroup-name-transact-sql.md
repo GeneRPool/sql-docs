@@ -1,14 +1,13 @@
 ---
+description: "FILEGROUP_NAME (Transact-SQL)"
 title: "FILEGROUP_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "FILEGROUP_NAME_TSQL"
   - "FILEGROUP_NAME"
@@ -24,40 +23,39 @@ helpviewer_keywords:
   - "names [SQL Server], filegroups"
   - "viewing filegroup names"
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # FILEGROUP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns the filegroup name for the specified filegroup identification (ID) number.  
+This function returns the filegroup name for the specified filegroup identification (ID) number.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_id*  
- Is the filegroup ID number for which to return the filegroup name. *filegroup_id* is **smallint**.  
+
+The filegroup ID number whose filegroup name `FILEGROUP_NAME` will return. *filegroup_id* has a **smallint** data type.  
   
 ## Return Types  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## Remarks  
- *filegroup_id* corresponds to the **data_space_id** column in the **sys.filegroups** catalog view.  
+*filegroup_id* corresponds to the **data_space_id** column of the **sys.filegroups** catalog view.  
   
 ## Examples  
- The following example returns the filegroup name for the filegroup ID `1` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+This example returns the filegroup name for filegroup ID `1` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
-  
+```sql  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

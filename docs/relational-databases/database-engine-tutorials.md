@@ -1,27 +1,26 @@
 ---
 title: "Database Engine Tutorials | Microsoft Docs"
+description: Use these tutorials to learn about the SQL Server Database Engine, including getting started and using the SQL Server Management Studio.
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Engine Tutorials
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 This section contains tutorials for [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
 [Tutorial: Getting Started with the Database Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 This tutorial teaches how to connect to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
-[Tutorial: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+[Tutorial: SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)  
 This tutorial introduces you to the integrated environment for managing your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] presents a graphical interface for configuring, monitoring, and administering instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also allows you to deploy, monitor, and upgrade the data-tier components used by your applications, such as databases and data warehouses. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] also provides [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX, and XML language editors for editing and debugging scripts.  
   
 [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)  
@@ -42,16 +41,13 @@ This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/s
 [Tutorial: Administering Servers by Using Policy-Based Management](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 This tutorial teaches how to create policies that enforce site administration standards.  
   
-[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-This tutorial illustrates how to do a SQL Server backup and restore to the Windows Azure Blob Storage Service.  
+[Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+This tutorial illustrates how to do a SQL Server backup and restore to the Azure Blob Storage Service.  
   
-[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](https://msdn.microsoft.com/library/dn466438.aspx)  
-This tutorial helps you understand how to store SQL Server data files in the Windows Azure Blob storage service directly.  
+[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+This tutorial helps you understand how to store SQL Server data files in the Azure Blob storage service directly.  
   
 ## See Also  
 [Tutorials for SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
-[TechNet WIKI: SQL Server 2012 Samples](http://go.microsoft.com/fwlink/?linkID=220734)  
+[TechNet WIKI: SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734)  
   
-  
-  
-

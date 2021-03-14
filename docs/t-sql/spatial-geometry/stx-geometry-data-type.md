@@ -1,14 +1,13 @@
 ---
+description: "STX (geometry Data Type)"
 title: "STX (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: "sql-non-specified"
+ms.date: "06/23/2020"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "STX (geometry Data Type)"
   - "STX_TSQL"
@@ -17,15 +16,13 @@ dev_langs:
 helpviewer_keywords: 
   - "STX (geometry Data Type)"
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STX (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-The  X-coordinate property of a **Point**instance.
+The  X-coordinate property of a **Point** instance.
   
 ## Syntax  
   
@@ -34,7 +31,9 @@ The  X-coordinate property of a **Point**instance.
 .STX  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **float**  
   
  CLR type: **SqlDouble**  

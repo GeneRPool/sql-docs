@@ -1,21 +1,18 @@
 ---
+description: "SQLTables (Visual FoxPro ODBC Driver)"
 title: "SQLTables (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLTables function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTables (Visual FoxPro ODBC Driver)
 > [!NOTE]  

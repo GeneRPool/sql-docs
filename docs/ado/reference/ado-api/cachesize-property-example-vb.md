@@ -1,26 +1,23 @@
 ---
+description: "CacheSize Property Example (VB)"
 title: "CacheSize Property Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "CacheSize property [ADO], Visual Basic example"
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # CacheSize Property Example (VB)
-This example uses the [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache.  
+This example uses the [CacheSize](./cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache.  
   
 ```  
 'BeginCacheSizeVB  
@@ -118,5 +115,5 @@ End Sub
 ```  
   
 ## See Also  
- [CacheSize Property (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CacheSize Property (ADO)](./cachesize-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

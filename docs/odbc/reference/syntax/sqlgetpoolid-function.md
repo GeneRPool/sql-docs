@@ -1,21 +1,18 @@
 ---
+description: "SQLGetPoolID Function"
 title: "SQLGetPoolID Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLGetPoolID function [ODBC]"
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetPoolID Function
 **Conformance**  
@@ -26,7 +23,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLGetPoolID (  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 POOLID *              pPoolID );  

@@ -1,27 +1,22 @@
 ---
 title: "sp_polybase_leave_group (Transact-SQL) | Microsoft Docs"
+description: The sp_polybase_leave_group Transact-SQL command removes a SQL Server instance from a PolyBase group for scale-out computation.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.technology: polybase
+ms.topic: conceptual
 f1_keywords: 
   - "sp_polybase_leave_group"
   - "sp_polybase_leave_group_TSQL"
 helpviewer_keywords: 
   - "sp_polybase_leave_group"
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
 ---
-# PolyBase stored procedures - sp_polybase_leave_group
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# sp_polybase_leave_group (Transact-SQL)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Removes a SQL Server instance from a PolyBase group for scale-out computation. 
  
@@ -56,7 +51,6 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## See Also  
- [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Get started with PolyBase](../polybase/polybase-guide.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

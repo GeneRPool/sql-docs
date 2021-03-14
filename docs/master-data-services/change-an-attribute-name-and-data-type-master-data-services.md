@@ -1,24 +1,24 @@
 ---
-title: "Change an Attribute Name and Data Type (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+description: "Change an Attribute Name and Data Type (Master Data Services)"
+title: Change an Attribute Name and Data Type
+ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], changing name"
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
-caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: lrtoyou1223
+ms.author: lle
+manager: erikre
 ---
 # Change an Attribute Name and Data Type (Master Data Services)
+
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of an attribute.  
   
 ## Prerequisites  

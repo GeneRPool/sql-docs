@@ -1,14 +1,13 @@
 ---
+description: "sys.check_constraints (Transact-SQL)"
 title: "sys.check_constraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sys.check_constraints"
   - "sys.check_constraints_TSQL"
@@ -19,13 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.check_constraints catalog view"
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.check_constraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contains a row for each object that is a CHECK constraint, with **sys.objects.type** = 'C'.  
   

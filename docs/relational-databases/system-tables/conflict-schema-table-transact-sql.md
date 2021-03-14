@@ -1,14 +1,13 @@
 ---
+description: "conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)"
 title: "conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/15/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: replication
+ms.topic: "reference"
 f1_keywords: 
   - "conflict_"
   - "conflict_TSQL"
@@ -17,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "conflict_<schema>_<table>"
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The conflict_\<schema>_\<table> table contains information about conflicting rows in peer-to-peer replication. A conflict table exists for each replicated table in a publication, where the name of the conflict table is appended with the schema and article name. These article-specific conflict tables exist in each publication database.  
   

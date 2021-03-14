@@ -1,26 +1,24 @@
 ---
 title: "SQL Server, Database Mirroring Object | Microsoft Docs"
+description: Learn about the SQLServer:Database Mirroring performance object, which contains performance counters to report information about SQL Server database mirroring.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Database Mirroring"
   - "database mirroring [SQL Server], performance counters"
   - "performance counters [SQL Server], database mirroring"
   - "Database Mirroring object"
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Database Mirroring Object
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Database Mirroring** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring. The table below lists the counters that this object contains.  
   
 |Name|Description|  
@@ -43,9 +41,9 @@ manager: "jhubbard"
 |**Receives/sec**|Number of mirroring messages received per second.|  
 |**Redo Bytes/sec**|Number of bytes of log rolled forward on the mirror database per second.|  
 |**Redo Queue KB**|Total number of kilobytes of hardened log that currently remain to be applied to the mirror database to roll it forward. This is sent to the Principal from the Mirror.|  
-|**Send/Receive Ack Time**|Milliseconds that messages waited for acknowledgement from the partner, in the last second.<br /><br /> This counter is helpful in troubleshooting a problem that might be caused by a network bottleneck, such as unexplained failovers, a large send queue, or high transaction latency. In such cases, you can analyze the value of this counter to determine whether the network is causing the problem.|  
+|**Send/Receive Ack Time**|Milliseconds that messages waited for acknowledgment from the partner, in the last second.<br /><br /> This counter is helpful in troubleshooting a problem that might be caused by a network bottleneck, such as unexplained failovers, a large send queue, or high transaction latency. In such cases, you can analyze the value of this counter to determine whether the network is causing the problem.|  
 |**Sends/sec**|Number of mirroring messages sent per second.|  
-|**Transaction Delay**|Delay in waiting for unterminated commit acknowledgement.|  
+|**Transaction Delay**|Delay in waiting for unterminated commit acknowledgment.|  
   
 > [!NOTE]  
 >  On each partner, some of the counters show a zero value depending on what role the partner is currently performing.  

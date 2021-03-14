@@ -1,23 +1,21 @@
 ---
 title: "SQL Server, Batch Resp Statistics Object | Microsoft Docs"
+description: Learn about the SQLServer:Batch Resp Statistics performance object, which provides counters to track SQL Server batch response times.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Batch Resp Statistics"
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Batch Resp Statistics Object
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **SQLServer:Batch Resp Statistics** performance object provides counters to track SQL Server batch response times.
 
 This following table describes the SQL Server **Batch Resp Statistics** performance objects.
@@ -47,9 +45,9 @@ Each counter in the object contains the following instances:
   
 |Item|Description|  
 |----------|-----------------|  
-|**CPU Time:Requests**|The time the CPU spent on the request.|  
+|**CPU Time:Requests**|The number of requests based on CPU time.|  
 |**CPU Time:Total(ms)**|The total time the CPU spent on the batch.|  
-|**Elapsed Time:Requests**|The elapsed time of the request.|  
+|**Elapsed Time:Requests**|The number of requests based on elapsed time.|  
 |**Elapsed Time:Total(ms)**|The elapsed time of the batch.|  
 
 ## See Also

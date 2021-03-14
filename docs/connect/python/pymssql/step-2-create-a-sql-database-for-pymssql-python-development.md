@@ -1,19 +1,16 @@
 ---
-title: "Step 2: Create a SQL database for pymssql Python development | Microsoft Docs"
+title: "Step 2: Create a SQL database for pymssql"
+description: "Step 2 of this getting started guide involves creating a database in SQL Server or Azure SQL Database for this pymssql sample."
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 75117d76-6396-493e-862a-0e9a6de26bfa
-caps.latest.revision: 3
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 2: Create a SQL database for pymssql Python development
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

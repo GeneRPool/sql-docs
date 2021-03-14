@@ -1,26 +1,23 @@
 ---
+description: "Catalog ActiveConnection Property Example (VC++)"
 title: "Catalog ActiveConnection Property Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "ActiveConnection property [ADOX], VC++ example"
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Catalog ActiveConnection Property Example (VC++)
-Setting the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property to a valid, open connection "opens" the catalog. From an open catalog, you can access the schema objects contained within that catalog.  
+Setting the [ActiveConnection](./activeconnection-property-adox.md) property to a valid, open connection "opens" the catalog. From an open catalog, you can access the schema objects contained within that catalog.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  
@@ -73,7 +70,7 @@ void OpenConnectionX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionX...." << endl;  
+      cout << "Error occurred in OpenConnectionX...." << endl;  
    }  
   
    if (m_pCnn)  
@@ -104,10 +101,10 @@ void OpenConnectionWithStringX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionWithStringX...." << endl;  
+      cout << "Error occurred in OpenConnectionWithStringX...." << endl;  
    }  
 }  
 ```  
   
 ## See Also  
- [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection Property (ADOX)](./activeconnection-property-adox.md)

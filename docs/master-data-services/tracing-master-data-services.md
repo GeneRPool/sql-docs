@@ -1,27 +1,28 @@
 ---
-title: "Tracing (Master Data Services) | Microsoft Docs"
+title: Tracing
+description: The Web.config file contains a tracing section, new in SQL Server 2016 Master Data Services. Learn about default tracing behavior.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
-caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: lrtoyou1223
+ms.author: lle
+manager: erikre
 ---
 # Tracing (Master Data Services)
-  The Web.config file contains a tracing section, as shown below. This section is new in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
+
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+  The Web.config file contains a tracing section, as shown below. This section is new in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
 <sources>  
       <!-- Adjust the switch value to control the types of messages that should be logged.   
-           http://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels  
+           https://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
            Use the a switchValue of Verbose to generate a full log. Please be aware that   
            the trace file can get quite large very quickly -->  
       <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="Warning, ActivityTracing">  
@@ -44,7 +45,7 @@ manager: "erikre"
   
 -   Tracing is enabled for Warning and ActivityTracing messages.  
   
-     For more information, see [SourceLevels Enumeration](https://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels).  
+     For more information, see [SourceLevels Enumeration](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   The logs are saved in the Logs folder under the WebApplication folder. The default location is C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
@@ -63,6 +64,5 @@ manager: "erikre"
     |Message|Message body of the trace|  
   
 ## External Resources  
- Blog post, [Troubleshooting Logging Improvement](http://go.microsoft.com/fwlink/p/?LinkId=615377), on msdn.com.  
-  
+ Blog post, [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214), on msdn.com.  
   

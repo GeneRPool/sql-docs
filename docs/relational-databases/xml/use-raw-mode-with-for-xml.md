@@ -1,14 +1,12 @@
 ---
 title: "Use RAW Mode with FOR XML | Microsoft Docs"
-ms.custom: ""
+description: Learn how using RAW mode with the FOR XML clause in an SQL query transforms the resulting XML data.
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML RAW mode"
   - "XMLSCHEMA option"
@@ -18,13 +16,15 @@ helpviewer_keywords:
   - "RAW mode"
   - "XMLDATA option"
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Use RAW Mode with FOR XML
-  RAW mode transforms each row in the query result set into an XML element that has the generic identifier \<row>, or the optionally provided element name. By default, each column value in the rowset that is not NULL is mapped to an attribute of the \<row> element. If the ELEMENTS directive is added to the FOR XML clause, each column value is mapped to a subelement of the \<row> element. Together with the ELEMENTS directive, you can optionally specify the XSINIL option to map NULL column values in the result set to an element that has the attribute, xsi:nil=`"`true`"`.  
+
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+RAW mode transforms each row in the query result set into an XML element that has the generic identifier \<row>, or the optionally provided element name. By default, each column value in the rowset that is not NULL is mapped to an attribute of the \<row> element. If the ELEMENTS directive is added to the FOR XML clause, each column value is mapped to a subelement of the \<row> element. Together with the ELEMENTS directive, you can optionally specify the XSINIL option to map NULL column values in the result set to an element that has the attribute, `xsi:nil="true"`.
   
  You can request a schema for the resulting XML. Specifying the XMLDATA option returns an in-line XDR schema. Specifying the XMLSCHEMA option returns an in-line XSD schema. The schema appears at the start of the data. In the result, the schema namespace reference is repeated for every top-level element.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   [Example: Specifying XSINIL with the ELEMENTS Directive](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Request schemas as results with XMLDATA & XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Example: Retrieving Binary Data](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
  [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
+ [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)
   
   

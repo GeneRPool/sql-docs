@@ -1,26 +1,25 @@
 ---
-title: "Use Certificates for a Database Mirroring Endpoint (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Use Certificates for a Database Mirroring Endpoint (Transact-SQL)"
+title: "Use certificates for a database mirroring endpoint"
+descriptoin: "Steps to configure the use of a certificate on both inbound and outbound connections for a SQL Server database mirroring endpoint." 
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: database-mirroring
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
   - "certificates [SQL Server], database mirroring"
   - "authentication [SQL Server], database mirroring"
   - "database mirroring [SQL Server], security"
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
-caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Use Certificates for a Database Mirroring Endpoint (Transact-SQL)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   To enable certificate authentication for database mirroring on a given server instance, the system administrator must configure each server instance to use certificates on both outbound and inbound connections. Outbound connections must be configured first.  
   
 > [!NOTE]  

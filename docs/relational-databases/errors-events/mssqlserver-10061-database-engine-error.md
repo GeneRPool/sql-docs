@@ -1,30 +1,27 @@
 ---
 title: "MSSQLSERVER_10061 | Microsoft Docs"
+description: The server did not respond to the client request in SQL Server. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: supportability
+ms.topic: "reference"
 f1_keywords: 
   - "10061"
 helpviewer_keywords: 
   - "10061 (Database Engine error)"
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 ---
 # MSSQLSERVER_10061
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10061|  
 |Event Source|MSSQLSERVER|  

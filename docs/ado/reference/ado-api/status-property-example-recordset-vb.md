@@ -1,26 +1,23 @@
 ---
+description: "Status Property Example (Recordset) (VB)"
 title: "Status Property Example (Recordset) (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Status property [ADO Recordset], Visual Basic example"
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Status Property Example (Recordset) (VB)
-This example uses the [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) property to display which records have been modified in a batch operation before a batch update has occurred.  
+This example uses the [Status](./status-property-ado-recordset.md) property to display which records have been modified in a batch operation before a batch update has occurred.  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -96,4 +93,4 @@ End Sub
 ```  
   
 ## See Also  
- [Status Property (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status Property (ADO Recordset)](./status-property-ado-recordset.md)

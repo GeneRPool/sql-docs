@@ -1,22 +1,19 @@
 ---
+description: "Selecting and Configuring Affected Objects (OracleToSQL)"
 title: "Selecting and Configuring Affected Objects (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Columns Comparison Settings"
   - "Selection of Affected Objects"
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "v-thobro"
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Selecting and Configuring Affected Objects (OracleToSQL)
 At this page you can select tables and foreign keys, changes in which should be compared when SSMA verifies the results of execution for the objects chosen in the previous step. Also, you can customize the verification parameters.  
@@ -46,7 +43,7 @@ The Table tab contains the grid view of the table selected. The grid contains th
 -   Nullable  
   
 ## Sql  
-SQL tab contains the “Create table” SQL of the table selected.  
+SQL tab contains the "Create table" SQL of the table selected.  
   
 ## Data  
 Data tab displays data present in the table selected.  

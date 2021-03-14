@@ -1,14 +1,13 @@
 ---
+description: "syscollector_collection_sets (Transact-SQL)"
 title: "syscollector_collection_sets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "syscollector_collection_sets_TSQL"
   - "syscollector_collection_sets"
@@ -18,13 +17,11 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_collection_sets view"
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syscollector_collection_sets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides information about a collection set, including schedule, collection mode, and its state.  
   

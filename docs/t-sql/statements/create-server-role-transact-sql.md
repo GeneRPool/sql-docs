@@ -1,14 +1,13 @@
 ---
+description: "CREATE SERVER ROLE (Transact-SQL)"
 title: "CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "SERVER_ROLE_TSQL"
   - "CREATE SERVER ROLE"
@@ -24,13 +23,11 @@ helpviewer_keywords:
   - "user-defined server roles [SQL Server]"
   - "roles, server"
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new user-defined server role.  
   
@@ -38,13 +35,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Parallel Data Warehouse  
-  
+```syntaxsql  
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *role_name*  
  Is the name of the server role to be created.  
   
@@ -78,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ### A. Creating a server role that is owned by a login  
  The following example creates the server role `buyers` that is owned by login `BenMiller`.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;  
 GO  
@@ -87,7 +84,7 @@ GO
 ### B. Creating a server role that is owned by a fixed server role  
  The following example creates the server role `auditors` that is owned the `securityadmin` fixed server role.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;  
 GO  

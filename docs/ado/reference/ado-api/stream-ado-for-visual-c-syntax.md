@@ -1,24 +1,21 @@
 ---
+description: "Stream (ADO for Visual C++ Syntax)"
 title: "Stream (ADO for Visual C++ Syntax) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Stream collection [ADO]"
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Stream (ADO for Visual C++ Syntax)
 ## Methods  
@@ -58,4 +55,4 @@ put_Type(StreamTypeEnum Type)
 ```  
   
 ## See Also  
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream Object (ADO)](./stream-object-ado.md)

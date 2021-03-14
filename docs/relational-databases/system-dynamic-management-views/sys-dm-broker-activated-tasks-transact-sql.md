@@ -1,14 +1,12 @@
 ---
+description: "sys.dm_broker_activated_tasks (Transact-SQL)"
 title: "sys.dm_broker_activated_tasks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_broker_activated_tasks"
   - "sys.dm_broker_activated_tasks_TSQL"
@@ -19,13 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_broker_activated_tasks dynamic management view"
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_broker_activated_tasks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each stored procedure activated by Service Broker.  
  

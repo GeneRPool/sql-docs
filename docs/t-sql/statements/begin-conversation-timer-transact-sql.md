@@ -1,14 +1,13 @@
 ---
+description: "BEGIN CONVERSATION TIMER (Transact-SQL)"
 title: "BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "CONVERSATION"
   - "BEGIN_CONVERSATION_TSQL"
@@ -30,31 +29,30 @@ helpviewer_keywords:
   - "timer messages [Service Broker]"
   - "conversations [Service Broker], timers"
   - "starting timers [Service Broker]"
-  - "http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
+  - "https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Starts a timer. When the time-out expires, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts a message of type `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` on the local queue for the conversation.  
+  Starts a timer. When the time-out expires, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts a message of type `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` on the local queue for the conversation.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 BEGIN CONVERSATION TIMER ( conversation_handle )  
    TIMEOUT = timeout   
 [ ; ]  
 ```  
   
-## Arguments  
- BEGIN CONVERSATION TIMER **(***conversation_handle***)**  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  Specifies the conversation to time. The *conversation_handle* must be of type **uniqueidentifier**.  
   
  TIMEOUT  
@@ -75,7 +73,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ## Examples  
  The following example sets a two-minute time-out on the dialog identified by `@dialog_handle`.  
   
-```  
+```sql 
 -- @dialog_handle is of type uniqueidentifier and  
 -- contains a valid conversation handle.  
   

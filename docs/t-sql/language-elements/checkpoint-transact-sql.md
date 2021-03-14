@@ -1,14 +1,12 @@
 ---
+description: "CHECKPOINT (Transact-SQL)"
 title: "CHECKPOINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "CHECKPOINT_TSQL"
   - "CHECKPOINT"
@@ -27,13 +25,11 @@ helpviewer_keywords:
   - "manual checkpoints [SQL Server]"
   - "pages [SQL Server], checkpoints"
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
 ---
 # CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Generates a manual checkpoint in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to which you are currently connected.  
   
@@ -44,12 +40,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *checkpoint_duration*  
  Specifies the requested amount of time, in seconds, for the manual checkpoint to complete. When *checkpoint_duration* is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] attempts to perform the checkpoint within the requested duration. The *checkpoint_duration* must be an expression of type **int** and must be greater than zero. When this parameter is omitted, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] adjusts the checkpoint duration to minimize the performance impact on database applications. *checkpoint_duration* is an advanced option.  
   

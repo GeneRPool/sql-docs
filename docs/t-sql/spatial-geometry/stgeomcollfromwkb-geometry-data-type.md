@@ -1,14 +1,13 @@
 ---
+description: "STGeomCollFromWKB (geometry Data Type)"
 title: "STGeomCollFromWKB (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "STGeomCollFromWKB (geometry Data Type)"
   - "STGeomCollFromWKB_TSQL"
@@ -17,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomCollFromWKB (geometry Data Type)"
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomCollFromWKB (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geometrycollection** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -34,7 +31,9 @@ Returns a **geometrycollection** instance from an Open Geospatial Consortium (OG
 STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_geometrycollection*  
  Is the WKB representation of the **geometrycollection** instance you wish to return. *WKB_geometrycollection* is a **varbinary(max)** expression.  
   
@@ -47,9 +46,9 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  CLR return type: **SqlGeometry**  
   
 ## Remarks  
- The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MulitPoint**, depending on the corresponding WKB input.  
+ The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MultiPoint**, depending on the corresponding WKB input.  
   
- This method will throw a FormatException  exception if the input is not well-formatted.  
+ This method will throw a FormatException exception if the input isn't well-formatted.  
   
 ## Examples  
  The following example uses `STGeomCollFromWKB()` to create a **geometry** instance.  
@@ -63,5 +62,3 @@ SELECT @g.STAsText();
 ## See Also  
  [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
-  
-

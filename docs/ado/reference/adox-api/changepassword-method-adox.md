@@ -1,14 +1,13 @@
 ---
+description: "ChangePassword Method (ADOX)"
 title: "ChangePassword Method (ADOX) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "_User25::raw_ChangePassword"
@@ -16,13 +15,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "ChangePassword method [ADOX]"
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # ChangePassword Method (ADOX)
-Changes the password for a [user](../../../ado/reference/adox-api/user-object-adox.md) account.  
+Changes the password for a [user](./user-object-adox.md) account.  
   
 ## Syntax  
   
@@ -44,7 +41,7 @@ User.ChangePassword OldPassword, NewPassword
  An error will occur if the provider does not support the administration of trustee properties.  
   
 ## Applies To  
- [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [User Object (ADOX)](./user-object-adox.md)  
   
 ## See Also  
- [Groups and Users Append, ChangePassword Methods Example (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)
+ [Groups and Users Append, ChangePassword Methods Example (VB)](./groups-and-users-append-changepassword-methods-example-vb.md)

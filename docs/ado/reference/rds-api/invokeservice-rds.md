@@ -1,28 +1,25 @@
 ---
+description: "InvokeService (RDS)"
 title: "InvokeService (RDS) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 helpviewer_keywords: 
   - "InvokeService [RDS]"
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # InvokeService (RDS)
 Returns a pointer to the requested interface on a more capable version of the object.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to  [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to  [WCF Data Service](/dotnet/framework/wcf/).  
   
 ## Syntax  
   
@@ -51,9 +48,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
  The RDS cursor engine implementation of **InvokeService** takes the input rowset (or multiple results object), populates the cursor engine from the input rowset, and then returns a pointer on itself.  
   
 ## Applies To  
- [IRDSService Interface (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [IRDSService Interface (RDS)](./irdsservice-interface-rds.md)  
   
 ## See Also  
- [RDS Methods](../../../ado/reference/rds-api/rds-methods.md)
-
-
+ [RDS Methods](./rds-methods.md)

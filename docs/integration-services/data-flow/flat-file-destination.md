@@ -1,14 +1,13 @@
 ---
+description: "Flat File Destination"
 title: "Flat File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.flatfiledest.f1"
   - "sql13.dts.designer.flatfiledestadapter.connection.f1"
@@ -19,12 +18,14 @@ helpviewer_keywords:
   - "text file writing [Integration Services]"
   - "destinations [Integration Services], Flat File"
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Destination
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Flat File destination writes data to a text file. The text file can be in delimited, fixed width, fixed width with row delimiter, or ragged right format.  
   
  You can configure the Flat File destination in the following ways:  
@@ -44,7 +45,7 @@ manager: "jhubbard"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
@@ -93,5 +94,4 @@ manager: "jhubbard"
 ## See Also  
  [Flat File Source](../../integration-services/data-flow/flat-file-source.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
   

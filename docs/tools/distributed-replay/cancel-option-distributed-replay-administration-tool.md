@@ -1,22 +1,22 @@
 ---
-title: "Cancel Option (Distributed Replay Administration Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+title: Cancel option admin tool
+titleSuffix: SQL Server Distributed Replay
+description: This article describes the cancel command-line option and syntax of the SQL Server Distributed Replay administration tool.
+ms.prod: sql
+ms.prod_service: sql-tools
+ms.technology: tools-other
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
 # Cancel Option (Distributed Replay Administration Tool)
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay administration tool, **DReplay.exe**, is a command-line tool that you can use to communicate with the distributed replay controller. This topic describes the **cancel** command-line option and corresponding syntax.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay administration tool, **DReplay.exe**, is a command-line tool that you can use to communicate with the distributed replay controller. This topic describes the **cancel** command-line option and corresponding syntax.  
   
  The **cancel** option cancels the current operation that is running on the controller.  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
 dreplay cancel [-m controller] [-q]   
 ```  
   
-#### Parameters  
+#### Parameters
  **-m** *controller*  
  The computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.  
   
@@ -44,7 +44,7 @@ dreplay cancel [-m controller] [-q]
  In the following example, a cancel request is submitted in quiet mode. The value `localhost` indicates that the controller service is running on the same computer as the administration tool.  
   
 ```  
-dreplay cancel –m localhost -q  
+dreplay cancel -m localhost -q  
 ```  
   
 ## Permissions  

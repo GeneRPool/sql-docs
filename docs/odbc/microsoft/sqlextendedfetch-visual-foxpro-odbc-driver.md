@@ -1,21 +1,18 @@
 ---
+description: "SQLExtendedFetch (Visual FoxPro ODBC Driver)"
 title: "SQLExtendedFetch (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLExtendedFetch function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLExtendedFetch (Visual FoxPro ODBC Driver)
 > [!NOTE]  

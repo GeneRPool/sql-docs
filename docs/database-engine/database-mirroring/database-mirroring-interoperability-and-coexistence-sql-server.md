@@ -1,24 +1,22 @@
 ---
-title: "Database Mirroring: Interoperability and Coexistence (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Database Mirroring: Interoperability & Coexistence"
+description: Learn about interoperability and coexistence of SQL Server database mirroring and other SQL Server features, such as full-text catalogs and database snapshots.
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: database-mirroring
+ms.topic: conceptual
 helpviewer_keywords: 
   - "high availability [SQL Server], interoperability and coexistence"
   - "Database Engine [SQL Server], high availability"
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
-caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Database Mirroring: Interoperability and Coexistence (SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Database mirroring can be used with the following features or components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Always On Failover Cluster Instances (SQL Server Failover Clustering)](../../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md)  

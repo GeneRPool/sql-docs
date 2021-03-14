@@ -1,14 +1,13 @@
 ---
+description: "ALTER DATABASE SET HADR (Transact-SQL)"
 title: "ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "SET HADR"
   - "SET_HADR_TSQL"
@@ -23,13 +22,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains the ALTER DATABASE syntax for setting [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options on a secondary database. Only one SET HADR option is permitted per ALTER DATABASE statement. These options are supported only on secondary replicas.  
   
@@ -37,8 +34,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ALTER DATABASE database_name  
    SET HADR   
    {  
@@ -48,14 +44,16 @@ ALTER DATABASE database_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  Is the name of the secondary database to be modified.  
   
  SET HADR  
  Executes the specified [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] command on the specified database.  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  Joins or removes the availability database from the specified availability group, as follows:  
   
  *group_name*  
@@ -65,7 +63,7 @@ ALTER DATABASE database_name
   
 -   The database must already have been added to the availability group on the primary replica.  
   
--   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](http://go.microsoft.com/fwlink/?LinkId=225834).  
+-   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](/previous-versions/sql/sql-server-2012/ff878308(v=sql.110)).  
   
 -   The primary replica must be online, and the secondary replica must be connected to the primary replica.  
   
@@ -79,7 +77,7 @@ ALTER DATABASE database_name
  OFF  
  Removes the specified secondary database from the availability group.  
   
- Removing a secondary database can be useful if it has fallen far behind the primary database, and you do not want to wait for the secondary database to catch up. After removing the secondary database, you can update it by restoring a sequence of backups ending with a recent log backup (using RESTORE … WITH NORECOVERY).  
+ Removing a secondary database can be useful if it has fallen far behind the primary database, and you do not want to wait for the secondary database to catch up. After removing the secondary database, you can update it by restoring a sequence of backups ending with a recent log backup (using RESTORE ... WITH NORECOVERY).  
   
 > [!IMPORTANT]  
 >  To completely remove an availability database from an availability group, connect to the server instance that hosts the primary replica, and use the [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name* statement. For more information, see [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
@@ -132,7 +130,7 @@ ALTER DATABASE database_name
 ## Examples  
  The following example joins the secondary database, `AccountsDb1`, to the local secondary replica of the `AccountsAG` availability group.  
   
-```  
+```sql  
 ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;  
 ```  
   
@@ -145,5 +143,4 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
-  
   

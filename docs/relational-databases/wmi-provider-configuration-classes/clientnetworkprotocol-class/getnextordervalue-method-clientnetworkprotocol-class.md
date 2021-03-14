@@ -1,13 +1,12 @@
 ---
-title: "GetNextOrderValue Method (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+description: "GetNextOrderValue Method (ClientNetworkProtocol Class)"
+title: "GetNextOrderValue Method (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "GetNextOrderValue Method (ClientNetworkProtocol Class)"
@@ -17,12 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "GetNextOrderValue method"
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Selects the protocol that is in the next position in the list of protocols.  
   
 ## Syntax  
@@ -42,7 +40,6 @@ object.GetNextOrderValue()
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)   
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Configuring Client Network Protocols and Net-Libraries](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

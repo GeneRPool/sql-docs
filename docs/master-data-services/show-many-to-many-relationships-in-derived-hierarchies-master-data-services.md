@@ -1,22 +1,21 @@
 ---
-title: "Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+description: "Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)"
+title: Show Many-to-Many Relationships in Derived Hierarchies
+ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: lrtoyou1223
+ms.author: lle
 ---
 # Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)
+
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
   Derived Hierarchies (DH) display one-to-many relationships, and can now also show many-to-many relationships.  
   
 ## Many-to-Many (M2M) Relationships  

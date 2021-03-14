@@ -1,28 +1,26 @@
 ---
+description: "Primary and Foreign Key Constraints"
 title: "Primary and Foreign Key Constraints | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "foreign keys [SQL Server], cascading referential integrity"
   - "FOREIGN KEY constraints"
   - "foreign keys [SQL Server]"
   - "foreign keys [SQL Server], about foreign key constraints"
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Primary and Foreign Key Constraints
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Primary keys and foreign keys are two types of constraints that can be used to enforce data integrity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. These are important database objects.  
   
@@ -39,7 +37,7 @@ manager: "jhubbard"
   
  When you specify a primary key constraint for a table, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] enforces data uniqueness by automatically creating a unique index for the primary key columns. This index also permits fast access to data when the primary key is used in queries. If a primary key constraint is defined on more than one column, values may be duplicated within one column, but each combination of values from all the columns in the primary key constraint definition must be unique.  
   
- As shown in the following illustration, the **ProductID** and **VendorID** columns in the **Purchasing.ProductVendor** table form a composite primary key constraint for this table. This makes sure that that every row in the **ProductVendor** table has a unique combination of **ProductID** and **VendorID**. This prevents the insertion of duplicate rows.  
+ As shown in the following illustration, the **ProductID** and **VendorID** columns in the **Purchasing.ProductVendor** table form a composite primary key constraint for this table. This makes sure that every row in the **ProductVendor** table has a unique combination of **ProductID** and **VendorID**. This prevents the insertion of duplicate rows.  
   
  ![Composite PRIMARY KEY constraint](../../relational-databases/tables/media/fund04.gif "Composite PRIMARY KEY constraint")  
   
@@ -60,7 +58,7 @@ manager: "jhubbard"
   
  For example, the **Sales.SalesOrderHeader** table has a foreign key link to the **Sales.SalesPerson** table because there is a logical relationship between sales orders and salespeople. The **SalesPersonID** column in the **SalesOrderHeader** table matches the primary key column of the **SalesPerson** table. The **SalesPersonID** column in the **SalesOrderHeader** table is the foreign key to the **SalesPerson** table. By creating this foreign key relationship, a value for **SalesPersonID** cannot be inserted into the **SalesOrderHeader** table if it does not already exist in the **SalesPerson** table.  
   
- A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] increases the limit for the number of other table and columns that can reference columns in a single table (incoming references), from 253 to 10,000. (Requires at least 130 compatibility level.) The increase has the following restrictions:  
+ A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] increases the limit for the number of other table and columns that can reference columns in a single table (incoming references), from 253 to 10,000. (Requires at least 130 compatibility level.) The increase has the following restrictions:  
   
 -   Greater than 253 foreign key references are only supported for DELETE DML operations. UPDATE and MERGE operations are not supported.  
   

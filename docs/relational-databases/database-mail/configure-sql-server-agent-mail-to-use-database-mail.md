@@ -1,25 +1,22 @@
 ---
-title: "Configure SQL Server Agent Mail to Use Database Mail | Microsoft Docs"
-ms.custom: ""
+description: "Configure SQL Server Agent Mail to Use Database Mail"
+title: "Configure SQL Server Agent Mail to Use Database Mail"
 ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], SQL Server Agent Mail"
   - "SQL Server Agent Mail"
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+ms.custom: seo-dt-2019
 ---
 # Configure SQL Server Agent Mail to Use Database Mail
-  This topic describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use Database Mail to send notification and alerts in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  For information on how to enable and configure Database Mail, see [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  For an example using [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to use Database Mail to send notification and alerts in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  For information on how to enable and configure Database Mail, see [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  For an example using [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).
   
 -   **Before you begin:**  
   
@@ -33,13 +30,16 @@ manager: "jhubbard"
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
+  > [!NOTE]
+  > SQL Agent on Managed Instance is always configured to use Database Mail, so this content is not applicable on Managed Instance. In Managed Instance you need to have a profile that must be called **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** in order to bind SQL Agent with Database Mail. 
+  
 ###  <a name="Prerequisites"></a> Prerequisites  
   
 -   [Enable Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [Create a Database Mail account](../../relational-databases/database-mail/create-a-database-mail-account.md) for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account to use.  
   
--   [Create a Database Mail profile](../../relational-databases/database-mail/create-a-database-mail-profile.md) for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account to use and add the user to the **DatabaseMailUserRole** in the **msdb** database.  
+-   [Create a Database Mail profile](../../relational-databases/database-mail/create-a-database-mail-profile.md) for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account to use and add the user to the **DatabaseMailUserRole** in the **msdb** database.
   
 -   Set the profile as the default profile for the **msdb** database.  
   
@@ -61,19 +61,18 @@ manager: "jhubbard"
   
 -   In the **Mail system** list, select **Database Mail**.  
   
--   In the **Mail profile list**, select a mail profile for Database Mail.  
+-   In the **Mail profile list**, select a mail profile for Database Mail. 
   
--   Restart SQL Server Agent.  
+-   Restart SQL Server Agent .  
   
 ##  <a name="Follow_Up"></a> Follow-up Tasks  
  The following tasks are necessary to complete the configuration of Agent to send alerts and notifications.  
   
--   [Alerts](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
+-   [Alerts](../../ssms/agent/alerts.md)  
   
      Alerts can be configured to notify an operator of a particular database event or operating system condition.  
   
--   [Operators](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
+-   [Operators](../../ssms/agent/operators.md)  
   
      Operators are aliases for people or groups that can receive electronic notification  
-  
   

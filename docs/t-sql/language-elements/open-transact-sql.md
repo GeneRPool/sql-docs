@@ -1,14 +1,13 @@
 ---
+description: "OPEN (Transact-SQL)"
 title: "OPEN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "OPEN_TSQL"
   - "OPEN"
@@ -21,13 +20,11 @@ helpviewer_keywords:
   - "OPEN statement"
   - "Transact-SQL cursors, opening"
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # OPEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Opens a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor and populates the cursor by executing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement specified on the DECLARE CURSOR or SET *cursor_variable* statement.  
   
@@ -35,12 +32,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GLOBAL  
  Specifies that *cursor_name* refers to a global cursor.  
   
@@ -61,7 +59,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## Examples  
  The following example opens a cursor and fetches all the rows.  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LastName, FirstName  
 FROM AdventureWorks2012.HumanResources.vEmployee  

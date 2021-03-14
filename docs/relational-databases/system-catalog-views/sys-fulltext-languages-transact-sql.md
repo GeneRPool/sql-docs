@@ -1,14 +1,12 @@
 ---
+description: "sys.fulltext_languages (Transact-SQL)"
 title: "sys.fulltext_languages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fulltext_languages"
   - "sys.fulltext_languages_TSQL"
@@ -20,15 +18,15 @@ helpviewer_keywords:
   - "languages [full-text search]"
   - "sys.fulltext_languages catalog view"
 ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
-caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  This catalog view contains one row per language whose word breakers are registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the LCID and name of the language. When word breakers are registered for a language, its other linguistic resources—stemmers, noise words (stopwords), and thesaurus files—become available to full-text indexing/querying operations. The value of **name** or **lcid** can be specified in the full-text queries and full-text index [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+  This catalog view contains one row per language whose word breakers are registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the LCID and name of the language. When word breakers are registered for a language, its other linguistic resources-stemmers, noise words (stopwords), and thesaurus files-become available to full-text indexing/querying operations. The value of **name** or **lcid** can be specified in the full-text queries and full-text index [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
    
 |Column|Data type|Description|  
 |------------|---------------|-----------------|  
@@ -55,7 +53,7 @@ manager: "jhubbard"
 |English|1033|  
 |French|1036|  
 |German|1031|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Greek|1032|  
 |Gujarati|1095|  
 |Hebrew|1037|  
 |Hindi|1081|  
@@ -72,7 +70,7 @@ manager: "jhubbard"
 |Marathi|1102|  
 |Neutral|0|  
 |Norwegian (Bokmål)|1044|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Polish|1045|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Polish|1045|  
 |Portuguese (Brazil)|1046|  
 |Portuguese (Portugal)|2070|  
 |Punjabi|1094|  
@@ -89,7 +87,7 @@ manager: "jhubbard"
 |Telugu|1098|  
 |Thai|1054|  
 |Traditional Chinese|1028|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Turkish|1055|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Turkish|1055|  
 |Ukrainian|1058|  
 |Urdu|1056|  
 |Vietnamese|1066|  

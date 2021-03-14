@@ -1,14 +1,13 @@
 ---
+description: "IN (Transact-SQL)"
 title: "IN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "IN_TSQL"
   - "IN"
@@ -22,13 +21,12 @@ helpviewer_keywords:
   - "IN keyword"
   - "8632 (Database Engine error)"
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determines whether a specified value matches any value in a subquery or a list.  
   
@@ -36,15 +34,15 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
+```syntaxsql
 test_expression [ NOT ] IN   
     ( subquery | expression [ ,...n ]  
     )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *test_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
@@ -81,7 +79,7 @@ test_expression [ NOT ] IN
 ### A. Comparing OR and IN  
  The following example selects a list of the names of employees who are design engineers, tool designers, or marketing assistants.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -96,7 +94,7 @@ GO
   
  However, you retrieve the same results by using IN.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -127,7 +125,7 @@ Mary        Dempsey     Marketing Assistant
 ### B. Using IN with a subquery  
  The following example finds all IDs for the salespeople in the `SalesPerson` table for employees who have a sales quota greater than $250,000 for the year, and then selects from the `Employee` table the names of all employees where `EmployeeID` that match the results from the `SELECT` subquery.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -156,7 +154,7 @@ Tete         Mensa-Annan
 ### C. Using NOT IN with a subquery  
  The following example finds the salespersons who do not have a quota greater than $250,000. `NOT IN` finds the salespersons who do not match the items in the values list.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -175,7 +173,7 @@ GO
 ### D. Using IN and NOT IN  
  The following example finds all entries in the `FactInternetSales` table that match `SalesReasonKey` values in the `DimSalesReason` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -185,7 +183,7 @@ IN (SELECT SalesReasonKey FROM DimSalesReason);
   
  The following example finds all entries in the `FactInternetSalesReason` table that do not match `SalesReasonKey` values in the `DimSalesReason` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -196,7 +194,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ### E. Using IN with an expression list  
  The following example finds all IDs for the salespeople in the `DimEmployee` table for employees who have a first name that is either `Mike` or `Michael`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

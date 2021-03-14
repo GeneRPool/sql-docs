@@ -1,27 +1,24 @@
 ---
+description: "GetPermissions and SetPermissions Methods Example (VB)"
 title: "GetPermissions and SetPermissions Methods Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "SetPermissions method [ADOX], Visual Basic example"
   - "GetPermissions method [ADOX], Visual Basic example"
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # GetPermissions and SetPermissions Methods Example (VB)
-This example demonstrates the [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) and [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) methods. The following code gives full access for the Orders table to the Admin user.  
+This example demonstrates the [GetPermissions](./getpermissions-method-adox.md) and [SetPermissions](./setpermissions-method-adox.md) methods. The following code gives full access for the Orders table to the Admin user.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -93,8 +90,8 @@ End Sub
 ```  
   
 ## See Also  
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [GetPermissions Method (ADOX)](./getpermissions-method-adox.md)   
+ [SetPermissions Method (ADOX)](./setpermissions-method-adox.md)   
+ [User Object (ADOX)](./user-object-adox.md)   
+ [Users Collection (ADOX)](./users-collection-adox.md)

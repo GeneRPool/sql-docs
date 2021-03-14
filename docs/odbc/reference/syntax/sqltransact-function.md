@@ -1,14 +1,13 @@
 ---
+description: "SQLTransact Function"
 title: "SQLTransact Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "SQLTransact"
 apilocation: 
@@ -19,17 +18,15 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLTransact function [ODBC]"
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTransact Function
 **Conformance**  
  Version Introduced: ODBC 1.0 Standards Compliance: Deprecated  
   
  **Summary**  
- In ODBC 3.*x*, the ODBC 2*.x* function **SQLTransact** has been replaced by **SQLEndTran**. For more information, see [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
+ In ODBC *3.x*, the ODBC *2.x* function **SQLTransact** has been replaced by **SQLEndTran**. For more information, see [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
   
 > [!NOTE]  
 >  The attribute SQL_ASYNC_DBC_FUNCTION_ENABLE, which was introduced in ODBC 3.8, is not supported by **SQLTransact**. Applications using an asynchronous operation on a connection handle must use **SQLEndTran**.  

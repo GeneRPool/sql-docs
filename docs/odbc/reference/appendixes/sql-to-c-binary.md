@@ -1,24 +1,21 @@
 ---
+description: "SQL to C: Binary"
 title: "SQL to C: Binary | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 helpviewer_keywords: 
   - "converting data from SQL to c types [ODBC], binary"
   - "binary data type [ODBC]"
   - "data conversions from SQL to C types [ODBC], binary"
   - "binary data transfers [ODBC]"
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL to C: Binary
 The identifiers for the binary ODBC SQL data types are:  

@@ -1,14 +1,13 @@
 ---
+description: "SCHEMA_ID (Transact-SQL)"
 title: "SCHEMA_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "SCHEMA_ID"
   - "SCHEMA_ID_TSQL"
@@ -21,13 +20,12 @@ helpviewer_keywords:
   - "IDs [SQL Server], schemas"
   - "default schema IDs"
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SCHEMA_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the schema ID associated with a schema name.  
   
@@ -35,13 +33,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
+```syntaxsql  
 SCHEMA_ID ( [ schema_name ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 |Term|Definition|  
 |----------|----------------|  
@@ -59,31 +57,13 @@ SCHEMA_ID ( [ schema_name ] )
   
 ### A. Returning the default schema ID of a caller  
   
-```  
+```sql  
 SELECT SCHEMA_ID();  
-GO  
 ```  
   
 ### B. Returning the schema ID of a named schema  
   
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT SCHEMA_ID('HumanResources');  
-GO   
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Returning the default schema ID of a caller  
-  
-```  
-SELECT SCHEMA_ID();  
-```  
-  
-### D. Returning the schema ID of a named schema  
-  
-```  
+```sql  
 SELECT SCHEMA_ID('dbo');  
 ```  
   

@@ -1,23 +1,22 @@
 ---
-title: "Location Dialog Box (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+description: "Location Dialog Box (Visual Database Tools)"
+title: Location Dialog Box
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.prod: sql
+ms.prod_service: sql-tools
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vs.getdirectoryname"
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
+
 ---
 # Location Dialog Box (Visual Database Tools)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this dialog box to locate and select the folder containing the files of interest. This dialog box returns the path of the selected folder to the calling dialog box. You can access this dialog box in the following way:  
   
 -   Choose **New** from the **File** menu and select **Project**. When the **New Project** dialog box is displayed, choose **Browse**. The **Location** dialog box opens with the title **Project Location**.  

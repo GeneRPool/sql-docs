@@ -1,13 +1,11 @@
 ---
-title: "Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Annotated mapping schemas for an Updategram (SQLXML)"
+description: Learn how an annotated XSD or XDR mapping schema that is specified in an SQLXML 4.0 updategram is used to process updates to a database. 
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "annotated XSD schemas, updategrams"
@@ -20,12 +18,13 @@ helpviewer_keywords:
   - "mapping schema [SQLXML], updategrams"
   - "sql:inverse"
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0)
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This topic explains how the mapping schema (XSD or XDR) that is specified in an updategram is used to process the updates. In an updategram, you can provide the name of an annotated mapping schema to use in mapping the elements and attributes in the updategram to tables and columns in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. When a mapping schema is specified in an updategram, the element and attribute names that are specified in the updategram must map to the elements and attributes in the mapping schema.  
   
  To specify a mapping schema, you use the **mapping-schema** attribute of the **\<sync>** element. The following examples show two updategrams: one that uses a simple mapping schema, and one that uses a more complex schema.  

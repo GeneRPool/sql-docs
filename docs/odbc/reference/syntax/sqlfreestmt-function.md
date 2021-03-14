@@ -1,28 +1,26 @@
 ---
+description: "SQLFreeStmt Function"
 title: "SQLFreeStmt Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/18/2019"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "SQLFreeStmt"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLFreeStmt"
 helpviewer_keywords: 
   - "SQLFreeStmt function [ODBC]"
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFreeStmt Function
 **Conformance**  
@@ -33,11 +31,11 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeStmt(  
-     SQLHSTMT       StatementHandle,  
-     SQLUSMALLINT   Option);  
+     SQLHSTMT       StatementHandle,  
+     SQLUSMALLINT   Option);  
 ```  
   
 ## Arguments  
@@ -80,7 +78,7 @@ SQLRETURN SQLFreeStmt(
 ## Example  
  It is a good programming practice to free handles. However, for simplicity, the following sample does not include code that frees allocated handles. For an example of how to free handles, see [SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
-```  
+```cpp  
 // SQLFreeStmt.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

@@ -1,25 +1,23 @@
 ---
-title: "Set Up a Mirror Database to Use the Trustworthy Property (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Enable trustworthy property for a mirrored database"
+description: Learn how to enable the TRUSTWORTHY database property on a newly mirrored database by using Transact-SQL in SQL Server.
+ms.custom: "seo-lt-2019"
 ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: database-mirroring
+ms.topic: conceptual
 helpviewer_keywords: 
   - "TRUSTWORTHY database option"
   - "mirror database [SQL Server]"
   - "database mirroring [SQL Server], security"
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
-caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Set Up a Mirror Database to Use the Trustworthy Property (Transact-SQL)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When a database is backed up, the TRUSTWORTHY database property is set to OFF. Therefore, on a new mirror database TRUSTWORTHY is always OFF. If the database needs to be trustworthy after a failover, extra setup steps are necessary after mirroring begins.  
   
 > [!NOTE]  

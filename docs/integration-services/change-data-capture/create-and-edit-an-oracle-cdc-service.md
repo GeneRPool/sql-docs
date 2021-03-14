@@ -1,23 +1,24 @@
 ---
+description: "Create and Edit an Oracle CDC Service"
 title: "Create and Edit an Oracle CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: chugugrace
+ms.author: chugu
 ---
 # Create and Edit an Oracle CDC Service
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   You create and edit a new Oracle CDC Windows Service from the CDC Service Configuration Console.  
   
  To create a new Oracle CDC Windows service, select **Local CDC Services** from the left pane, then click **New Service** from the **Actions** pane. You can also right-click **Local CDC Services** and select **New Service**. The New Oracle CDC Windows Service dialog box opens.  
@@ -28,7 +29,7 @@ manager: "jhubbard"
   
  Enter the following information in the New Oracle CDC Windows Service dialog box or the CDC Service Properties dialog box.  
   
-** Service Name**  
+**Service Name**  
  Type the name of the new Oracle CDC Windows Service. You should not use long names, if possible. The characters / and \ cannot be used in the service name.  
   
 > [!NOTE]  

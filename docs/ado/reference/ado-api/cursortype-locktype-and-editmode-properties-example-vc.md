@@ -1,14 +1,13 @@
 ---
+description: "CursorType, LockType, and EditMode Properties Example (VC++)"
 title: "CursorType, LockType, and EditMode Properties Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
@@ -16,13 +15,11 @@ helpviewer_keywords:
   - "EditMode property [ADO], VC++ example"
   - "CursorType property [ADO], VC++ example"
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # CursorType, LockType, and EditMode Properties Example (VC++)
-This example demonstrates setting the [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) and [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) properties before opening a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). It also shows the value of the [EditMode](../../../ado/reference/ado-api/editmode-property.md) property under various conditions. The EditModeOutput function is required for this procedure to run.  
+This example demonstrates setting the [CursorType](./cursortype-property-ado.md) and [LockType](./locktype-property-ado.md) properties before opening a [Recordset](./recordset-object-ado.md). It also shows the value of the [EditMode](./editmode-property.md) property under various conditions. The EditModeOutput function is required for this procedure to run.  
   
 ## Example  
   
@@ -160,7 +157,7 @@ void PrintComError(_com_error &e) {
 **After Edit:**   
  **EditMode = adEditInProgress**   
 ## See Also  
- [CursorType Property (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [EditMode Property](../../../ado/reference/ado-api/editmode-property.md)   
- [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CursorType Property (ADO)](./cursortype-property-ado.md)   
+ [EditMode Property](./editmode-property.md)   
+ [LockType Property (ADO)](./locktype-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

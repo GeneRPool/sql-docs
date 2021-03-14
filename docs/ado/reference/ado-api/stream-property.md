@@ -1,14 +1,13 @@
 ---
+description: "Stream Property"
 title: "Stream Property | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "ADOStreamConstruction::GetStream"
@@ -19,10 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Stream property"
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Stream Property
 Gets or sets an OLE DB **Stream** object from/on an **ADOStreamConstruction** object.  
@@ -47,4 +44,4 @@ HRESULT put_Stream([in] IUnknown* pStream);
  This property method returns the standard HRESULT values. This includes S_OK and E_FAIL.  
   
 ## Applies To  
- [ADOStreamConstruction Interface](../../../ado/reference/ado-api/adostreamconstruction-interface.md)
+ [ADOStreamConstruction Interface](./adostreamconstruction-interface.md)

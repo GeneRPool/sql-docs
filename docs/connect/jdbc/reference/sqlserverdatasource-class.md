@@ -1,24 +1,21 @@
 ---
-title: "SQLServerDataSource Class | Microsoft Docs"
+title: "SQLServerDataSource Class"
+description: "Learn the public API details for the SQLServerDataSource class in the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerDataSource Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Represents a list of properties specific to connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database by using a [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
+  Represents a list of properties specific to connecting to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database by using a [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) object.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

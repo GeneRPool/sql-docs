@@ -1,21 +1,18 @@
 ---
+description: "SQLSetConnectAttr (Cursor Library)"
 title: "SQLSetConnectAttr (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetConnectAttr function [ODBC], Cursor Library"
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectAttr (Cursor Library)
 > [!IMPORTANT]  

@@ -1,26 +1,23 @@
 ---
+description: "Find Method Example (VC++)"
 title: "Find Method Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Find method [ADO], VC++ example"
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Find Method Example (VC++)
-This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Find](../../../ado/reference/ado-api/find-method-ado.md) method to locate and count the number of business titles in the **Pubs** database. The example assumes the underlying provider does not support similar functionality.  
+This example uses the [Recordset](./recordset-object-ado.md) object's [Find](./find-method-ado.md) method to locate and count the number of business titles in the **Pubs** database. The example assumes the underlying provider does not support similar functionality.  
   
 ```  
 // BeginFindCpp.cpp  
@@ -153,5 +150,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Find Method (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find Method (ADO)](./find-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

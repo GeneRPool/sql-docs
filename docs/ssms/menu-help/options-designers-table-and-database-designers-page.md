@@ -1,26 +1,24 @@
 ---
-title: "Options (Designers - Table and Database Designers Page) | Microsoft Docs"
-ms.custom: ""
+description: "Options (Designers - Table and Database Designers Page)"
+title: "Options (Designers - Table and Database Designers Page)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.Table_Designer"
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options (Designers - Table and Database Designers Page)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this page to determine the default behavior of the designer. To access the settings, on the **Tools** menu, click **Options**, expand the **Designers** folder, and click **Table Designer**.  
   
-## UIElement List  
+## UI element list  
 **Override connection string time-out value for table designer updates**  
 Permits a new time-out value to be set for the actions of the table designer. This can be useful when the table designer affects a large table and requires extra time to complete the table modification.  
   
@@ -69,7 +67,7 @@ Select the way you want to see tables in the designers:
   
 -   **Name Only**  
   
-    Shows only the table header with it's name.  
+    Shows only the table header with its name.  
   
 -   **Custom**  
   

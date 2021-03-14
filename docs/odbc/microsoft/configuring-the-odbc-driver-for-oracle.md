@@ -1,22 +1,19 @@
 ---
+description: "Configuring the ODBC Driver for Oracle"
 title: "Configuring the ODBC Driver for Oracle | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "configuring ODBC driver for Oracle [ODBC]"
   - "ODBC driver for Oracle [ODBC], configuring"
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Configuring the ODBC Driver for Oracle
 > [!IMPORTANT]  

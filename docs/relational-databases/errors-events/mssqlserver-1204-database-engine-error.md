@@ -1,28 +1,25 @@
 ---
+description: "MSSQLSERVER_1204"
 title: "MSSQLSERVER_1204 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: supportability
+ms.topic: "reference"
 helpviewer_keywords: 
   - "1204 (Database Engine error)"
 ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 ---
 # MSSQLSERVER_1204
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|1204|  
 |Event Source|MSSQLSERVER|  

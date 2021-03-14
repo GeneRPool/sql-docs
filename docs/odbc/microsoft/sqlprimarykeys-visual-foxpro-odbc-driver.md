@@ -1,21 +1,18 @@
 ---
+description: "SQLPrimaryKeys (Visual FoxPro ODBC Driver)"
 title: "SQLPrimaryKeys (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPrimaryKeys function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLPrimaryKeys (Visual FoxPro ODBC Driver)
 > [!NOTE]  

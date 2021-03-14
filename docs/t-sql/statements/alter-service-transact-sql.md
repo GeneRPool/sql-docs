@@ -1,14 +1,13 @@
 ---
+description: "ALTER SERVICE (Transact-SQL)"
 title: "ALTER SERVICE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "ALTER SERVICE"
   - "ALTER_SERVICE_TSQL"
@@ -20,13 +19,11 @@ helpviewer_keywords:
   - "ALTER SERVICE statement"
   - "services [Service Broker], modifying"
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes an existing service.  
   
@@ -34,8 +31,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   
    [ ( < opt_arg > [ , ...n ] ) ]  
@@ -45,11 +41,14 @@ ALTER SERVICE service_name
    ADD CONTRACT contract_name | DROP CONTRACT contract_name  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *service_name*  
  Is the name of the service to change. Server, database, and schema names cannot be specified.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Specifies the new queue for this service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] moves all messages for this service from the current queue to the new queue.  
   
  ADD CONTRACT *contract_name*  
@@ -71,7 +70,7 @@ ALTER SERVICE service_name
 ### A. Changing the queue for a service  
  The following example changes the `//Adventure-Works.com/Expenses` service to use the queue `NewQueue`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE NewQueue ;  
 ```  
@@ -79,7 +78,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### B. Adding a new contract to the service  
  The following example changes the `//Adventure-Works.com/Expenses` service to allow dialogs on the contract `//Adventure-Works.com/Expenses`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
@@ -87,7 +86,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### C. Adding a new contract to the service, dropping existing contract  
  The following example changes the `//Adventure-Works.com/Expenses` service to allow dialogs on the contract `//Adventure-Works.com/Expenses/ExpenseProcessing` and to disallow dialogs on the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseProcessing],   
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  

@@ -1,33 +1,30 @@
 ---
+description: "Properties Collection Properties, Methods, and Events"
 title: "Properties Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 helpviewer_keywords: 
   - "Properties collection [ADO], members"
 ms.assetid: 03dc1e08-5f03-49e5-8596-76b306b931bd
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Properties Collection Properties, Methods, and Events
 ## Properties  
- [Count Property](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count Property](./count-property-ado.md)  
   
- [Item Property](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item Property](./item-property-ado.md)  
   
 ## Methods  
- [Refresh Method](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh Method](./refresh-method-ado.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Properties Collection (ADO)](./properties-collection-ado.md)

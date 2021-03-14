@@ -1,24 +1,23 @@
 ---
-title: "Server Configuration (MDS Configuration Manager) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+description: "Server Configuration (MDS Configuration Manager)"
+title: Server Configuration
+ms.custom: ""
 ms.date: "01/26/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.srvinfopg.f1"
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: lrtoyou1223
+ms.author: lle
 ---
 # Server Configuration (MDS Configuration Manager)
+
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
   Use the **Server Configuration** page to view configuration information for the local server computer.  
   
 ## Server Configuration  

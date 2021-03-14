@@ -1,26 +1,23 @@
 ---
+description: "Prepared Property Example (VB)"
 title: "Prepared Property Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Prepared property [ADO], Visual Basic example"
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Prepared Property Example (VB)
-This example demonstrates the [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) property by opening two [Command](../../../ado/reference/ado-api/command-object-ado.md) objects — one prepared and one not prepared.  
+This example demonstrates the [Prepared](./prepared-property-ado.md) property by opening two [Command](./command-object-ado.md) objects - one prepared and one not prepared.  
   
 ```  
 'BeginPreparedVB  
@@ -113,5 +110,5 @@ End Sub
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Prepared Property (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)   
+ [Prepared Property (ADO)](./prepared-property-ado.md)

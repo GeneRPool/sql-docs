@@ -1,14 +1,13 @@
 ---
+description: "DROP APPLICATION ROLE (Transact-SQL)"
 title: "DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "DROP_APPLICATION_ROLE_TSQL"
   - "DROP APPLICATION ROLE"
@@ -21,13 +20,11 @@ helpviewer_keywords:
   - "application roles [SQL Server], removing"
   - "DROP APPLICATION ROLE statement"
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # DROP APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes an application role from the current database.  
   
@@ -35,12 +32,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP APPLICATION ROLE rolename  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *rolename*  
  Specifies the name of the application role to be dropped.  
   
@@ -56,7 +54,7 @@ DROP APPLICATION ROLE rolename
 ## Examples  
  Drop application role "weekly_ledger" from the database.  
   
-```  
+```sql  
 DROP APPLICATION ROLE weekly_ledger;  
 GO  
 ```  

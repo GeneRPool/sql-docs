@@ -1,26 +1,23 @@
 ---
+description: "MarshalOptions Property Example (VB)"
 title: "MarshalOptions Property Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "MarshalOptions property [ADO], Visual Basic example"
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # MarshalOptions Property Example (VB)
-This example uses the [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) property to specify what rows are sent back to the server — All Rows or only Modified Rows.  
+This example uses the [MarshalOptions](./marshaloptions-property-ado.md) property to specify what rows are sent back to the server - All Rows or only Modified Rows.  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -130,5 +127,5 @@ End Sub
 ```  
   
 ## See Also  
- [MarshalOptions Property (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
- [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)
+ [MarshalOptions Property (ADO)](./marshaloptions-property-ado.md)   
+ [MarshalOptionsEnum](./marshaloptionsenum.md)

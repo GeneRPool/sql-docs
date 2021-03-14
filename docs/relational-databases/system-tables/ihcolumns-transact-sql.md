@@ -1,16 +1,13 @@
 ---
+description: "IHcolumns (Transact-SQL)"
 title: "IHcolumns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
+ms.technology: replication
+ms.topic: "reference"
 f1_keywords: 
   - "IHcolumns_TSQL"
   - "IHcolumns"
@@ -19,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IHcolumns system table"
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # IHcolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHcolumns** system table contains one row for each published column. This table is used to define how column data types from the non-SQL Server Publisher will be represented when published, which essentially maps data types between a non-SQL Server database management systems (DBMS) and SQL Server. This table is stored in the distribution database.  
   

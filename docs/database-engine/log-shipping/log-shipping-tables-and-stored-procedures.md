@@ -1,14 +1,12 @@
 ---
 title: "Log Shipping Tables and Stored Procedures | Microsoft Docs"
+description: Review all the tables and stored procedures associated with a log shipping configuration. Each server stores log shipping tables in msdb.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: log-shipping
+ms.topic: conceptual
 helpviewer_keywords: 
   - "secondary servers [SQL Server]"
   - "monitor servers [SQL Server]"
@@ -16,12 +14,11 @@ helpviewer_keywords:
   - "log shipping [SQL Server], stored procedures"
   - "primary servers [SQL Server]"
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # Log Shipping Tables and Stored Procedures
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes all of the tables and stored procedures associated with a log shipping configuration. All log shipping tables are stored in **msdb** on each server. The tables below describe which tables and stored procedures are used on which servers in a log shipping configuration.  
   
 ## Primary Server Tables  

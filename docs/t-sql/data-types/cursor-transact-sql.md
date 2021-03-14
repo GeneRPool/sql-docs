@@ -1,32 +1,29 @@
 ---
+description: "cursor (Transact-SQL)"
 title: "cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "cursor data type"
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A data type for variables or stored procedure OUTPUT parameters that contain a reference to a cursor.
   
 ## Remarks  
 The operations that can reference variables and parameters having a **cursor** data type are:
--   The DECLARE *@local_variable* and SET *@local_variable* statements.  
+-   The DECLARE *\@local_variable* and SET *\@local_variable* statements.  
 -   The OPEN, FETCH, CLOSE, and DEALLOCATE cursor statements.  
 -   Stored procedure output parameters.  
 -   The CURSOR_STATUS function.  

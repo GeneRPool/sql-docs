@@ -1,22 +1,19 @@
 ---
+description: "SQLConfigDataSource (dBASE Driver)"
 title: "SQLConfigDataSource (dBASE Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DBase driver [ODBC], SQLConfigDataSource"
   - "SQLConfigDataSource function [ODBC], dBASE Driver"
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLConfigDataSource (dBASE Driver)
 > [!NOTE]  

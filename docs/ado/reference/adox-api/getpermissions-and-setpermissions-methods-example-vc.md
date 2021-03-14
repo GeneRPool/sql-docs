@@ -1,27 +1,24 @@
 ---
+description: "GetPermissions and SetPermissions Methods Example (VC++)"
 title: "GetPermissions and SetPermissions Methods Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "SetPermissions method [ADOX], VC++ example"
   - "GetPermissions method [ADOX], VC++ example"
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # GetPermissions and SetPermissions Methods Example (VC++)
-This example demonstrates the [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) and [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) methods. The following code gives full access to the Orders table to the Admin user.  
+This example demonstrates the [GetPermissions](./getpermissions-method-adox.md) and [SetPermissions](./setpermissions-method-adox.md) methods. The following code gives full access to the Orders table to the Admin user.  
   
 ```  
 // BeginGrantPermissionCpp.cpp  
@@ -95,7 +92,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in GrantPermissionsX...."<< endl;  
+      cout << "Error occurred in GrantPermissionsX...."<< endl;  
    }  
    ::CoUninitialize();  
 }  

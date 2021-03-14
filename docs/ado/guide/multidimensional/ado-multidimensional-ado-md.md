@@ -1,23 +1,20 @@
 ---
+description: "ADO (Multidimensional) (ADO MD)"
 title: "ADO (Multidimensional) (ADO MD) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO (Multidimensional) [ADO MD]"
 ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # ADO (Multidimensional) (ADO MD)
 This section contains the following topic.  
   
--   [ADO MD Fundamentals](../../../ado/guide/multidimensional/ado-md-fundamentals.md)
+-   [ADO MD Fundamentals](./ado-md-fundamentals.md)

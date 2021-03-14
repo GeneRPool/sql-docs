@@ -1,14 +1,13 @@
 ---
+description: "ENCRYPTBYKEY (Transact-SQL)"
 title: "ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "ENCRYPTBYKEY_TSQL"
   - "ENCRYPTBYKEY"
@@ -20,13 +19,11 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], ENCRYPTBYKEY function"
   - "ENCRYPTBYKEY function"
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # ENCRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Encrypts data by using a symmetric key.  
   
@@ -34,14 +31,16 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }  
     [, { add_authenticator | @add_authenticator }  
      , { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *key_GUID*  
  Is the GUID of the key to be used to encrypt the *cleartext*. **uniqueidentifier**.  
   
@@ -67,6 +66,8 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  **varbinary** with a maximum size of 8,000 bytes.  
   
  Returns NULL if the key is not open, if the key does not exist, or if the key is a deprecated RC4 key and the database is not in compatibility level 110 or higher.  
+ 
+ Returns NULL if the *cleartext* value is NULL.
   
 ## Remarks  
  EncryptByKey uses a symmetric key. This key must be open. If the symmetric key is already open in the current session, you do not have to open it again in the context of the query.  
@@ -96,7 +97,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ### A. Encrypting a string with a symmetric key  
  The following example adds a column to the `Employee` table, and then encrypts the value of the Social Security number that is stored in column `NationalIDNumber`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -119,11 +120,11 @@ GO
   
 ### B. Encrypting a record together with an authentication value  
   
-```  
+```sql 
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   

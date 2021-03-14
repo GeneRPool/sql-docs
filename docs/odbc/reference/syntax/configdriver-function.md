@@ -1,14 +1,13 @@
 ---
+description: "ConfigDriver Function"
 title: "ConfigDriver Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "ConfigDriver"
 apilocation: 
@@ -19,10 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConfigDriver [ODBC]"
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # ConfigDriver Function
 **Conformance**  
@@ -33,7 +30,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL ConfigDriver(  
       HWND    hwndParent,  

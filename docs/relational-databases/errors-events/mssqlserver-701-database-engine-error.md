@@ -1,28 +1,25 @@
 ---
+description: "MSSQLSERVER_701"
 title: "MSSQLSERVER_701 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: supportability
+ms.topic: "reference"
 helpviewer_keywords: 
   - "701 (Database Engine error)"
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 ---
 # MSSQLSERVER_701
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|701|  
 |Event Source|MSSQLSERVER|  
@@ -59,7 +56,7 @@ The following list outlines general steps that will help in troubleshooting memo
 4.  Observe DBCC MEMORYSTATUS output and the way it changes when you see these error messages.  
   
 5.  Check the workload (for example, number of concurrent sessions, currently executing queries).  
-  
+
 The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  

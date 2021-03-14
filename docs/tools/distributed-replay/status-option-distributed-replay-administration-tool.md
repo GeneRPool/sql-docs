@@ -1,22 +1,22 @@
 ---
-title: "Status Option (Distributed Replay Administration Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+title: Status Option in admin tool
+titleSuffix: SQL Server Distributed Replay
+description: This article describes the status command-line option and syntax of the SQL Server Distributed Replay administration tool, which displays the current status.
+ms.prod: sql
+ms.reviewer:
+ms.technology: tools-other
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Status Option (Distributed Replay Administration Tool)
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay administration tool, **DReplay.exe**, is a command-line tool that you can use to communicate with the distributed replay controller. This topic describes the **status** command-line option and corresponding syntax.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay administration tool, **DReplay.exe**, is a command-line tool that you can use to communicate with the distributed replay controller. This topic describes the **status** command-line option and corresponding syntax.  
   
  The **status** option queries the controller and displays the current status.  
   
@@ -30,12 +30,12 @@ dreplay status [-m controller] [-f status_interval]
 ```  
   
 #### Parameters  
- **-m** *controller*  
+ **-m** _controller_  
  Specifies the computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.  
   
  If the **-m** parameter is not specified, the local computer is used.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  Specifies the frequency (in seconds) at which to display the status.  
   
  If the **-f** parameter is not specified, the default interval is 30 seconds.  
@@ -44,7 +44,7 @@ dreplay status [-m controller] [-f status_interval]
  In the following example, the current status is displayed every 60 seconds. The value `localhost` indicates that the controller service is running on the same computer as the administration tool.  
   
 ```  
-dreplay status –m localhost -f 60  
+dreplay status -m localhost -f 60  
 ```  
   
 ## Permissions  
@@ -54,6 +54,5 @@ dreplay status –m localhost -f 60
   
 ## See Also  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [Transact-SQL Debugger](../../ssms/scripting/transact-sql-debugger.md)  
   

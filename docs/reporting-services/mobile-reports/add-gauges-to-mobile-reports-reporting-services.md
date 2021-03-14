@@ -1,22 +1,18 @@
 ---
 title: "Add gauges to mobile reports | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+description: You can add gauges to a Reporting Services mobile report. Gauges display a single value in a dataset by itself or compared to a goal.
+ms.date: 03/30/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: mobile-reports
+
+ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add gauges to mobile reports | Reporting Services
-Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset – just the value, or the value compared to a goal.
+Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset - just the value, or the value compared to a goal.
 
 ![PBI_SSMRP_Gauges](../../reporting-services/mobile-reports/media/pbi-ssmrp-gauges.png)  
   
@@ -52,7 +48,7 @@ If the mobile report has any navigators, you can bind a gauge to one or more of 
 
 2. Under Filtered by, select the navigator you want to filter the gauge.
 
-   ![mobile-report-gauge-navigator](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![Screenshot of the Main Value's Options expanded with the Filter by Product List option selected.](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## Set visual properties for a gauge
   

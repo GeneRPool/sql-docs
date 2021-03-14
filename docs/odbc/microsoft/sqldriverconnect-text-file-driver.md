@@ -1,22 +1,19 @@
 ---
+description: "SQLDriverConnect (Text File Driver)"
 title: "SQLDriverConnect (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDriverConnect function [ODBC], Text File Driver"
   - "text file driver [ODBC], SQLDriverConnect"
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDriverConnect (Text File Driver)
 > [!NOTE]  

@@ -1,29 +1,28 @@
 ---
-title: "Duplicate Tables | Microsoft Docs"
+description: "Create a duplicate copy of a table, without the row data."
+title: "Duplicate tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/05/2020"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "copying tables"
   - "tables [SQL Server], duplicating"
   - "duplicating tables"
+  - "duplicating table structures"
   - "table copying [SQL Server]"
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Duplicate Tables
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+# Duplicate tables
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  You can duplicate an existing table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] by creating a new table and then copying column information from an existing table.  
+You can duplicate an existing table in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] by creating a new table and then copying column information from an existing table.  
   
 > [!IMPORTANT]  
 >  This operation duplicates only the structure of a table; it does not duplicate any table rows.  
@@ -63,10 +62,10 @@ manager: "jhubbard"
   
 6.  From the **Edit** menu, click **Paste**.  
   
-7.  From the **File** menu, click **Save***table name*.  
+7.  From the **File** menu, click **Save**_table name_.  
   
 8.  In the **Choose Name** dialog box, type a name for the new table and click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To duplicate a table in Query Editor  
@@ -80,5 +79,3 @@ manager: "jhubbard"
 4.  Remove any columns that are not needed in the new table.  
   
 5.  Click **Execute**.  
-  
-  

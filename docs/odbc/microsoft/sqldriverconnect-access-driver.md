@@ -1,22 +1,19 @@
 ---
+description: "SQLDriverConnect (Access Driver)"
 title: "SQLDriverConnect (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Access driver [ODBC], SQLDriverConnect"
   - "SQLDriverConnect function [ODBC], Access Driver"
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDriverConnect (Access Driver)
 > [!NOTE]  

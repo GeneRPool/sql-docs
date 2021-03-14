@@ -1,14 +1,13 @@
 ---
-title: "Work with Change Tracking (SQL Server) | Microsoft Docs"
-ms.custom: ""
+description: "Work with Change Tracking (SQL Server)"
+title: "Work with Change Tracking"
+ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], making changes"
   - "change tracking [SQL Server], troubleshooting"
@@ -21,13 +20,12 @@ helpviewer_keywords:
   - "change tracking [SQL Server], ensuring consistent results"
   - "change tracking [SQL Server], handling changes"
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Work with Change Tracking (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Applications that use change tracking must be able to obtain tracked changes, apply these changes to another data store, and update the source database. This topic describes how to perform these tasks, and also the role change tracking plays when a failover occurs and a database must be restored from a backup.  
   
@@ -37,56 +35,59 @@ manager: "jhubbard"
 ### About the Change Tracking Functions  
  Applications can use the following functions to obtain the changes that are made in a database and information about the changes:  
   
- CHANGETABLE(CHANGES …) function  
+ CHANGETABLE(CHANGES ...) function  
  This rowset function is used to query for change information. The function queries the data stored in the internal change tracking tables. The function returns a results set that contains the primary keys of rows that have changed together with other change information such as the operation, columns updated and version for the row.  
   
- CHANGETABLE(CHANGES …) takes a last synchronization version as an argument. The last sychronization version is obtained using the `@last_synchronization_version` variable. The semantics of the last synchronization version are as follows:  
+ CHANGETABLE(CHANGES ...) takes a last synchronization version as an argument. The last sychronization version is obtained using the `@last_synchronization_version` variable. The semantics of the last synchronization version are as follows:  
   
 -   The calling client has obtained changes and knows about all changes up to and including the last synchronization version.  
   
--   CHANGETABLE(CHANGES …) will therefore return all changes that have occurred after the last synchronization version.  
+-   CHANGETABLE(CHANGES ...) will therefore return all changes that have occurred after the last synchronization version.  
   
-     The following illustration shows how CHANGETABLE(CHANGES …) is used to obtain changes.  
+     The following illustration shows how CHANGETABLE(CHANGES ...) is used to obtain changes.  
   
      ![Example of change tracking query output](../../relational-databases/track-changes/media/queryoutput.gif "Example of change tracking query output")  
   
  CHANGE_TRACKING_CURRENT_VERSION() function  
  Is used to obtain the current version that will be used the next time when querying changes. This version represents the version of the last committed transaction.  
   
- CHANGE_TRACKING_MIN_VALID_VERSION()function  
- Is used to obtain the minimum valid version that a client can have and still obtain valid results from CHANGETABLE(). The client should check the last synchronization version against the value thatis returned by this function. If the last synchronization version is less than the version returned by this function, the client will be unable to obtain valid results from CHANGETABLE() and will have to reinitialize.  
+ CHANGE_TRACKING_MIN_VALID_VERSION() function  
+ Is used to obtain the minimum valid version that a client can have and still obtain valid results from CHANGETABLE(). The client should check the last synchronization version against the value that is returned by this function. If the last synchronization version is less than the version returned by this function, the client will be unable to obtain valid results from CHANGETABLE() and will have to reinitialize.  
   
 ### Obtaining Initial Data  
- Before an application can obtain changes for the first time, the application must send a query to obtain the initial data and the synchronization version. The application must obtain the appropriate data directly from the table, and then use CHANGE_TRACKING_CURRENT_VERSION() to obtain the initial version. This version will be passed to CHANGETABLE(CHANGES …) the first time that changes are obtained.  
+ Before an application can obtain changes for the first time, the application must send a query to obtain the initial data and the synchronization version. The application must obtain the appropriate data directly from the table, and then use CHANGE_TRACKING_CURRENT_VERSION() to obtain the initial version. This version will be passed to CHANGETABLE(CHANGES ...) the first time that changes are obtained.  
   
  The following example shows how to obtain the initial synchronization version and the initial data set.  
   
-```tsql  
-    -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
-    SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
+```sql  
+declare @synchronization_version bigint;
+
+-- Obtain the current synchronization version. This will be used next time that changes are obtained.  
+SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
-    -- Obtain initial data set.  
-    SELECT  
-        P.ProductID, P.Name, P.ListPrice  
-    FROM  
-        SalesLT.Product AS P  
+-- Obtain initial data set.  
+SELECT  
+    P.ProductID, P.Name, P.ListPrice  
+FROM  
+   SalesLT.Product AS P  
 ```  
   
 ### Using the Change Tracking Functions to Obtain Changes  
- To obtain the changed rows for a table and information about the changes, use CHANGETABLE(CHANGES…). For example, the following query obtains changes for the `SalesLT.Product` table.  
+ To obtain the changed rows for a table and information about the changes, use CHANGETABLE(CHANGES...). For example, the following query obtains changes for the `SalesLT.Product` table.  
   
-```tsql  
+```sql  
+declare @last_synchronization_version bigint;
+
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
 FROM  
-    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT  
-  
+    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT
 ```  
   
- Usually, a client will want to obtain the latest data for a row instead of only the primary keys for the row. Therefore, an application would join the results from CHANGETABLE(CHANGES …) with the data in the user table. For example, the following query joins with the `SalesLT.Product` table to obtain the values for the `Name` and `ListPrice` columns. Note the use of `OUTER JOIN`. This is required to make sure that the change information is returned for those rows that have been deleted from the user table.  
+ Usually, a client will want to obtain the latest data for a row instead of only the primary keys for the row. Therefore, an application would join the results from CHANGETABLE(CHANGES ...) with the data in the user table. For example, the following query joins with the `SalesLT.Product` table to obtain the values for the `Name` and `ListPrice` columns. Note the use of `OUTER JOIN`. This is required to make sure that the change information is returned for those rows that have been deleted from the user table.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -100,14 +101,14 @@ ON
 ```  
   
  To obtain the version for use in the next change enumeration, use CHANGE_TRACKING_CURRENT_VERSION(), as shown in the following example.  
-  
-```tsql  
+
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
+ 
+ When an application obtains changes, it must use both CHANGETABLE(CHANGES...) and CHANGE_TRACKING_CURRENT_VERSION(), as shown in the following example.  
   
- When an application obtains changes, it must use both CHANGETABLE(CHANGES…) and CHANGE_TRACKING_CURRENT_VERSION(), as shown in the following example.  
-  
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -130,11 +131,11 @@ ON
 ### Validating the Last Synchronized Version  
  Information about changes is maintained for a limited time. The length of time is controlled by the CHANGE_RETENTION parameter that can be specified as part of the ALTER DATABASE.  
   
- Be aware that the time specified for CHANGE_RETENTION determines how frequently all applications must request changes from the database. If an application has a value for *last_synchronization_version* that is older than the minimum valid synchronization version for a table, that application cannot perform valid change enumeration. This is because some change information might have been cleaned up. Before an application obtains changes by using CHANGETABLE(CHANGES …), the application must validate the value for *last_synchronization_version* that it plans to pass to CHANGETABLE(CHANGES …). If the value of *last_synchronization_version* is not valid, that application must reinitialize all the data.  
+ Be aware that the time specified for CHANGE_RETENTION determines how frequently all applications must request changes from the database. If an application has a value for *last_synchronization_version* that is older than the minimum valid synchronization version for a table, that application cannot perform valid change enumeration. This is because some change information might have been cleaned up. Before an application obtains changes by using CHANGETABLE(CHANGES ...), the application must validate the value for *last_synchronization_version* that it plans to pass to CHANGETABLE(CHANGES ...). If the value of *last_synchronization_version* is not valid, that application must reinitialize all the data.  
   
  The following example shows how to verify the validity of the value of `last_synchronization_version` for each table.  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -146,10 +147,10 @@ END
   
  As the following example shows, the validity of the value of `last_synchronization_version` can be checked against all tables in the database.  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
-  SELECT COUNT(*) FROM sys.change_tracking_tables  
+  SELECT 1 FROM sys.change_tracking_tables  
   WHERE min_valid_version > @last_synchronization_version )  
 BEGIN  
   -- Handle invalid version & do not enumerate changes  
@@ -160,13 +161,13 @@ END
 ### Using Column Tracking  
  Column tracking enables applications to obtain the data for only the columns that have changed instead of the whole row. For example, consider the scenario in which a table has one or more columns that are large, but rarely change; and also has other columns that frequently change. Without column tracking, an application can only determine that a row has changed and would have to synchronize all the data that includes the large column data. However, by using column tracking, an application can determine whether the large column data changed and only synchronize the data if it has changed.  
   
- Column tracking information appears in the SYS_CHANGE_COLUMNS column that is returned by the CHANGETABLE(CHANGES …) function.  
+ Column tracking information appears in the SYS_CHANGE_COLUMNS column that is returned by the CHANGETABLE(CHANGES ...) function.  
   
  Column tracking can be used so that NULL is returned for a column that has not changed. If the column can be changed to NULL, a separate column must be returned to indicate whether the column changed.  
   
  In the following example, the `CT_ThumbnailPhoto` column will be `NULL` if that column did not change. This column could also be `NULL` because it was changed to `NULL` - the application can use the `CT_ThumbNailPhoto_Changed` column to determine whether the column changed.  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -180,7 +181,7 @@ SELECT
       END AS CT_ThumbNailPhoto,  
       CHANGE_TRACKING_IS_COLUMN_IN_MASK(  
                      @PhotoColumnId, CT.SYS_CHANGE_COLUMNS) AS  
-                                   CT_ThumbNailPhoto_Changed  
+                                   CT_ThumbNailPhoto_Changed,  
      CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
      CT.SYS_CHANGE_CONTEXT  
 FROM  
@@ -201,15 +202,15 @@ ON
   
 2.  Obtain the version that can be used to obtain change the next time by using CHANGE_TRACKING_CURRENT_VERSION().  
   
-3.  Obtain the changes for the Sales table by using CHANGETABLE(CHANGES …).  
+3.  Obtain the changes for the Sales table by using CHANGETABLE(CHANGES ...).  
   
-4.  Obtain the changes for the SalesOrders table by using CHANGETABLE(CHANGES …).  
-  
+4.  Obtain the changes for the SalesOrders table by using CHANGETABLE(CHANGES ...).  
+
  Two processes are occurring in the database that can affect the results that are returned by the previous steps:  
   
 -   The cleanup process runs in the background and removes change tracking information that is older than the specified retention period.  
   
-     The cleanup process is a separate background process that uses the retention period that is specified when you configure change tracking for the database. The issue is that the cleanup process can occur in the time between when the last synchronization version was validated and when the call to CHANGETABLE(CHANGES…) is made. A last synchronization version that was just valid might no longer be valid by the time the changes are obtained. Therefore, incorrect results might be returned.  
+     The cleanup process is a separate background process that uses the retention period that is specified when you configure change tracking for the database. The issue is that the cleanup process can occur in the time between when the last synchronization version was validated and when the call to CHANGETABLE(CHANGES...) is made. A last synchronization version that was just valid might no longer be valid by the time the changes are obtained. Therefore, incorrect results might be returned.  
   
 -   Ongoing DML operations are occurring in the Sales and SalesOrders tables, such as the following operations:  
   
@@ -230,21 +231,21 @@ ON
   
 3.  Obtain the version to be used the next time by using CHANGE_TRACKING_CURRENT_VERSION().  
   
-4.  Obtain the changes for the Sales table by using CHANGETABLE(CHANGES …)  
+4.  Obtain the changes for the Sales table by using CHANGETABLE(CHANGES ...)  
   
-5.  Obtain the changes for the Salesorders table by using CHANGETABLE(CHANGES …)  
+5.  Obtain the changes for the Salesorders table by using CHANGETABLE(CHANGES ...)  
   
 6.  Commit the transaction.  
   
  Some points to remember as all steps to obtain changes are inside a snapshot transaction:  
   
--   If cleanup occurs after the last synchronization version is validated, the results from CHANGETABLE(CHANGES …) will still be valid as the delete operations performed by cleanup will not be visible inside the transaction.  
+-   If cleanup occurs after the last synchronization version is validated, the results from CHANGETABLE(CHANGES ...) will still be valid as the delete operations performed by cleanup will not be visible inside the transaction.  
   
--   Any changes that are made to the Sales table or the SalesOrders table after the next synchronization version is obtained will not be visible, and the calls to CHANGETABLE(CHANGES …) will never return changes with a version later than that returned by CHANGE_TRACKING_CURRENT_VERSION(). Consistency between the Sales table and the SalesOrders table will also be maintained, because the transactions that were committed in the time between calls to CHANGETABLE(CHANGES …) will not be visible.  
+-   Any changes that are made to the Sales table or the SalesOrders table after the next synchronization version is obtained will not be visible, and the calls to CHANGETABLE(CHANGES ...) will never return changes with a version later than that returned by CHANGE_TRACKING_CURRENT_VERSION(). Consistency between the Sales table and the SalesOrders table will also be maintained, because the transactions that were committed in the time between calls to CHANGETABLE(CHANGES ...) will not be visible.  
   
  The following example shows how snapshot isolation is enabled for a database.  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -252,7 +253,7 @@ ALTER DATABASE AdventureWorksLT
   
  A snapshot transaction is used as follows:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -263,6 +264,11 @@ COMMIT TRAN
   
  For more information about snapshot transactions, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
+#### Cleanup and snapshot isolation   
+Enabling both snapshot isolation and change tracking on either the same database, or on two different databases within the same instance 
+can result in the cleanup process leaving expired rows in sys.syscommittab when there is an open transaction in the database with snapshot isolation. This can happen as the change tracking cleanup process takes an instance-wide low water mark (which is the safe cleanup version) into account when performing the cleanup. This is done to ensure the change tracking auto clean up process doesn't remove any rows that might be required by the open transaction in the database that has snapshot isolation enabled. Keep read committed snapshot isolation, and snapshot isolation transactions as short as possible to ensure expired rows from sys.syscommittab are cleaned up in a timely manner. 
+
+
 #### Alternatives to Using Snapshot Isolation  
  There are alternatives to using snapshot isolation, but they require more work to make sure all application requirements are met. To make sure the *last_synchronization_version* is valid and data is not removed by the cleanup process before changes are obtained, do the following:  
   
@@ -300,7 +306,7 @@ COMMIT TRAN
   
  To perform the previous operations, a synchronization application can use the following functions:  
   
--   CHANGETABLE(VERSION…)  
+-   CHANGETABLE(VERSION...)  
   
      When an application is making changes, it can use this function to check for conflicts. The function obtains the latest change tracking information for a specified row in a change tracked table. The change tracking information includes the version of the row that was last changed. This information enables an application to determine whether the row was changed after the last time that the application was synchronized.  
   
@@ -311,9 +317,9 @@ COMMIT TRAN
 ### Checking for Conflicts  
  In a two-way synchronization scenario, the client application must determine whether a row has not been updated since the application last obtained the changes.  
   
- The following example shows how to use the CHANGETABLE(VERSION …) function to check for conflicts in the most efficient way, without a separate query. In the example, `CHANGETABLE(VERSION …)` determines the `SYS_CHANGE_VERSION` for the row specified by `@product id`. `CHANGETABLE(CHANGES …)` can obtain the same information, but that would be less efficient. If the value of `SYS_CHANGE_VERSION` for the row is larger than the value of `@last_sync_version`, there is a conflict. If there is a conflict, the row will not be updated. The `ISNULL()` check is required because there might be no change information available for the row. No change information would exist if the row had not been updated since change tracking was enabled or since the change information was cleaned up.  
+ The following example shows how to use the CHANGETABLE(VERSION ...) function to check for conflicts in the most efficient way, without a separate query. In the example, `CHANGETABLE(VERSION ...)` determines the `SYS_CHANGE_VERSION` for the row specified by `@product id`. `CHANGETABLE(CHANGES ...)` can obtain the same information, but that would be less efficient. If the value of `SYS_CHANGE_VERSION` for the row is larger than the value of `@last_sync_version`, there is a conflict. If there is a conflict, the row will not be updated. The `ISNULL()` check is required because there might be no change information available for the row. No change information would exist if the row had not been updated since change tracking was enabled or since the change information was cleaned up.  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -333,7 +339,7 @@ WHERE
   
  The following code can check the updated row count and can identify more information about the conflict.  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -355,25 +361,25 @@ END
 ```  
   
 ### Setting Context Information  
- By using the WITH CHANGE_TRACKING_CONTEXT clause, an application can store context information together with the change information. This information can then be obtained from the SYS_CHANGE_CONTEXT column that is returned by CHANGETABLE(CHANGES …).  
+ By using the WITH CHANGE_TRACKING_CONTEXT clause, an application can store context information together with the change information. This information can then be obtained from the SYS_CHANGE_CONTEXT column that is returned by CHANGETABLE(CHANGES ...).  
   
  Context information is typically used to identify the source of the changes. If the source of the change can be identified, that information can be used by a data store to avoid obtaining changes when it synchronizes again.  
   
-```tsql  
-  -- Try to update the row and check for a conflict.  
-  WITH CHANGE_TRACKING_CONTEXT (@source_id)  
-  UPDATE  
-     SalesLT.Product  
-  SET  
-      ListPrice = @new_listprice  
-  FROM  
-      SalesLT.Product AS P  
-  WHERE  
-     ProductID = @product_id AND  
-     @last_sync_version >= ISNULL (  
-         (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
-         (ProductID), (P.ProductID)) AS CT),  
-         0)  
+```sql  
+-- Try to update the row and check for a conflict.  
+WITH CHANGE_TRACKING_CONTEXT (@source_id)  
+UPDATE  
+  SalesLT.Product  
+SET  
+  ListPrice = @new_listprice  
+FROM  
+  SalesLT.Product AS P  
+WHERE  
+  ProductID = @product_id AND  
+    @last_sync_version >= ISNULL (  
+    (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
+    (ProductID), (P.ProductID)) AS CT),  
+       0)  
 ```  
   
 ### Ensuring Consistent and Correct Results  
@@ -382,16 +388,16 @@ END
 > [!IMPORTANT]  
 >  We recommend that you use snapshot isolation and make the changes within a snapshot transaction.  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
     -- Verify that last_sync_version is valid.  
     IF (@last_sync_version <  
-CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(‘SalesLT.Product’)))  
+CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))  
     BEGIN  
-       RAISERROR (N’Last_sync_version too old’, 16, -1);  
+       RAISERROR (N'Last_sync_version too old', 16, -1);  
     END  
     ELSE  
     BEGIN  

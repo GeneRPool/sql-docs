@@ -1,14 +1,11 @@
 ---
+description: "sys.dm_repl_schemas (Transact-SQL)"
 title: "sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "dm_repl_schemas_TSQL"
   - "dm_repl_schemas"
@@ -19,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_repl_schemas dynamic management function"
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_repl_schemas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about table columns published by replication.  
   

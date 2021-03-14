@@ -1,14 +1,12 @@
 ---
-title: "Requirements and Limitations for XML Schema Collections on the Server | Microsoft Docs"
-ms.custom: ""
+title: "Requirements and limitations (XML schema collections) | Microsoft Docs"
+description: Learn about the requirements and limitations for modifying your XML schema collections in SQL Server.
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "identifiers [XML schema collections]"
   - "XML schema collections [SQL Server], limitations"
@@ -24,12 +22,12 @@ helpviewer_keywords:
   - "schema collections [SQL Server], guidelines"
   - "lexical representation"
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 84
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
 # Requirements and Limitations for XML Schema Collections on the Server
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The XML schema definition language (XSD) validation has some limitations regarding SQL columns that use the **xml** data type. The following table provides details about those limitations and guidelines for modifying your XSD schema so it can work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The topics in this section provide additional information about specific limitations and guidance for working with them.  
   
 |Item|Limitation|  

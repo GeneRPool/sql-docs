@@ -1,45 +1,45 @@
 ---
+description: "Rebuild System Databases"
 title: "Rebuild System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "master database [SQL Server], rebuilding"
   - "REBUILDDATABASE parameter"
   - "rebuilding databases, master"
   - "system databases [SQL Server], rebuilding"
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
 ---
 # Rebuild System Databases
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   System databases must be rebuilt to fix corruption problems in the [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md), or [resource](../../relational-databases/databases/resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **In This Topic**  
   
--   **Before you begin:**  
+   - **Before you begin:**  
   
      [Limitations and Restrictions](#Restrictions)  
   
      [Prerequisites](#Prerequisites)  
   
--   **Procedures:**  
+   - **Procedures:**  
   
      [Rebuild System Databases](#RebuildProcedure)  
   
      [Rebuild the resource Database](#Resource)  
   
-     [Create a New msdb Database](#CreateMSDB)  
+     [Create a New msdb Database](#CreateMSDB) 
+
+     [Rebuild the tempdb Database](#RebuildTempdb)  
   
--   **Follow Up:**  
+   - **Follow Up:**  
   
      [Troubleshoot Rebuild Errors](#Troubleshoot)  
   
@@ -51,15 +51,15 @@ manager: "jhubbard"
 ###  <a name="Prerequisites"></a> Prerequisites  
  Perform the following tasks before you rebuild the system databases to ensure that you can restore the system databases to their current settings.  
   
-1.  Record all server-wide configuration values.  
+1. Record all server-wide configuration values.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Record all service packs and hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these updates after rebuilding the system databases.  
+2.  Record all hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these hotfixes after rebuilding the system databases.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 3.  Record the current location of all data and log files for the system databases. Rebuilding the system databases installs all system databases to their original location. If you have moved system database data or log files to a different location, you must move the files again.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -103,8 +103,8 @@ manager: "jhubbard"
     |/ACTION=REBUILDDATABASE|Specifies that Setup re-create the system databases.|  
     |/INSTANCENAME=*InstanceName*|Is the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For the default instance, enter MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Specifies the Windows groups or individual accounts to add to the **sysadmin** fixed server role. When specifying more than one account, separate the accounts with a blank space. For example, enter **BUILTIN\Administrators MyDomain\MyUser**. When you are specifying an account that contains a blank space within the account name, enclose the account in double quotation marks. For example, enter **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Specifies the password for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** account. This parameter is required if the instance uses Mixed Authentication ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication) mode.<br /><br /> **\*\* Security Note \*\***The **sa** account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. It is very important that you use a strong password for the **sa** login.<br /><br /> Do not specify this parameter for Windows Authentication mode.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Specifies a new server-level collation. This parameter is optional. When not specified, the current collation of the server is used.<br /><br /> **\*\* Important \*\***Changing the server-level collation does not change the collation of existing user databases. All newly created user databases will use the new collation by default.<br /><br /> For more information, see [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |[ /SAPWD=*StrongPassword* ]|Specifies the password for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** account. This parameter is required if the instance uses Mixed Authentication ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication) mode.<br /><br /> **&#42;&#42; Security Note &#42;&#42;** The **sa** account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. It is very important that you use a strong password for the **sa** login.<br /><br /> Do not specify this parameter for Windows Authentication mode.|  
+    |[ /SQLCOLLATION=*CollationName* ]|Specifies a new server-level collation. This parameter is optional. When not specified, the current collation of the server is used.<br /><br /> **\*\* Important \*\*** Changing the server-level collation does not change the collation of existing user databases. All newly created user databases will use the new collation by default.<br /><br /> For more information, see [Set or Change the Server Collation](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Specifies the number of tempdb data files. This value can be increased up to 8 or the number of cores, whichever is higher.<br /><br /> Default value: 8 or the number of cores, whichever is lower.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB.<br /><br /> Default value: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64|  
@@ -137,7 +137,7 @@ manager: "jhubbard"
 -   Verify the server-wide configuration values match the values you recorded previously.  
   
 ##  <a name="Resource"></a> Rebuild the resource Database  
- The following procedure rebuilds the resource system database. When you rebuild the resource database, all service packs and hot fixes are lost, and therefore must be reapplied.  
+ The following procedure rebuilds the resource system database. When you rebuild the resource database, all hot fixes are lost, and therefore must be reapplied.  
   
 #### To rebuild the resource system database:  
   
@@ -154,12 +154,13 @@ manager: "jhubbard"
 6.  From the **Ready to Repair** page, click **Repair**. The Complete page indicates that the operation is finished.  
   
 ##  <a name="CreateMSDB"></a> Create a New msdb Database  
+
  If the **msdb** database is damaged and you do not have a backup of the **msdb** database, you can create a new **msdb** by using the **instmsdb** script.  
   
 > [!WARNING]  
 >  Rebuilding the **msdb** database using the **instmsdb** script will eliminate all the information stored in **msdb** such as jobs, alert, operators, maintenance plans, backup history, Policy-Based Management settings, Database Mail, Performance Data Warehouse, etc.  
   
-1.  Stop all services connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], and all applications using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as data store.  
+1.  Stop all services connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], and all applications using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as data store.  
   
 2.  Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command line using the command: `NET START MSSQLSERVER /T3608`  
   
@@ -171,17 +172,44 @@ manager: "jhubbard"
   
 5.  Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, stop and restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service normally.  
   
-6.  In a command line window, connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute the command: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
+6.  In a command line window, connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute the command: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
      Replace *\<servername>* with the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use the file system path of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 7.  Using the Windows Notepad, open the **instmsdb.out** file and check the output for any errors.  
   
-8.  Re-apply any service packs or hotfix installed on the instance.  
+8.  Re-apply any hotfix installed on the instance.  
   
 9. Recreate the user content stored in the **msdb** database, such as jobs, alert, etc.  
   
 10. Backup the **msdb** database.  
+
+##  <a name="RebuildTempdb"></a> Rebuild the tempdb Database  
+
+If the **tempdb** database is damaged and the database engine fails to start, you can rebuild  **tempdb** without the need to rebuild all system databases.
+  
+1. Rename the current tempdb.mdf and templog.ldf files, if not missing. 
+1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a Command Prompt by using the following command. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   For a default instance name use MSSQLSERVER, for named instance use MSSQL$<instance_name>. Trace flag 4022 disables execution of startup stored procedures. The -mSQLCMD allows only [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) to connect to the server (see [Other Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options))
+
+   > [!Note] 
+   > Make sure that the command prompt window remains open after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. Closing the command prompt window will terminate the process.
+
+1. Connect to the server by using **sqlcmd**, and then use the following stored procedure to reset the status of the tempdb database.
+
+   ```sql
+   exec master..sp_resetstatus tempdb
+   ```
+
+1. Shut down the server by pressing CTRL+C in the command prompt window
+
+1. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. This creates a new set of tempdb database files, and recovers the tempdb database.
+
   
 ##  <a name="Troubleshoot"></a> Troubleshoot Rebuild Errors  
  Syntax and other run-time errors are displayed in the command prompt window. Examine the Setup statement for the following syntax errors:  

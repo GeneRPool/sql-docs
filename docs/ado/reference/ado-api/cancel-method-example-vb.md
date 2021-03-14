@@ -1,26 +1,23 @@
 ---
+description: "Cancel Method Example (VB)"
 title: "Cancel Method Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Cancel method [ADO], Visual Basic example"
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Cancel Method Example (VB)
-This example uses the [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) method to cancel a command executing on a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object if the connection is busy.  
+This example uses the [Cancel](./cancel-method-ado.md) method to cancel a command executing on a [Connection](./connection-object-ado.md) object if the connection is busy.  
   
 ```  
 'BeginCancelVB  
@@ -54,7 +51,7 @@ Public Sub Main()
     ' Begin a transaction, then execute a command asynchronously  
     Cnxn.BeginTrans  
     Cnxn.Execute strCmdChange, , adAsyncExecute  
-    ' do something else for a little while –  
+    ' do something else for a little while -  
     ' use i = 1 to 32000 to allow completion  
     Dim i As Integer  
     For i = 1 To 1000  
@@ -101,5 +98,5 @@ End Sub
 ```  
   
 ## See Also  
- [Cancel Method (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Cancel Method (ADO)](./cancel-method-ado.md)   
+ [Connection Object (ADO)](./connection-object-ado.md)

@@ -1,14 +1,13 @@
 ---
 title: "Estimate the Size of a Clustered Index | Microsoft Docs"
+description: Use this procedure to estimate the amount of space that is required to store data in a clustered index in SQL Server.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql  
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod_service: database-engine, sql-database
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"
   - "size [SQL Server], tables"
@@ -22,12 +21,14 @@ helpviewer_keywords:
   - "designing databases [SQL Server], estimating size"
   - "calculating table size"
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
-caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+monikerRange: "= azuresqldb-current || >= sql-server-2016"
 ---
 # Estimate the Size of a Clustered Index
+
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
   You can use the following steps to estimate the amount of space that is required to store data in a clustered index:  
   
 1.  Calculate the space used to store data in the leaf level of the clustered index.  

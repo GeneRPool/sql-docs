@@ -1,14 +1,13 @@
 ---
+description: "DROP SERVER ROLE (Transact-SQL)"
 title: "DROP SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "DROP SERVER ROLE"
   - "DROP_SERVER_ROLE_TSQL"
@@ -18,13 +17,12 @@ helpviewer_keywords:
   - "SERVER ROLE, DROP"
   - "DROP SERVER ROLE statement"
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
 
   Removes a user-defined server role.  
   
@@ -34,9 +32,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Parallel Data Warehouse  
-  
+```syntaxsql  
 DROP SERVER ROLE role_name  
 ```  
   
@@ -61,7 +57,7 @@ DROP SERVER ROLE role_name
 ### A. To drop a server role  
  The following example drops the server role `purchasing`.  
   
-```  
+```sql  
 DROP SERVER ROLE purchasing;  
 GO  
 ```  
@@ -69,7 +65,7 @@ GO
 ### B. To view role membership  
  To view role membership, use the **Server Role (Members**) page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or execute the following query:  
   
-```  
+```sql  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -83,7 +79,7 @@ ORDER BY  SP.name,  SP2.name
 ### C. To view role membership  
  To determine whether a server role owns another server role, execute the following query:  
   
-```  
+```sql  
 SELECT SP1.name AS RoleOwner, SP2.name AS Server_Role  
 FROM sys.server_principals AS SP1  
 JOIN sys.server_principals AS SP2  

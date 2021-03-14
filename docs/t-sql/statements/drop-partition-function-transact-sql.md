@@ -1,14 +1,13 @@
 ---
+description: "DROP PARTITION FUNCTION (Transact-SQL)"
 title: "DROP PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "DROP PARTITION FUNCTION"
   - "DROP_PARTITION_FUNCTION_TSQL"
@@ -21,13 +20,11 @@ helpviewer_keywords:
   - "dropping partition functions"
   - "removing partition functions"
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a partition function from the current database. Partition functions are created by using CREATE PARTITION FUNCTION and modified by using ALTER PARTITION FUNCTION.  
   
@@ -35,12 +32,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 DROP PARTITION FUNCTION partition_function_name [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_function_name*  
  Is the name of the partition function that is to be dropped.  
   
@@ -59,7 +57,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## Examples  
  The following example assumes the partition function `myRangePF` has been created in the current database.  
   
-```  
+```sql 
 DROP PARTITION FUNCTION myRangePF;  
 ```  
   

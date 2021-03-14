@@ -1,14 +1,13 @@
 ---
+description: "SET DEADLOCK_PRIORITY (Transact-SQL)"
 title: "SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "SET DEADLOCK_PRIORITY"
   - "DEADLOCK_PRIORITY_TSQL"
@@ -23,13 +22,12 @@ helpviewer_keywords:
   - "priority deadlock settings [SQL Server]"
   - "SET DEADLOCK_PRIORITY statement"
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DEADLOCK_PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Specifies the relative importance that the current session continue processing if it is deadlocked with another session.  
   
@@ -37,14 +35,16 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var | @deadlock_intvar }  
   
-<numeric-priority> ::= { -10 | -9 | -8 | … | 0 | … | 8 | 9 | 10 }  
+<numeric-priority> ::= { -10 | -9 | -8 | ... | 0 | ... | 8 | 9 | 10 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  LOW  
  Specifies that the current session will be the deadlock victim if it is involved in a deadlock and other sessions involved in the deadlock chain have deadlock priority set to either NORMAL or HIGH or to an integer value greater than -5. The current session will not be the deadlock victim if the other sessions have deadlock priority set to an integer value less than -5. It also specifies that the current session is eligible to be the deadlock victim if another session has set deadlock priority set to LOW or to an integer value equal to -5.  
   
@@ -68,7 +68,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  Which session is chosen as the deadlock victim depends on each session's deadlock priority:  
   
--   If both sessions have the same deadlock priority, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chooses the session that is less expensive to roll back as the deadlock victim. For example, if both sessions have set their deadlock priority to HIGH, the instance will choose as a victim the session it estimates is less costly to roll back.  
+-   If both sessions have the same deadlock priority, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chooses the session that is less expensive to roll back as the deadlock victim. For example, if both sessions have set their deadlock priority to HIGH, the instance will choose as a victim the session it estimates is less costly to roll back. The cost is determined by comparing the number of log bytes written to that point in each transaction. (You can see this value as "Log Used" in a deadlock graph).
   
 -   If the sessions have different deadlock priorities, the session with the lowest deadlock priority is chosen as the deadlock victim.  
   
@@ -80,7 +80,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 ## Examples  
  The following example uses a variable to set the deadlock priority to `LOW`.  
   
-```  
+```sql
 DECLARE @deadlock_var NCHAR(3);  
 SET @deadlock_var = N'LOW';  
   
@@ -90,7 +90,7 @@ GO
   
  The following example sets the deadlock priority to `NORMAL`.  
   
-```  
+```sql
 SET DEADLOCK_PRIORITY NORMAL;  
 GO  
 ```  

@@ -1,14 +1,13 @@
 ---
+description: "Delete Method (ADO Fields Collection)"
 title: "Delete Method (ADO Fields Collection) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "Fields20::Delete"
@@ -16,10 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete method [ADO]"
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Delete Method (ADO Fields Collection)
 Deletes an object from the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  

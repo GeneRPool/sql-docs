@@ -1,28 +1,26 @@
 ---
+description: "SQLNumParams Function"
 title: "SQLNumParams Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/18/2019"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "SQLNumParams"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLNumParams"
 helpviewer_keywords: 
   - "SQLNumParams function [ODBC]"
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
-caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLNumParams Function
 **Conformance**  
@@ -33,11 +31,11 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLNumParams(  
-     SQLHSTMT        StatementHandle,  
-     SQLSMALLINT *   ParameterCountPtr);  
+     SQLHSTMT        StatementHandle,  
+     SQLSMALLINT *   ParameterCountPtr);  
 ```  
   
 ## Arguments  

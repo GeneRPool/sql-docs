@@ -1,20 +1,16 @@
 ---
-title: "Specify the Size of an Indicator Using an Expression (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Specify the Size of an Indicator Using an Expression (Report Builder) | Microsoft Docs"
+description: Discover ways to use size, in addition to color, direction, and shape, to maximize the visual impact of indicators in Report Builder.
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
-caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Specify the Size of an Indicator Using an Expression (Report Builder and SSRS)
   In addition to color, direction, and shape, you can use size to maximize the visual impact of indicators.  

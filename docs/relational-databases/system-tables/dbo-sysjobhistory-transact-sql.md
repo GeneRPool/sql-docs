@@ -1,14 +1,13 @@
 ---
+description: "dbo.sysjobhistory (Transact-SQL)"
 title: "dbo.sysjobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/03/2016"
-ms.prod: "sql-non-specified"
+ms.date: "06/24/2019"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.sysjobhistory_TSQL"
   - "dbo.sysjobhistory"
@@ -19,17 +18,18 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobhistory system table"
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contains information about the execution of scheduled jobs by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This table is stored in the **msdb** database.  
+Contains information about the execution of scheduled jobs by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
   
-> **NOTE:** Data is updated only after the jobstep completes.  
+> [!NOTE]
+> In most cases the data is updated only after the job step completes and the table typically contains no records for job steps that are currently in progress, but in some cases underlying processes *do* provide information about in progress job steps.
+
+This table is stored in the **msdb** database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -40,9 +40,9 @@ manager: "jhubbard"
 |**sql_message_id**|**int**|ID of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message returned if the job failed.|  
 |**sql_severity**|**int**|Severity of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
 |**message**|**nvarchar(4000)**|Text, if any, of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
-|**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled|  
+|**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled<br /><br />**4** = In Progress|  
 |**run_date**|**int**|Date the job or step started execution. For an In Progress history, this is the date/time the history was written.|  
-|**run_time**|**int**|Time the job or step started.|  
+|**run_time**|**int**|Time the job or step started in **HHMMSS** format.|  
 |**run_duration**|**int**|Elapsed time in the execution of the job or step in **HHMMSS** format.|  
 |**operator_id_emailed**|**int**|ID of the operator notified when the job completed.|  
 |**operator_id_netsent**|**int**|ID of the operator notified by a message when the job completed.|  
@@ -53,7 +53,7 @@ manager: "jhubbard"
   ## Example
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] query will convert the **run_time** and **run_duration** columns into a more user friendly format.  Execute the script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
- ```tsql
+ ```sql
  SET NOCOUNT ON;
  
  SELECT sj.name,

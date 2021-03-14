@@ -1,24 +1,21 @@
 ---
+description: "getLogWriter Method (SQLServerDataSource)"
 title: "getLogWriter Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: reference
 apiname: 
   - "SQLServerDataSource.getLogWriter"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: cde41743-1a5d-4930-91b3-4e5fccc1bc36
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # getLogWriter Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

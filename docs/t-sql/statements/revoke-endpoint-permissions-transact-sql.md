@@ -1,14 +1,13 @@
 ---
+description: "REVOKE Endpoint Permissions (Transact-SQL)"
 title: "REVOKE Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,13 +15,11 @@ helpviewer_keywords:
   - "REVOKE statement, endpoints"
   - "permissions [SQL Server], endpoints"
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions granted or denied on an endpoint.  
   
@@ -30,8 +27,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ENDPOINT :: endpoint_name  
     { FROM | TO } <server_principal> [ ,...n ]  
@@ -45,11 +41,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Specifies the endpoint on which the permission is being granted. The scope qualifier (**::**) is required.  
   
  { FROM | TO } \<server_principal> 
@@ -105,7 +103,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### A. Revoking VIEW DEFINITION permission on an endpoint  
  The following example revokes `VIEW DEFINITION` permission on the endpoint `Mirror7` from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;  
 GO  
@@ -114,7 +112,7 @@ GO
 ### B. Revoking TAKE OWNERSHIP permission with the CASCADE option  
  The following example revokes `TAKE OWNERSHIP` permission on the endpoint `Shipping83` from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user `PKomosinski` and from all principals to which `PKomosinski` granted `TAKE OWNERSHIP` on `Shipping83`.  
   
-```  
+```sql  
 USE master;  
 REVOKE TAKE OWNERSHIP ON ENDPOINT::Shipping83 FROM PKomosinski   
     CASCADE;  

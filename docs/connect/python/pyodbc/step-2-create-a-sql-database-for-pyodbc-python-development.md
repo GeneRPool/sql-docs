@@ -1,19 +1,16 @@
 ---
-title: "Step 2: Create a SQL database for pyodbc Python development | Microsoft Docs"
+title: "Step 2: Create a SQL database for pyodbc"
+description: "Step 2 of this getting started guide involves creating a database in SQL Server or Azure SQL Database for the pyodbc sample."
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 9dd871b1-358f-4161-bb79-290bdb024d9d
-caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 2: Create a SQL database for pyodbc Python development
 

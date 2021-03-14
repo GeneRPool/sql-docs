@@ -1,13 +1,12 @@
 ---
-title: "ProtocolDisplayName Property (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+description: "ProtocolDisplayName Property (ClientNetworkProtocol Class)"
+title: "ProtocolDisplayName Property (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "ProtocolDisplayName Property (ClientNetworkProtocol Class)"
@@ -17,13 +16,12 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolDisplayName property"
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
 ---
 # ProtocolDisplayName Property (ClientNetworkProtocol Class)
-  Gets the display name of the client network protocol specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Gets the display name of the client network protocol specified by the [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
 ## Syntax  
   
@@ -42,6 +40,5 @@ object.ProtocolDisplayName [= value]
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configuring Client Network Protocols and Net-Libraries](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

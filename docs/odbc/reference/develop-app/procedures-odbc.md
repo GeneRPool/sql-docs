@@ -1,22 +1,19 @@
 ---
+description: "Procedures ODBC"
 title: "Procedures ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "procedures [ODBC], defined"
   - "procedures [ODBC]"
 ms.assetid: 92172f52-6bd2-4b17-9ef0-baf1a97f7510
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Procedures ODBC
 A *procedure* is an executable object stored on the data source. Generally, it is one or more SQL statements that have been precompiled.  

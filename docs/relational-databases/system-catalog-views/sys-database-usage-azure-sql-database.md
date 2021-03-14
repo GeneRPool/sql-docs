@@ -1,17 +1,12 @@
 ---
+description: "sys.database_usage (Azure SQL Database)"
 title: "sys.database_usage (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: 
+ms.service: sql-database
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "database_usage"
   - "database_usage_TSQL"
@@ -23,13 +18,12 @@ helpviewer_keywords:
   - "database_usage"
   - "sys.database_usage"
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: "= azuresqldb-current"
 ---
 # sys.database_usage (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   **Note: This applies only to Azure SQL Database V11.**  
   
@@ -50,7 +44,6 @@ manager: "jhubbard"
  The **sys.database_usage** view returns one row for each day of your subscription.  
   
 ## See Also  
- [SQL Database Pricing Details](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [Accounts and Billing in Windows Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
-  
+ [SQL Database Pricing Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Accounts and Billing in Azure SQL Database](/previous-versions/azure/ee621788(v=azure.100))  
   

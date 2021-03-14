@@ -1,22 +1,19 @@
 ---
+description: "SQLTables (Text File Driver)"
 title: "SQLTables (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "text file driver [ODBC], SQLTables"
   - "SQLTables function [ODBC], Text File Driver"
 ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTables (Text File Driver)
 > [!NOTE]  

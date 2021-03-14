@@ -1,13 +1,12 @@
 ---
-title: "DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs"
+description: "DBCC UPDATEUSAGE (Transact-SQL)"
+title: DBCC UPDATEUSAGE (Transact-SQL)
 ms.custom: ""
-ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
+ms.date: "11/14/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "UPDATEUSAGE"
@@ -33,13 +32,13 @@ helpviewer_keywords:
   - "row count accuracy [SQL Server]"
   - "page count accuracy [SQL Server]"
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: umajay
 ---
+
 # DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Reports and corrects pages and row count inaccuracies in the catalog views. These inaccuracies may cause incorrect space usage reports returned by the sp_spaceused system stored procedure.
   
@@ -47,7 +46,7 @@ Reports and corrects pages and row count inaccuracies in the catalog views. Thes
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC UPDATEUSAGE   
 (   { database_name | database_id | 0 }   
     [ , { table_name | table_id | view_name | view_id }   
@@ -55,14 +54,16 @@ DBCC UPDATEUSAGE
 ) [ WITH [ NO_INFOMSGS ] [ , ] [ COUNT_ROWS ] ]   
 ```  
   
-## Arguments  
-*database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+*database_name* \| *database_id* \| 0  
 Is the name or ID of the database for which to report and correct space usage statistics. If 0 is specified, the current database is used. Database names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-*table_name* | *table_id* | *view_name* | *view_id*  
+*table_name* \| *table_id* \| *view_name* \| *view_id*  
 Is the name or ID of the table or indexed view for which to report and correct space usage statistics. Table and view names must comply with the rules for identifiers.  
   
-*index_id* | *index_name*  
+*index_id* \| *index_name*  
 Is the ID or name of the index to use. If not specified, the statement processes all indexes for the specified table or view.  
   
 WITH  

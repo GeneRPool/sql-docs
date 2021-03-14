@@ -1,14 +1,13 @@
 ---
+description: "Database Mail Configuration Objects"
 title: "Database Mail Configuration Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
   - "sql13.swb.sqlimail.newaccount.f1"
@@ -32,12 +31,11 @@ helpviewer_keywords:
   - "profiles [SQL Server], Database Mail"
   - "accounts [Database Mail]"
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
 ---
 # Database Mail Configuration Objects
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Database Mail has two configuration objects: The database configuration objects provide a way for you to configure the settings that Database mail should use when sending an email from your database application or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Database Mail accounts  
@@ -80,7 +78,7 @@ manager: "jhubbard"
   
 -   The port number of the e-mail server.  
   
--   A bit column indicating whether the connection to the SMTP mail server is made using Secure Sockets Layer (SSL).  
+-   A bit column indicating whether the connection to the SMTP mail server is made using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL).  
   
 -   A bit column indicating whether the connection to the SMTP server is made using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

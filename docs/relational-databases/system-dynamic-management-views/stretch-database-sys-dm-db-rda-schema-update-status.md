@@ -1,14 +1,12 @@
 ---
 title: "sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs"
+description: Learn how sys.dm_db_rda_schema_update_status contains a row for each schema update task for the remote data archive of each Stretch-enabled table in the database.
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: stored-procedures
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_rda_schema_update_status"
   - "sys.dm_db_rda_schema_update_status_TSQL"
@@ -17,13 +15,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.dm_db_rda_schema_update_status dynamic management view"
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: pmasl 
+ms.author: pelopes
 ---
 # Stretch Database - sys.dm_db_rda_schema_update_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Contains one row for each schema update task for the remote data archive of each Stretch-enabled table in the current database. Tasks are identified by their task ids.  
   

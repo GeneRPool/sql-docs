@@ -1,14 +1,12 @@
 ---
-title: "Validation Page (Always On Availability Group Wizards) | Microsoft Docs"
-ms.custom: ""
+title: "Availability group wizard: Validation Page"
+description: "This topic describes the options found on the Validation page of the Always On availability group wizard."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: availability-groups
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.addreplicawizard.validation.f1"
   - "sql13.swb.adddatabasewizard.validation.f1"
@@ -16,17 +14,13 @@ f1_keywords:
 helpviewer_keywords: 
   - ", listeners"
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
-caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # Validation Page (Always On Availability Group Wizards)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
-  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
-  This help topic describes the options of the **Validation** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], and [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use this page to validate that your environment supports all the configuration choices you made on previous pages of the wizard.  
+  This help topic describes the options of the **Validation** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], and [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Use this page to validate that your environment supports all the configuration choices you made on previous pages of the wizard.  
   
 ##  <a name="PageOptions"></a> Validation Page Options  
  **Results of availability group validation.**  

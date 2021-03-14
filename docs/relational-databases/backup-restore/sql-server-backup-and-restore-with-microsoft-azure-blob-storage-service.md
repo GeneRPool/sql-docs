@@ -1,33 +1,31 @@
 ---
-title: "SQL Server Backup and Restore with Microsoft Azure Blob Storage Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
+description: "SQL Server Backup and Restore with Microsoft Azure Blob Storage Service"
+title: "Backup & restore with Azure Blob Storage"
+storage: Learn about SQL Server backup to and restore from Azure Blob storage, including the benefits of using Azure Blob storage to store SQL Server backups.
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server Backup and Restore with Microsoft Azure Blob Storage Service
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ![Backup to Azure blob graphic](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
   
- This topic introduces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups to and restoring from the [Microsoft Azure Blob storage service](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). It also provides a summary of the benefits of using the Microsoft Azure Blob service to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
+ This topic introduces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups to and restoring from the [Microsoft Azure Blob storage service](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). It also provides a summary of the benefits of using the Microsoft Azure Blob service to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
   
  SQL Server supports storing backups to the Microsoft Azure Blob storage service in the following ways:  
   
--   **Manage your backups to Microsoft Azure:** Using the same methods used to backup to DISK and TAPE, you can now back up to Microsoft Azure storage by specifying URL as the backup destination. You can use this feature to manually backup or configure your own backup strategy like you would for a local storage or other off-site options. This feature is also referred to as **SQL Server Backup to URL**. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). This feature is available in SQL Server 2012 SP1 CU2 or later. This feature has been enhanced in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to provide increased performance and functionality through the use of block blobs, Shared Access Signatures, and striping.  
+-   **Manage your backups to Microsoft Azure:** Using the same methods used to backup to DISK and TAPE, you can now back up to Microsoft Azure storage by specifying URL as the backup destination. You can use this feature to manually backup or configure your own backup strategy like you would for a local storage or other off-site options. This feature is also referred to as **SQL Server Backup to URL**. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). This feature is available in SQL Server 2012 SP1 CU2 or later. This feature has been enhanced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] to provide increased performance and functionality through the use of block blobs, Shared Access Signatures, and striping.  
   
     > [!NOTE]  
-    >  For SQL Server versions previous to SQL Server 2012 SP1 CU2, you can use the add-in SQL Server Backup to Microsoft Azure Tool to quickly and easily create backups to Microsoft Azure storage. For more information, see [download center](http://go.microsoft.com/fwlink/?LinkID=324399).  
+    >  For SQL Server versions previous to SQL Server 2012 SP1 CU2, you can use the add-in SQL Server Backup to Microsoft Azure Tool to quickly and easily create backups to Microsoft Azure storage. For more information, see [download center](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
 -   **File-Snapshot Backups for Database Files in Azure Blob Storage** Through the use of Azure snapshots, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-Snapshot Backups provide nearly instantaneous backups and restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies, and it supports for point in time restore. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). This feature is available in SQL Server 2016 or later.  
   
@@ -38,7 +36,7 @@ manager: "jhubbard"
 -   Flexible, reliable, and limitless off-site storage: Storing your backups on Microsoft Azure Blob service can be a convenient, flexible, and easy to access off-site option. Creating off-site storage for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups can be as easy as modifying your existing scripts/jobs. Off-site storage should typically be far enough from the production database location to prevent a single disaster that might impact both the off-site and production database locations. By choosing to geo replicate the Blob storage you have an extra layer of protection in the event of a disaster that could affect the whole region. In addition, backups are available from anywhere and at any time and can easily be accessed for restores.  
   
     > [!IMPORTANT]  
-    >  Through the use of block blobs in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can stripe your backup set to support backup files sizes up to 12.8 TB.  
+    >  Through the use of block blobs in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can stripe your backup set to support backup files sizes up to 12.8 TB.  
   
 -   Backup Archive: The Microsoft Azure Blob Storage service offers a better alternative to the often used tape option to archive backups. Tape storage might require physical transportation to an off-site facility and measures to protect the media. Storing your backups in Microsoft Azure Blob Storage provides an instant, highly available, and a durable archiving option.  
   
@@ -53,11 +51,11 @@ manager: "jhubbard"
 ##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
  Understanding Microsoft Azure storage costs enables you to forecast the cost of creating and storing backups in Microsoft Azure.  
   
- The [Microsoft Azure pricing calculator](http://go.microsoft.com/fwlink/?LinkId=277060) can help estimate your costs.  
+ The [Microsoft Azure pricing calculator](https://go.microsoft.com/fwlink/?LinkId=277060) can help estimate your costs.  
   
- **Storage:** Charges are based on the space used and are calculated on a graduated scale and the level of redundancy. For more details, and up-to-date information, see the **Data Management** section of the [Pricing Details](http://go.microsoft.com/fwlink/?LinkId=277059) article.  
+ **Storage:** Charges are based on the space used and are calculated on a graduated scale and the level of redundancy. For more details, and up-to-date information, see the **Data Management** section of the [Pricing Details](https://go.microsoft.com/fwlink/?LinkId=277059) article.  
   
- **Data Transfers:** Inbound data transfers to Microsoft Azure are free. Outbound transfers are charged for the bandwidth use and calculated based on a graduated region-specific scale. For more details, see the [Data Transfers](http://go.microsoft.com/fwlink/?LinkId=277061) section of the Pricing Details article.  
+ **Data Transfers:** Inbound data transfers to Microsoft Azure are free. Outbound transfers are charged for the bandwidth use and calculated based on a graduated region-specific scale. For more details, see the [Data Transfers](https://go.microsoft.com/fwlink/?LinkId=277061) section of the Pricing Details article.  
   
 ## See Also  
 

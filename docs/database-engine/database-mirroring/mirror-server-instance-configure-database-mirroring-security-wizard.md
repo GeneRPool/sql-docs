@@ -1,23 +1,21 @@
 ---
-title: "Mirror Server Instance (Configure Database Mirroring Security Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Configure Security Wizard: Mirror Server Instance"
+description: "Describes the 'Mirror Server Instance' page of the 'Configure Database Mirroring Security Wizard' in SQL Server Management Studio."
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: database-mirroring
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.configdbmsecurwiz.mirrorsrvr.f1"
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
-caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 ---
-# Mirror Server Instance (Configure Database Mirroring Security Wizard)
+# Configure Database Mirrroing Security Wizard: Mirror Server Instance
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to specify information about the server instance with the mirror database.  
   
 > [!IMPORTANT]  

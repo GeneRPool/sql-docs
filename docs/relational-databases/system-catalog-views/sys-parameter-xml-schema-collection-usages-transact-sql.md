@@ -1,14 +1,13 @@
 ---
+description: "sys.parameter_xml_schema_collection_usages (Transact-SQL)"
 title: "sys.parameter_xml_schema_collection_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sys.parameter_xml_schema_collection_usages"
   - "parameter_xml_schema_collection_usages"
@@ -19,13 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.parameter_xml_schema_collection_usages catalog view"
 ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.parameter_xml_schema_collection_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a row for each parameter that is validated by an XML schema.  
   

@@ -1,27 +1,24 @@
 ---
+description: "Create Synonyms"
 title: "Create Synonyms | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.synonym.general.f1"
 helpviewer_keywords: 
   - "creating synonyms"
   - "synonyms [SQL Server], creating"
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Synonyms
-  This topic describes how to create a synonym in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  This topic describes how to create a synonym in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -48,10 +45,10 @@ manager: "jhubbard"
   
 1.  In **Object Explorer**, expand the database where you want to create your new view.  
   
-2.  Right-click the **Synonyms** folder, then click **New Synonym…**.  
+2.  Right-click the **Synonyms** folder, then click **New Synonym...**.  
   
 3.  In the **Add Synonym** dialog box, enter the following information.  
-  
+
      **Synonym name**  
      Type the new name you will use for this object.  
   

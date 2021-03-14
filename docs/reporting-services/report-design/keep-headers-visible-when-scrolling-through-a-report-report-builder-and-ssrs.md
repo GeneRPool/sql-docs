@@ -1,20 +1,16 @@
 ---
-title: "Keep Headers Visible When Scrolling Through a Report (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Keep Headers Visible When Scrolling Through a Report (Report Builder) | Microsoft Docs"
+description:  Freeze the row or column headings to prevent row and column labels from scrolling out of view after rendering a report in Report Builder. 
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
-caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Keep Headers Visible When Scrolling Through a Report (Report Builder and SSRS)
   To prevent row and column labels from scrolling out of view after rendering a report, you can freeze the row or column headings.  
@@ -28,11 +24,11 @@ manager: "erikre"
   
  The following image shows a table.  
   
- ![Table](../../reporting-services/report-design/media/table.png "Table")  
+ ![Screenshot of a table.](../../reporting-services/report-design/media/table.png "Table")  
   
  The following image shows a matrix.  
   
- ![Matrix](../../reporting-services/report-design/media/matrix.png "Matrix")  
+ ![Screenshot of a matrix.](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

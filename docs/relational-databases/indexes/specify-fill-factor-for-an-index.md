@@ -1,27 +1,25 @@
 ---
+description: "Specify Fill Factor for an Index"
 title: "Specify Fill Factor for an Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "fill factor [SQL Server]"
   - "page splits [SQL Server]"
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+monikerRange: "= azuresqldb-current || >= sql-server-2016"
 ---
 # Specify Fill Factor for an Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This topic describes what fill factor is and how to specify a fill factor value on an index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes what fill factor is and how to specify a fill factor value on an index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  The fill-factor option is provided for fine-tuning index data storage and performance. When an index is created or rebuilt, the fill-factor value determines the percentage of space on each leaf-level page to be filled with data, reserving the remainder on each page as free space for future growth. For example, specifying a fill-factor value of 80 means that 20 percent of each leaf-level page will be left empty, providing space for index expansion as data is added to the underlying table. The empty space is reserved between the index rows rather than at the end of the index.  
   
@@ -65,11 +63,11 @@ manager: "jhubbard"
   
 #### To specify a fill factor by using Table Designer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index’s fill factor.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index's fill factor.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Right-click the table on which you want to specify an index’s fill factor and select **Design**.  
+3.  Right-click the table on which you want to specify an index's fill factor and select **Design**.  
   
 4.  On the **Table Designer** menu, click **Indexes/Keys**.  
   
@@ -79,15 +77,15 @@ manager: "jhubbard"
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, select **Save***table_name*.  
+8.  On the **File** menu, select **Save**_table_name_.  
   
 #### To specify a fill factor in an index by using Object Explorer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index’s fill factor.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to specify an index's fill factor.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table on which you want to specify an index’s fill factor.  
+3.  Click the plus sign to expand the table on which you want to specify an index's fill factor.  
   
 4.  Click the plus sign to expand the **Indexes** folder.  
   

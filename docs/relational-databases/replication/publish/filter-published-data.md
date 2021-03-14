@@ -1,14 +1,13 @@
 ---
+description: "Filter Published Data"
 title: "Filter Published Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication]"
   - "filters [SQL Server replication], about filtering"
@@ -20,12 +19,12 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], filtering published data"
   - "column filters [SQL Server replication]"
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Filter Published Data
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Filtering table articles enables you to create partitions of data to be published. By filtering published data, you can:  
   
 -   Minimize the amount of data sent over the network.  

@@ -1,23 +1,20 @@
 ---
-title: "Creating and Managing Storage for Memory-Optimized Objects | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+title: "Create & manage storage - memory-optimized objects"
+description: Learn about attributes of memory-optimized tables and disk-based tables. Use these resources to create and manage storage for memory-optimized objects.
+ms.custom: seo-dt-2019
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
-caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating and Managing Storage for Memory-Optimized Objects
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine is integrated into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which lets you have both memory-optimized tables and (traditional) disk-based tables in the same database. However, the storage structure for memory-optimized tables is different from disk-based tables.  
   
@@ -27,7 +24,7 @@ manager: "jhubbard"
   
 -   Each file is divided into extents of 8 pages and each page is of size 8K bytes.  
   
--   An extent can be shared across multiple tables, but a there is 1-to-1 mapping between an allocated page and the table or index. In other words, a page can’t have rows from two or more tables or index.  
+-   An extent can be shared across multiple tables, but a there is 1-to-1 mapping between an allocated page and the table or index. In other words, a page can't have rows from two or more tables or index.  
   
 -   The data is moved into memory (the buffer pool) as needed and the modified or newly created pages are asynchronously written to the disk generating mostly random IO.  
   

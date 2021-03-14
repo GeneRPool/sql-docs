@@ -1,21 +1,18 @@
 ---
+description: "SQLPrepare (Visual FoxPro ODBC Driver)"
 title: "SQLPrepare (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPrepare function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLPrepare (Visual FoxPro ODBC Driver)
 > [!NOTE]  

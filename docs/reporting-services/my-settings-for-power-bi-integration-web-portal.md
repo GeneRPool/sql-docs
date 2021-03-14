@@ -1,22 +1,19 @@
 ---
 title: "My Settings for Power BI Integration (web portal) | Microsoft Docs"
-ms.date: "08/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+description: Learn about the My Settings page in the Reporting Services web portal and how it is used by individual users to manage their sign-in with Power BI.
+ms.date: 08/17/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: reporting-services
+
+ms.topic: conceptual
 f1_keywords: 
   - "pbi"
   - "power bi"
   - "power bi integration"
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
-caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # My Settings for Power BI Integration (web portal)
@@ -46,4 +43,4 @@ Once you sign in, a new security token will be created.  Your dashboard tiles wi
 [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 [Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

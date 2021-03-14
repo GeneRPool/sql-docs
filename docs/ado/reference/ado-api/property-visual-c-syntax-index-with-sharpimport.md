@@ -1,24 +1,21 @@
 ---
+description: "Property (Visual C++ Syntax Index with #import)"
 title: "Property (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Property collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # Property (Visual C++ Syntax Index with #import)
 ## Properties  
@@ -41,4 +38,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## See Also  
- [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Property Object (ADO)](./property-object-ado.md)

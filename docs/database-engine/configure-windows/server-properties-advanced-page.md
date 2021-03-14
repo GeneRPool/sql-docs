@@ -1,23 +1,21 @@
 ---
 title: "Server Properties (Advanced Page) | Microsoft Docs"
+description: Get acquainted with SQL Server advanced server settings. Learn about FILESTREAM options, various thresholds, full-text upgrade alternatives, and other settings.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.serverproperties.advanced.f1"
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
 ---
 # Server Properties - Advanced Page
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify your advanced server settings.  
   
  **To view the Server Properties pages**  

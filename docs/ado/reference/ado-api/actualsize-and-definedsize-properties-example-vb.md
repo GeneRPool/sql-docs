@@ -1,29 +1,26 @@
 ---
+description: "ActualSize and DefinedSize Properties Example (VB)"
 title: "ActualSize and DefinedSize Properties Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "DefinedSize property [ADO], Visual Basic example"
   - "ActualSize property [ADO], Visual Basic example"
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # ActualSize and DefinedSize Properties Example (VB)
-This example uses the [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) and [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) properties to display the defined size and actual size of a field.  
+This example uses the [ActualSize](./actualsize-property-ado.md) and [DefinedSize](./definedsize-property.md) properties to display the defined size and actual size of a field.  
   
-```  
+```vb
 'BeginActualSizeVB  
   
     'To integrate this code  
@@ -86,6 +83,6 @@ End Sub
 ```  
   
 ## See Also  
- [ActualSize Property (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [DefinedSize Property](../../../ado/reference/ado-api/definedsize-property.md)   
- [Field Object](../../../ado/reference/ado-api/field-object.md)
+ [ActualSize Property (ADO)](./actualsize-property-ado.md)   
+ [DefinedSize Property](./definedsize-property.md)   
+ [Field Object](./field-object.md)

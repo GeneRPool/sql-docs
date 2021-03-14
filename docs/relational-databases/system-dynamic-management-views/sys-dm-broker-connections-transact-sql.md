@@ -1,14 +1,12 @@
 ---
+description: "sys.dm_broker_connections (Transact-SQL)"
 title: "sys.dm_broker_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_broker_connections"
   - "dm_broker_connections"
@@ -19,13 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_broker_connections dynamic management view"
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_broker_connections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each [!INCLUDE[ssSB](../../includes/sssb-md.md)] network connection. The following table provides more information:  
   

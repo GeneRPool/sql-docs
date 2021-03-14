@@ -1,16 +1,13 @@
 ---
+description: "MSpub_identity_range (Transact-SQL)"
 title: "MSpub_identity_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
+ms.technology: replication
+ms.topic: "reference"
 f1_keywords: 
   - "MSpub_identity_range_TSQL"
   - "MSpub_identity_range"
@@ -19,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpub_identity_range system table"
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
 ---
 # MSpub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSpub_identity_range** table provides identity range management support. This table is stored in the publication and subscription database.  
   

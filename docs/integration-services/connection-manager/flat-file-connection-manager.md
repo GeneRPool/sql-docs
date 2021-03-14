@@ -1,14 +1,13 @@
 ---
+description: "Flat File Connection Manager"
 title: "Flat File Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.ffileconnection.general.f1"
   - "sql13.dts.designer.ffileconnection.columns.f1"
@@ -22,12 +21,14 @@ helpviewer_keywords:
   - "flat files"
   - "flat file connections [Integration Services]"
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Connection Manager
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   A Flat File connection manager enables a package to access data in a flat file. For example, the Flat File source and destination can use Flat File connection managers to extract and load data.  
   
  The Flat File connection manager can access only one file. To reference multiple files, use a Multiple Flat Files connection manager instead of a Flat File connection manager. For more information, see [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
@@ -58,7 +59,7 @@ manager: "jhubbard"
   
 -   Specify a text qualifier character. Each column can be configured to recognize a text qualifier.  
   
-     The use of a qualifier character to embed a qualifier character into a qualified string is supported by the Flat File Connection Manager. The double instance of a text qualifier is interpreted as a literal, single instance of that string. For example, if the text qualifier is a single quote and the input data is ‘abc’, ‘def’, ‘g’hi’, the output data is abc, def, g’hi. However, an instance of a qualifier embedded in a qualified string causes the Flat File Source to fail with the error DTS_E_PRIMEOUTPUTFAILED.
+     The use of a qualifier character to embed a qualifier character into a qualified string is supported by the Flat File Connection Manager. The double instance of a text qualifier is interpreted as a literal, single instance of that string. For example, if the text qualifier is a single quote and the input data is 'abc', 'def', 'g'hi', the output data is abc, def, g'hi. However, an instance of a qualifier embedded in a qualified string causes the Flat File Source to fail with the error DTS_E_PRIMEOUTPUTFAILED.
   
 -   Set properties such as the name, data type, and maximum width on individual columns.  
   

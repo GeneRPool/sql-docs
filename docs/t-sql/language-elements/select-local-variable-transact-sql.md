@@ -1,14 +1,13 @@
 ---
-title: "SELECT @local_variable (Transact-SQL) | Microsoft Docs"
+description: "SELECT @local_variable (Transact-SQL)"
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/06/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: t-sql
+ms.topic: reference
 f1_keywords: 
   - "variable_TSQL"
   - "@loca_variable"
@@ -24,13 +23,14 @@ helpviewer_keywords:
   - "@local_variable"
   - "local variables [SQL Server]"
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: cawrites
+ms.author: chadam
+monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017"
 ---
+
 # SELECT @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Sets a local variable to the value of an expression.  
   
@@ -40,60 +40,58 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression } [ ,...n ] [ ; ]  
+```syntaxsql
+SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression } 
+    [ ,...n ] [ ; ]  
 ```  
   
-## Arguments  
- @*local_variable*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+
+@*local_variable*  
  Is a declared variable for which a value is to be assigned.  
   
- =  
- Assign the value on the right to the variable on the left.  
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
+Assign the value on the right to the variable on the left.  
   
- {= | += | -= | *= | /= | %= | &= | ^= | |= }  
- Compound assignment operator:  
-  
- +=                    Add and assign  
-  
- -=                     Subtract and assign  
-  
- *=                     Multiply and assign  
-  
- /=                      Divide and assign  
-  
- %=                    Modulo and assign  
-  
- &=                     Bitwise AND and assign  
-  
- ^=                     Bitwise XOR and assign  
-  
- |=                      Bitwise OR and assign  
-  
- *expression*  
- Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
-  
-## Remarks  
- SELECT @*local_variable* is typically used to return a single value into the variable. However, when *expression* is the name of a column, it can return multiple values. If the SELECT statement returns more than one value, the variable is assigned the last value that is returned.  
-  
- If the SELECT statement returns no rows, the variable retains its present value. If *expression* is a scalar subquery that returns no value, the variable is set to NULL.  
-  
- One SELECT statement can initialize multiple local variables.  
-  
-> [!NOTE]  
->  A SELECT statement that contains a variable assignment cannot be used to also perform typical result set retrieval operations.  
+Compound assignment operator:  
+
+| operator | action |  
+| -------- | ------ |  
+| = | Assigns the expression that follows, to the variable. |  
+| += | Add and assign |  
+| -= | Subtract and assign |  
+| \*= | Multiply and assign |  
+| /= | Divide and assign |  
+| %= | Modulo and assign |  
+| &= | Bitwise AND and assign |  
+| ^= | Bitwise XOR and assign |  
+| \|= | Bitwise OR and assign |  
+
+*expression*  
+Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
+
+## Remarks
+
+SELECT @*local_variable* is typically used to return a single value into the variable. However, when *expression* is the name of a column, it can return multiple values. If the SELECT statement returns more than one value, the variable is assigned the last value that is returned.  
+
+If the SELECT statement returns no rows, the variable retains its present value. If *expression* is a scalar subquery that returns no value, the variable is set to NULL.  
+
+One SELECT statement can initialize multiple local variables.  
+
+> [!NOTE]
+> A SELECT statement that contains a variable assignment cannot be used to also perform typical result set retrieval operations.  
   
 ## Examples  
   
 ### A. Use SELECT @local_variable to return a single value  
  In the following example, the variable `@var1` is assigned `Generic Name` as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` does not exist in the table. The variable retains the `Generic Name` value.  
   
-```  
+```sql  
 -- Uses AdventureWorks    
   
-DECLARE @var1 varchar(30);         
+DECLARE @var1 VARCHAR(30);         
 SELECT @var1 = 'Generic Name';         
 SELECT @var1 = Name         
 FROM Sales.Store         
@@ -103,19 +101,19 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Company Name`  
-  
- `------------------------------`  
-  
- `Generic Name`  
+ ```
+ Company Name  
+ ------------------------------  
+ Generic Name  
+ ```  
   
 ### B. Use SELECT @local_variable to return null  
  In the following example, a subquery is used to assign a value to `@var1`. Because the value requested for `CustomerID` does not exist, the subquery returns no value and the variable is set to `NULL`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @var1 varchar(30)   
+DECLARE @var1 VARCHAR(30)   
 SELECT @var1 = 'Generic Name'   
 SELECT @var1 = (SELECT Name   
 FROM Sales.Store   
@@ -125,15 +123,14 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Company Name`  
-  
- `----------------------------`  
-  
- `NULL`  
+```
+Company Name  
+----------------------------  
+NULL  
+```  
   
 ## See Also  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  

@@ -1,14 +1,12 @@
 ---
-title: "Design Queries and Views How-to Topics (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+description: "Design Queries and Views How-to Topics (Visual Database Tools)"
+title: Design Queries and Views How-to Topics
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.prod: sql
+ms.prod_service: sql-tools
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "• vs.solutionexplorer.file.query"
   - "vs.solutionexplorer.file.query"
@@ -21,12 +19,13 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], about Query Designer"
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-caps.latest.revision: 3
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
+
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The Query and View Designer can help you create and maintain the data retrieval and data manipulation portions of your application.  
   
 ## In This Section  

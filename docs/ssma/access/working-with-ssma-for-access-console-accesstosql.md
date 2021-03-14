@@ -1,22 +1,16 @@
 ---
+description: "Working with SSMA for Access Console (AccessToSQL)"
 title: "Working with SSMA for Access Console (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
-caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "murato"
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Working with SSMA for Access Console (AccessToSQL)
 Microsoft SQL Server Migration Assistant (SSMA) for Access is now accessible through a console application at command line. The script files form the input to the application for executing the commands. As a console application, SSMA enables script-level interfacing, reduces the migration cycle, and scales the migration effort.  
@@ -25,9 +19,8 @@ This section explains the procedure for migrating an Access database by using th
   
 Topics covered in this section include:  
   
-|||  
+|Topic|Description|  
 |-|-|  
-|**Topics**|**Description**|  
 |[Getting Started with SSMA for Access Console &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|Explains the procedure to execute the console application.|  
 |[Command Line Options in SSMA Console &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|Describes the command line options and parameters to operate the SSMA console application.|  
 |[Creating Script Files &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)|Explains how to create a script file.|  
@@ -40,5 +33,5 @@ Topics covered in this section include:
 |[Troubleshooting &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Provides brief information about fixing migration issues.|  
   
 ## See also  
-[Getting Started with SSMA for Access Console](http://msdn.microsoft.com/8585ec16-7e0a-483a-b250-adab9b9232a3)  
+[Getting Started with SSMA for Access Console](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

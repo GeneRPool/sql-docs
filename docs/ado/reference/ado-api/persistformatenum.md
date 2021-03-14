@@ -1,27 +1,24 @@
 ---
+description: "PersistFormatEnum"
 title: "PersistFormatEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "PersistFormatEnum"
 helpviewer_keywords: 
   - "PersistFormatEnum enumeration [ADO]"
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # PersistFormatEnum
-Specifies the format in which to save a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Specifies the format in which to save a [Recordset](./recordset-object-ado.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -39,4 +36,4 @@ Specifies the format in which to save a [Recordset](../../../ado/reference/ado-a
 |AdoEnums.PersistFormat.XML|  
   
 ## Applies To  
- [Save Method](../../../ado/reference/ado-api/save-method.md)
+ [Save Method](./save-method.md)

@@ -1,13 +1,12 @@
 ---
-title: "srv_paramsetoutput (Extended Stored Procedure API) | Microsoft Docs"
-ms.custom: ""
+title: "srv_paramsetoutput (Extended Stored Procedure API)"
+description: Learn how srv_paramsetoutput in the Extended Stored Procedure API sets the value of a return parameter.
+ms.custom: seo-dt-2019
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 apiname: 
   - "srv_paramsetoutput"
@@ -19,12 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_paramsetoutput"
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
 ---
 # srv_paramsetoutput (Extended Stored Procedure API)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
@@ -77,6 +75,6 @@ fNull
 -   the *cbLen* argument is invalid.  
   
 ## Remarks  
- **Security Note** You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+ **Security Note** You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

@@ -1,13 +1,13 @@
 ---
 title: "Use the Maintenance Plan Wizard | Microsoft Docs"
+description: Learn how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in SQL Server.
 ms.date: "06/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: ""
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.maintwiz.integrity.f1"
   - "sql13.ag.maintwiz.order.f1"
@@ -33,13 +33,12 @@ helpviewer_keywords:
   - "Database Maintenance Plan Wizard"
   - "Database Maintenance Plan Wizard, starting"
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
-caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Use the Maintenance Plan Wizard
-  This topic describes how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
     
  
 ##  <a name="Restrictions"></a> Limitations and Restrictions  
@@ -84,7 +83,7 @@ You must enable [Agent XPs Server Configuration Option](../../database-engine/co
   
     5.  If you selected **Single schedule for the entire plan or no schedule**, under **Schedule**, click **Change**.  
   
-        1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule’s name.  
+        1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule's name.  
   
         2.  On the **Schedule type** list, select the type of schedule:  
   
@@ -109,15 +108,15 @@ You must enable [Agent XPs Server Configuration Option](../../database-engine/co
   
                 -   If you select **Monthly**, select either **Day** or **The**.  
   
-                    -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter “15” in the first box and “2” in the second box. Please note that the largest number allowed in the second box is “99”.  
+                    -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. Please note that the largest number allowed in the second box is "99".  
   
-                    -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter “2” in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is “99”.  
+                    -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is "99".  
   
             2.  Under **Daily frequency**, specify how often the job schedule repeats on the day the job schedule runs:  
   
                 -   If you select **Occurs once at**, enter the specific time of day when the job schedule should run in the **Occurs once at** box. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
-                -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter “2” in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is “100”.  
+                -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is "100".  
   
                      In the **Starting at** box, enter the time that the job schedule should start running. In the **Ending at** box, enter the time that the job schedule should stop repeating. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
@@ -139,7 +138,7 @@ You must enable [Agent XPs Server Configuration Option](../../database-engine/co
   
     > **NOTE:** The tasks you select here will determine which pages you will need to complete after the **Select Maintenance Task Order** page below.  
   
-8.  On the **Select Maintenance Task Order** page, select a task and click either **Move Up…** or **Move Down…** to change its order of execution. When finished, or if you are satisfied with the current order of tasks, click **Next**.  
+8.  On the **Select Maintenance Task Order** page, select a task and click either **Move Up...** or **Move Down...** to change its order of execution. When finished, or if you are satisfied with the current order of tasks, click **Next**.  
   
     > **NOTE:** If you selected **Separate schedules for each task** on the **Select Plan Properties** page above, you will not be able to change the order of the maintenance tasks on this page.  
   
@@ -202,7 +201,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
 ## Define the Index Tasks  
   
-1.  On the **Define Reorganize Index Task** page, select the server or servers where you'll be moving index pages into a more efficient search order. This task uses the `ALTER INDEX … REORGANIZE` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). When complete, click **Next**.  
+1.  On the **Define Reorganize Index Task** page, select the server or servers where you'll be moving index pages into a more efficient search order. This task uses the `ALTER INDEX ... REORGANIZE` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). When complete, click **Next**.  
   
      The following options are available on this page.  
   
@@ -216,9 +215,9 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Specify the tables or indexes affected by this task. Not available when **Tables and Views** is selected in the Object box.  
   
      **Compact large objects** check box  
-     Deallocate space for tables and views when possible. This option uses `ALTER INDEX … LOB_COMPACTION = ON`.  
+     Deallocate space for tables and views when possible. This option uses `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
-2.  On the **Define Rebuild Index Task** page, select the database or databases where you'll be re-creating multiple indexes. This task uses the `ALTER INDEX … REBUILD PARTITION` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).) When complete, click **Next**.  
+2.  On the **Define Rebuild Index Task** page, select the database or databases where you'll be re-creating multiple indexes. This task uses the `ALTER INDEX ... REBUILD PARTITION` statement. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).) When complete, click **Next**.  
   
      The following options are available on this page.  
   
@@ -254,7 +253,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
      Selecting this option also activates Low Priority Used, which uses the `WAIT_AT_LOW_PRIORITY` option. Online index rebuild operations will wait for low priority locks for `MAX_DURATION` minutes, allowing other operations to proceed while the online index build operation is waiting.  
   
-    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      **MAXDOP** check box  
      Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
@@ -363,12 +362,12 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Specify the folder to contain the automatically created database files. This option is disabled if you selected URL as the backup destination.  
   
      **SQL Credential**  
-     Select a SQL Credential used to authenticate to Windows Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
+     Select a SQL Credential used to authenticate to Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
   
     > **IMPORTANT!** The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right-click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
   
      **Azure storage container**  
-     Specify the name of the Windows Azure storage container  
+     Specify the name of the Azure storage container  
   
      **URL prefix:**  
      This is automatically generated based on the storage account information stored in the SQL Credential, and Azure storage container name you specified. We recommend that you do not edit the information in this field unless you are using a domain that uses a format other than **\<storage account>.blob.core.windows.net**.  
@@ -419,7 +418,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
     |**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely affect concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by the Resource Governor. For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Do not compress backup**|Click to create an uncompressed backup, regardless of the server-level default.|  
   
-2.  On the **Define Backup Database (Differential) Task** page, select the database or databases on which to run a partial backup. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP DATABASE … WITH DIFFERENTIAL` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  When finished, click **Next**.  
+2.  On the **Define Backup Database (Differential) Task** page, select the database or databases on which to run a partial backup. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP DATABASE ... WITH DIFFERENTIAL` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  When finished, click **Next**.  
   
 3.  On the **Define Backup Database (Transaction Log) Task** page, select the database or databases on which to run a backup for a transaction log. See the definition list in step 16, above, for more information about the available options on this page. This task uses the `BACKUP LOG` statement. For more information, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). When finished, click **Next**.  
   
@@ -515,10 +514,10 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Opens the **Save Report As** dialog box.  
   
      **Copy Report to Clipboard**  
-     Copies the results of the wizard’s progress report to the Clipboard.  
+     Copies the results of the wizard's progress report to the Clipboard.  
   
      **Send Report as Email**  
-     Copies the results of the wizard’s progress report into an email message.  
+     Copies the results of the wizard's progress report into an email message.  
   
   
 

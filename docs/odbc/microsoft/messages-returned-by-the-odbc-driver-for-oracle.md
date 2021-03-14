@@ -1,22 +1,19 @@
 ---
+description: "Messages Returned by the ODBC Driver for Oracle"
 title: "Messages Returned by the ODBC Driver for Oracle | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "error messages [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], error messages"
 ms.assetid: 150bde1d-adb6-4e77-90e9-4dc93499a746
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Messages Returned by the ODBC Driver for Oracle
 > [!IMPORTANT]  

@@ -1,28 +1,25 @@
 ---
+description: "CompareBookmarks Method Example (VC++)"
 title: "CompareBookmarks Method Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "CompareBookmarks method [ADO], VC++ example"
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # CompareBookmarks Method Example (VC++)
-This example demonstrates the [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) method. The relative value of bookmarks is seldom needed unless a particular bookmark is somehow special.  
+This example demonstrates the [CompareBookmarks](./comparebookmarks-method-ado.md) method. The relative value of bookmarks is seldom needed unless a particular bookmark is somehow special.  
   
- Designate a random row of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derived from the ***Authors*** table as the target of a search. Then display the position of each row relative to that target.  
+ Designate a random row of a [Recordset](./recordset-object-ado.md) derived from the ***Authors*** table as the target of a search. Then display the position of each row relative to that target.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -168,5 +165,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CompareBookmarks Method (ADO)](./comparebookmarks-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

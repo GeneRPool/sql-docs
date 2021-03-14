@@ -1,27 +1,24 @@
 ---
+description: "SeekEnum"
 title: "SeekEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "SeekEnum"
 helpviewer_keywords: 
   - "SeekEnum enumeration [ADO]"
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
 ---
 # SeekEnum
-Specifies the type of [Seek](../../../ado/reference/ado-api/seek-method.md) to execute.  
+Specifies the type of [Seek](./seek-method.md) to execute.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -45,4 +42,4 @@ Specifies the type of [Seek](../../../ado/reference/ado-api/seek-method.md) to e
 |AdoEnums.Seek.BEFORE|  
   
 ## Applies To  
- [Seek Method](../../../ado/reference/ado-api/seek-method.md)
+ [Seek Method](./seek-method.md)

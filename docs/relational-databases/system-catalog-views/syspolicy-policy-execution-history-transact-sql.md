@@ -1,14 +1,13 @@
 ---
+description: "syspolicy_policy_execution_history (Transact-SQL)"
 title: "syspolicy_policy_execution_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "syspolicy_policy_execution_history_TSQL"
   - "syspolicy_policy_execution_history"
@@ -17,13 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "syspolicy_policy_execution_history view"
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
 ---
 # syspolicy_policy_execution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the time when policies were executed, the result of each execution, and details about errors if any occurred. The following table describes the columns in the syspolicy_policy_execution_history view.  
   

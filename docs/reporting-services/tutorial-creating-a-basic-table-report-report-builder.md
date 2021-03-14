@@ -1,21 +1,15 @@
 ---
 title: "Tutorial: Creating a Basic Table Report (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+description: Learn how to use a wizard to create a basic table report based on sample sales data in the Report Builder.
+ms.date: 06/23/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: reporting-services
+
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Creating a Basic Table Report (Report Builder)
 This tutorial teaches you to create a basic table report based on sample sales data. The following illustration shows the report you will create.  
@@ -176,7 +170,7 @@ After you create groups, you can add and format rows on which to display aggrega
   
     2.  The second row will repeat once for each line item in the sales order and display the product name, order quantity, and line total.  
   
-    3.  The third row will repeat once for each sales order to display subtotals per order.  
+    3.  The third row will repeat once for each sales order category to display subtotals per category.  
   
     4.  The fourth row will repeat once for each order date to display the subtotals per day.  
   
@@ -357,6 +351,6 @@ This concludes the walkthrough for how to create a basic table report. For more 
   
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

@@ -1,14 +1,13 @@
 ---
+description: "sys.fn_validate_plan_guide (Transact-SQL)"
 title: "sys.fn_validate_plan_guide (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_validate_plan_guide"
   - "sys.fn_validate_plan_guide_TSQL"
@@ -20,13 +19,11 @@ helpviewer_keywords:
   - "fn_validate_plan_guide function"
   - "sys.fn_validate_plan_guide function"
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifies the validity of the specified plan guide. The sys.fn_validate_plan_guide function returns the first error message that is encountered when the plan guide is applied to its query. An empty rowset is returned when the plan guide is valid. Plan guides can become invalid after changes are made to the physical design of the database. For example, if a plan guide specifies a particular index and that index is subsequently dropped, the query will no longer be able to use the plan guide.  
   
@@ -37,7 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 sys.fn_validate_plan_guide ( plan_guide_id )  
 ```  
   
@@ -64,7 +60,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 ### A. Validating all plan guides in a database  
  The following example checks the validity of all plan guides in the current database. If an empty result set is returned, all plan guides are valid.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
@@ -74,9 +70,9 @@ GO
 ```  
   
 ### B. Testing plan guide validation before implementing a change to the database  
- The following example uses an explicit transaction to drop an index. The `sys.fn`_`validate`\_`plan`\_`guide` function is executed to determine whether this action will invalidate any plan guides in the database. Based on the results of the function, the `DROP INDEX` statement is either committed or the transaction is rolled back, and the index is not dropped.  
+ The following example uses an explicit transaction to drop an index. The `sys.fn_validate_plan_guide` function is executed to determine whether this action will invalidate any plan guides in the database. Based on the results of the function, the `DROP INDEX` statement is either committed or the transaction is rolled back, and the index is not dropped.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN TRANSACTION;  

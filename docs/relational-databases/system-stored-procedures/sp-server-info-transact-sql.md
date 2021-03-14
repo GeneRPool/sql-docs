@@ -1,14 +1,13 @@
 ---
+description: "sp_server_info (Transact-SQL)"
 title: "sp_server_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "sp_server_info"
   - "sp_server_info_TSQL"
@@ -17,19 +16,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_server_info"
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_server_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a list of attribute names and matching values for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database gateway, or the underlying data source.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +35,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## Arguments  
- [ **@attribute_id =** ] **'***attribute_id***'**  
+`[ @attribute_id = ] 'attribute_id'`
  Is the integer ID of the attribute. *attribute_id* is **int**, with a default of NULL.  
   
 ## Return Code Values  
@@ -60,7 +54,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |ATTRIBUTE_ID|ATTRIBUTE_NAME Description|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
+|**2**|DBMS_VER|Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] *xxxx* - *x.xx.xxxx*<br/><br> For example, `Microsoft SQL Server 2017 - 14.0.3257.3`|  
 |**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  

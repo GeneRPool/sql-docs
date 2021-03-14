@@ -1,14 +1,12 @@
 ---
+description: "sys.selective_xml_index_paths (Transact-SQL)"
 title: "sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.prod: sql
+ms.prod_service: "database-engine"
+ms.technology: system-objects
+ms.topic: "reference"
 f1_keywords: 
   - "xml_schema_attributes_TSQL"
   - "xml_schema_attributes"
@@ -19,13 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_attributes catalog view"
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 ---
 # sys.selective_xml_index_paths (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Available beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, each row in sys.selective_xml_index_paths represents one promoted path for particular selective xml index.  
   
